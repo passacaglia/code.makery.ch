@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tutorial JavaFX 8 - Parte 3: Interacción con el usuario - code.makery.ch</title>
+    <title>Tutorial JavaFX 8 - Parte 3: Interacción con el usuario | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -47,7 +47,7 @@
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Tutorial JavaFX 8 - Parte 3: Interacción con el usuario - code.makery.ch" />
+    <meta property="og:title" content="Tutorial JavaFX 8 - Parte 3: Interacción con el usuario | code.makery.ch" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Respuesta a cambios de selección en un TableView. Añadir, editar y borrar ítems de la tabla y validar la entrada del usuario." />
     <meta property="og:url" content="http://code.makery.ch/library/javafx-8-tutorial/es/part3/" />
@@ -229,15 +229,15 @@
 <h2 id="contenidos-en-parte-3">Contenidos en Parte 3</h2>
 <ul>
 <li><strong>Respuesta a cambios en la selección</strong> dentro de la tabla.</li>
-<li>Añade funcionalidad de los botones <strong>añadir</strong>, <strong>editar</strong>, y <strong>borrar</strong>s.</li>
+<li>Añade funcionalidad de los botones <strong>añadir</strong>, <strong>editar</strong>, y <strong>borrar</strong>.</li>
 <li>Crear un <strong>diálogo emergente</strong> (popup dialog) a medida para editar un contacto.</li>
 <li><strong>Validación de la entrada del usuario</strong>.</li>
 </ul>
 <hr>
 <h2 id="respuesta-a-cambios-en-la-selecci-n-de-la-tabla">Respuesta a cambios en la selección de la Tabla</h2>
-<p>Obviamente, todavía no hemos usado la parte derecha de la interfaz de nuestra aplicación. La idea es mostrar los detalles de una persona en ese lado cuando el usuario selecciona una persona en la tabla.</p>
-<p>En primer lugar, añadamos un nuevo método dentro de <code>PersonOverviewController</code> que nos ayude a rellenar las etiquetas con los datos de una sola persona.</p>
-<p>Crea un método llamado <code>showPersonDetails(Person person)</code>. Este método recorrerá todas las etiquetas y establecerá el texto usando <code>setText(...)</code> con detalles de la persona. Si en vez de una instancia de <code>Person</code> se pasa <code>null</code> entonces las etiquetas deben ser borradas.</p>
+<p>Todavía no hemos usado la parte derecha de la interfaz de nuestra aplicación. La intención es usar esta parte para mostrar los detalles de la persona seleccionada por el usuario en la tabla.</p>
+<p>En primer lugar vamos a añadir un nuevo método dentro de <code>PersonOverviewController</code> que nos ayude a rellenar las etiquetas con los datos de una sola persona.</p>
+<p>Crea un método llamado <code>showPersonDetails(Person person)</code>. Este método recorrerá todas las etiquetas y establecerá el texto con detalles de la persona usando <code>setText(...)</code> . Si en vez de una instancia de <code>Person</code> se pasa <code>null</code> entonces las etiquetas deben ser borradas.</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
 /**
@@ -271,8 +271,8 @@ private void showPersonDetails(Person person) {
 
 
 <h3 id="convierte-la-fecha-de-nacimiento-en-una-cadena">Convierte la fecha de nacimiento en una cadena</h3>
-<p>Te darás cuenta de que no podemos usar el atributo <code>birthday</code> directamente para establecer el valor de una <code>Label</code> porque no es de tipo <code>LocalDate</code>. Antes necesitamos convertirlo en una cadena o <code>String</code>.</p>
-<p>Vamos a convertir entre <code>LocalDate</code> y <code>String</code> y viceversa en varios sitios. Una buena práctica es crear una clase auxiliar con métodos estáticos (<code>static</code>) para esta finalidad. Llamaremos a esta clase <code>DateUtil</code> y la ubicaremos una paquete separado denominado <code>ch.makery.address.util</code>:</p>
+<p>Te darás cuenta de que no podemos usar el atributo <code>birthday</code> directamente para establecer el valor de una <code>Label</code> porque se requiere un <code>String</code>, y <code>birthday</code> es de tipo <code>LocalDate</code>. Así pues necesitamos convertir <code>birthday</code> de <code>LocalDate</code> a <code>String</code>.</p>
+<p>En la práctica vamos a necesitar convertir entre <code>LocalDate</code> y <code>String</code>  en varios sitios y en ambos sentidos. Una buena práctica es crear una clase auxiliar con métodos estáticos (<code>static</code>) para esta finalidad. Llamaremos a esta clase <code>DateUtil</code> y la ubicaremos una paquete separado denominado <code>ch.makery.address.util</code>:</p>
 <h5 id="dateutil-java">DateUtil.java</h5>
 <pre class="prettyprint lang-java">
 package ch.makery.address.util;
