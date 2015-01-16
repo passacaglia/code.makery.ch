@@ -28,7 +28,7 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/java/javafx-8-tutorial-part7/" />
+    <link rel="canonical" href="http://code.makery.ch/library/javafx-8-tutorial/zh-cn/part7/" />
   
     <!-- Alternate Languages -->
     <link rel="alternate" hreflang="en" href="http://code.makery.ch/java/javafx-8-tutorial-part7/" />
@@ -130,7 +130,7 @@
 </div>
 <div class="panel panel-default sidebar">
   <div class="panel-heading">
-    <h4 class="panel-title">Download Sources</h4>  
+    <h4 class="panel-title">下载源代码</h4>  
   </div>
 
   <div class="list-group">
@@ -166,7 +166,7 @@
             <h1 class="article-title">JavaFX 8 教程 - 第七部分：部署</h1>
             <div class="article-date">
   Oct 08, 2014
-  • Updated Oct 08, 2014
+  • Updated Jan 16, 2015
 
 </div>
           </header>
@@ -196,7 +196,7 @@
   </ul>
 </div>
 <div class="btn-group sidebar-dropdown">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Download Sources <span class="caret"></span>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">下载源代码 <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
       <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-7.zip">
@@ -226,85 +226,83 @@
           </div>
           
           <section class="article-content">
-            <div class="alert alert-warning">
-  <i class="fa fa-language"></i> This page needs translation to Chinese (Simplified). If you'd like to help out please read <a href="/library/how-to-contribute/" class="alert-link">how to contribute</a>.
-</div>
-
-<p><img src="/assets/library/javafx-8-tutorial/part7/addressapp-part7.png" alt="Screenshot AddressApp Part 7"></p>
-<p>I thought I'd write one last part of this tutorial series to show how to deploy (i.e. package and publish) the AddressApp.</p>
+            <p><img src="/assets/library/javafx-8-tutorial/part7/addressapp-part7.png" alt="Screenshot AddressApp Part 7"></p>
+<p>我想已经写到本教程系列的最后一部分了，应该教你如何部署（例如：打包和发布）AddressApp</p>
 <hr>
-<h2 id="topics-in-part-7">Topics in Part 7</h2>
+<h2 id="-7-">第7部分的主题</h2>
 <ul>
-<li>Deploying our JavaFX application as <strong>Native Package</strong> with e(fx)clipse</li>
+<li>使用e(fx)clipse<strong>本地包（Native Package）</strong>部署我们的JavaFX应用程序。</li>
 </ul>
 <hr>
-<h2 id="what-is-deployment">What is Deployment</h2>
-<p>Deplyoment is the process of packaging and delivering software to the user. This is a crucial part of software development since it's the first contact a user has with our software.</p>
-<p>Java advertises with the slogan <strong>Write Once, Run Anywhere</strong> to illustrate the <em>cross-platform</em> benefits of the Java language. Ideally, this means that our Java application can be run on any device equipped with a Java virtual machine (JVM).</p>
-<p>In the past, the user experience for installing a Java application hasn't always been smooth. If the user didn't have the required Java version on his system, he had to be directed to install it first. This lead to some difficulties, e.g. need for admin rights, compatibility issues between Java versions, etc.</p>
-<p>Fortunately, JavaFX provides a new deployment option called <strong>Native Packaging</strong> (also called Self-Contained Application Package). A native package is a bundle containing both your application code and the (platform-specific) Java Runtime. </p>
-<p>The official JavaFX documentation by Oracle contains an extensive guide for all possible <a href="http://docs.oracle.com/javafx/2/deployment/jfxpub-deployment.htm">JavaFX deployment options</a>. </p>
-<p>In this post I will show how to create a <strong>Native Package</strong> with Eclipse and the <a href="http://www.eclipse.org/efxclipse/"><strong>e(fx)clipse plugin</strong></a>.</p>
+<h2 id="-">什么是部署</h2>
+<p>部署是打包和发布软件给用户的过程。这是软件开发的关键部分，因为它是第一次与使用我们软件的用户交流。</p>
+<p>Java的广告口号是<strong>编写一次，到处运行</strong>，这说明Java语言的<strong>跨平台</strong>好处。理想情况下，这意味着我们Java应用可以运行在任何装备有JVM的设备上。
+在过去，安装Java应用程序的用户经验不总是平滑的。如果用户在系统中没有要求的Java版本，它必须首先直接安装它。这导致有些困难，例如，需要管理员权限，Java版本之间的兼容问题等等。
+幸运的是，JavaFX提供新的部署选项称为<strong>本地打包</strong>（也称为自包含应用程序包）。一个本地包是一个包含你的应用代码和平台指定的Java运行时的打包程序。
+Oracle提供的官方JavaFx文档包含一个所有<a href="http://docs.oracle.com/javafx/2/deployment/jfxpub-deployment.htm">JavaFX部署选项</a>的扩展指南。
+在本章节中，我们教你如何使用Eclipse和<a href="http://www.eclipse.org/efxclipse/"><strong>e(fx)clipse插件</strong></a>创建<strong>本地包</strong>。</p>
 <hr>
-<h2 id="create-a-native-package">Create a Native Package</h2>
-<p>The goal is to create a self-contained application in a single folder on the user's computer. Here is how it will look like for our AddressApp (on Windows):</p>
-<p><img src="/assets/library/javafx-8-tutorial/part7/native-package.png" alt="AddressApp Native Package"></p>
-<p>The <code>app</code> folder contains our application data and the <code>runtime</code> folder contains the platform-specific Java runtime.</p>
-<p>To make it even more comfortable for the user, we'll provide an installer:</p>
+<h2 id="-">创建本地包</h2>
+<p>目标是在用户的计算机上单个目录中创建一个自包含的应用程序。下面是AddressApp应用看起来的样子（在Windows上）:</p>
+<p><img src="/assets/library/javafx-8-tutorial/part7/native-package.png" alt="AddressApp本地包"></p>
+<p><code>app</code>目录包含我们的应用数据和<code>runtime</code>目录（包含平台相关的Java运行时）。</p>
+<p>为了让用户更加舒适，我们也提供一个安装器：</p>
 <ul>
-<li>A <code>exe</code> file installer on windows</li>
-<li>A <code>dmg</code> (drag and drop) installer for MacOS.</li>
+<li>Windows下的<code>exe</code>文件安装器</li>
+<li>MacOS下的<code>dmg</code>（拖放）安装器。</li>
 </ul>
-<p>The e(fx)clipse plugin will help us generate the native package and installer.</p>
-<h3 id="step-1-edit-build-fxbuild">Step 1 - Edit build.fxbuild</h3>
-<p>The file <code>build.fxbuild</code> is used by e(fx)clipse to generate a file that will be used by the Ant build tool. (If you don't have a <code>build.fxbuild</code> file, create a new <em>Java FX Project</em> in Eclipse and copy the generated file.)</p>
+<p>E(fx)clipse插件会帮助我们生成本地包和安装器。</p>
+<h3 id="-1-build-fxbuild">第1步 编辑build.fxbuild</h3>
+<p>E(fx)clipse使用<code>build.fxbuild</code>文件生成一个被Ant编译工具使用的文件。（如果你没有一个<code>build.fxbuid</code>文件，在Eclipse中创建一个新的<strong>Java FX项目</strong>，并且拷贝生成的文件过来。</p>
 <ol>
-<li><p>Open <code>build.fxbuild</code> from your project root.</p>
+<li><p>从项目的根目录下打开<code>build.fxbuild</code>。</p>
 </li>
-<li><p>Fill out all the fields containing a star. <em>For MacOS: Do not use spaces in Application title as this seems to cause a problem.</em><br><img src="/assets/library/javafx-8-tutorial/part7/fxbuild-settings.png" alt="fxbuild settings"></p>
+<li><p>填写包含一个星号的字段。<em>对于MacOS：在应用程序标题中不能使用空格，因为好像会产生问题</em>。
+<img src="/assets/library/javafx-8-tutorial/part7/fxbuild-settings.png" alt="fxbuild设置"></p>
 </li>
-<li><p>As <strong>Packaging Format</strong> choose <code>exe</code> for Windows, <code>dmg</code> for MacOS, and <code>rpm</code> for Linux.</p>
+<li><p>在Windows下<strong>Packaging Format</strong>选择<code>exe</code>，MacOS下选择<code>dmg</code>，Linux下选择<code>rpm</code></p>
 </li>
-<li><p>Click on the link <code>Generate ant build.xml only</code> (found on the right side).<br><img src="/assets/library/javafx-8-tutorial/part7/generate-ant-build.png" alt="generate ant build"></p>
+<li><p>点击<code>Generate ant build.xml only</code>的连接（在右边可以找到）。
+<img src="/assets/library/javafx-8-tutorial/part7/generate-ant-build.png" alt="生成ant编译"></p>
 </li>
-<li><p>Verify that a new <code>build</code> folder and a file <code>build.xml</code> is created.</p>
+<li><p>验证是否创建一个新的<code>build</code>目录和文件<code>build.xml</code></p>
 </li>
 </ol>
-<h3 id="step-2-add-installer-icons">Step 2 - Add Installer Icons</h3>
-<p>We would like to have some nice icons for our installer:</p>
+<h3 id="-2-">第2步 添加安装程序的图标</h3>
+<p>我们希望安装程序有一些好看的图标:</p>
 <ul>
-<li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp.ico">AddressApp.ico</a> for the installer file icon</li>
-<li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp-setup-icon.bmp">AddressApp-setup-icon.bmp</a> for the installer splash screen icon</li>
-<li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp.icns">AddressApp.icns</a> for the mac installer icon</li>
+<li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp.ico">AddressApp.ico</a> 安装文件图标</li>
+<li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp-setup-icon.bmp">AddressApp-setup-icon.bmp</a> 安装启动画面图标</li>
+<li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp.icns">AddressApp.icns</a> Mac安装程序图标</li>
 </ul>
 <ol>
-<li>Create the following subfolders in the <code>build</code> folder:<ul>
-<li><code>build/package/windows</code> (only used for windows)</li>
-<li><code>build/package/macos</code> (only used for macos)</li>
+<li>在<code>build</code>目录下创建下面的子目录:<ul>
+<li><code>build/package/windows</code> (只用于Windows)</li>
+<li><code>build/package/macos</code> (只用于macos)</li>
 </ul>
 </li>
-<li>Copy the corresponding icons from above into those subfolders. It should look something like this now:<br><img src="/assets/library/javafx-8-tutorial/part7/installer-icons.png" alt="Installer Icons"></li>
-<li><strong>Important</strong>: The name of the icons must exactly match the <strong>Application title</strong> you specified in <code>build.fxbuild</code>:<ul>
+<li>拷贝上面的相关图标到这些目录中，现在它应该看起来如下所示:<br><img src="/assets/library/javafx-8-tutorial/part7/installer-icons.png" alt="安装器图标"></li>
+<li><strong>重要</strong>：图标的名称必须精确匹配<code>build.fxbuild</code>中指定的<strong>Application的标题名</strong>：<ul>
 <li><code>YourAppTitle.ico</code></li>
 <li><code>YourAppTitle-setup-icon.bmp</code></li>
 <li><code>YourAppTitle.icns</code></li>
 </ul>
 </li>
 </ol>
-<h3 id="step-3-add-resources">Step 3 - Add Resources</h3>
-<p>Our <code>resources</code> folder isn't copied automatically. We must manually add it to the build directory:</p>
+<h3 id="-3-">第3步 添加资源</h3>
+<p>我们的<code>resources</code>目录不能自动拷贝。我们必须手动添加它到build目录下:</p>
 <ol>
-<li>Create the following subfolder in the <code>build</code> folder:<ul>
+<li>在<code>build</code>目录下创建下面的子目录:<ul>
 <li><code>build/dist</code>   </li>
 </ul>
 </li>
-<li>Copy the <code>resources</code> folder (containing our application images) into <code>build/dist</code>.<br><img src="/assets/library/javafx-8-tutorial/part7/build-resources.png" alt="Build Resources"></li>
+<li>拷贝<code>resources</code>目录（包含我们应用的图标）到<code>build/dist</code>.<br><img src="/assets/library/javafx-8-tutorial/part7/build-resources.png" alt="编译资源"></li>
 </ol>
-<h3 id="step-4-edit-build-xml-to-include-icons">Step 4 - Edit build.xml to include icons</h3>
-<p>E(fx)clipse has generated a file <code>build/build.xml</code> which is ready to be executed by <strong>Ant</strong>. Our installer icons and resource images just won't work. </p>
-<p>As e(fx)clipse can't be told (yet?) to include additional resources like our <code>resources</code> folder and the few installer icons we've added above, we have to manually edit the <code>build.xml</code>:</p>
-<p>Open <code>build.xml</code> and find the path <code>fxant</code>. Add one line for the <code>${basedir}</code> (will make our installer icons available):</p>
-<h5 id="build-xml-add-basedir-">build.xml - add "basedir"</h5>
+<h3 id="-4-build-xml-">第4步 编辑build.xml包含图标</h3>
+<p>E(fx)clipse生成的<code>build/build.xml</code>文件（准备使用<strong>Ant</strong>执行）。我们的安装器图标和资源图像不能正常工作。</p>
+<p>当e(fx)clipse没有告诉它包含其它资源，例如<code>resources</code>目录和上面添加的安装文件图标时，我们必须手动编辑<code>build.xml</code>文件。</p>
+<p>打开<code>build.xml</code>文件，找到路径<code>fxant</code>。添加一行到<code>${basedir}</code>（将让我们安装器图标可用）。</p>
+<h5 id="build-xml-basedir-">build.xml - 添加"basedir"</h5>
 <pre class="prettyprint lang-xml">
 &lt;path id="fxant"&gt;
   &lt;filelist&gt;
@@ -316,8 +314,8 @@
 </pre>    
 
 
-<p>Find the block <code>fx:resources id="appRes"</code> further down in the file. Add one line for our <code>resources</code>:</p>
-<h5 id="build-xml-add-resources-">build.xml - add "resources"</h5>
+<p>找到块<code>fx:resources id="appRes"</code>，文件的更下面位置。为<code>resources</code>添加一行：</p>
+<h5 id="build-xml-resources-">build.xml - 添加"resources"</h5>
 <pre class="prettyprint lang-xml">
 &lt;fx:resources id="appRes"&gt;
     &lt;fx:fileset dir="dist" includes="AddressApp.jar"/&gt;
@@ -327,8 +325,9 @@
 </pre>
 
 
-<p>Somehow, the version number doesn't get added in the <code>fx:application</code> which makes the installer always default to version <code>1.0</code> (as pointed out by a few people in the comments). To fix this, manually add the version number (thanks Marc for <a href="http://code.makery.ch/java/javafx-8-tutorial-part7/#comment-1566725959">finding out</a>):</p>
-<h5 id="build-xml-add-version-">build.xml - add "version"</h5>
+<p>有时候，版本数不能添加到<code>fx:application</code>中，使得安装器总是缺省的版本<code>1.0</code>（在注释中很多人指出这个问题）。为了修复它，手动添加版本号（感谢Marc找到解决办法）。
+<a href="http://code.makery.ch/java/javafx-8-tutorial-part7/#comment-1566725959">解决</a>):</p>
+<h5 id="build-xml-version-">build.xml - 添加 "version"</h5>
 <pre class="prettyprint lang-xml">
 &lt;fx:application id="fxApplication"
     name="AddressApp"
@@ -337,41 +336,41 @@
 />
 </pre>
 
-<p>We could already run the <code>build.xml</code> as an Ant build at this point. This would generate a runnable jar file of the project. But we want to go a step further and create a nice installer.</p>
-<h3 id="step-5-windows-windows-exe-installer">Step 5 (WINDOWS) - Windows exe Installer</h3>
-<p><img src="/assets/library/javafx-8-tutorial/part7/addressapp-windows.png" alt="AddressApp on Windows"></p>
-<p>With <strong>Inno Setup</strong> we can create a Windows Installer of our application as a single <code>.exe</code> file. The resulting <code>.exe</code> will perform a user level installation (no admin permissions required). Also a shortcut will be created (menu or desktop).</p>
+<p>现在，我们已经能够使用ant编译运行<code>build.xml</code>了。这将会生成一个可运行的项目jar文件。但是我们希望更进一步，创建一个很好的安装器。</p>
+<h3 id="-5-windows-windows-exe-">第5步（Windows） - Windows exe安装器</h3>
+<p><img src="/assets/library/javafx-8-tutorial/part7/addressapp-windows.png" alt="Windows下AddressApp"></p>
+<p>使用<strong>Inno Setup</strong>，我们能为我们的应用程序创建一个单独<code>.exe</code>文件的Windows安装器。生成的<code>.exe</code>执行用户级别的安装（无需管理员权限）。也创建一个快捷方式（菜单和桌面）。</p>
 <ol>
-<li><p>Download <a href="http://www.jrsoftware.org/isdl.php">Inno Setup 5 or later</a>. Install Inno Setup on your computer. Our Ant script will use it to automatically generate the installer.</p>
+<li><p>下载<a href="http://www.jrsoftware.org/isdl.php">Inno Setup 5</a>以后版本，安装Inno程序到你的计算机上。我们的Ant脚本将使用它自动生成安装器。</p>
 </li>
-<li><p>Tell Windows about the installation path to Inno Setup (e.g. <code>C:\Program Files (x86)\Inno Setup 5</code>). To do this add Inno Setup to the <code>Path</code> variable in your windows environment variables. If you don't know where to find it, read <a href="http://www.computerhope.com/issues/ch000549.htm">How to set the path and environment variables in Windows</a>.</p>
+<li><p>告诉Windows Inno程序的安装路径（例如：<code>C:\Program Files (x86)\Inno Setup 5）</code>。添加Inno安装路径到Path环境变量中。如果你不知道哪里可以找到它，阅读<a href="http://www.computerhope.com/issues/ch000549.htm">Windows中如何设置路径和环境变量</a>.</p>
 </li>
-<li><p>Restart Eclipse and continue with Step 5.</p>
+<li><p>重启Eclipse，并且继续第6步。</p>
 </li>
 </ol>
-<h3 id="step-5-mac-macos-dmg-installer">Step 5 (MAC) - MacOS dmg Installer</h3>
-<p><img src="/assets/library/javafx-8-tutorial/part7/addressapp-macos.png" alt="AddressApp on Mac"></p>
-<p>To create a Mac OS <code>dmg</code> drag-and-drop installer, no additional tool is required.</p>
-<p>Note: For the installer image to work it must have exactly the same name as the application.</p>
-<h3 id="step-5-linux-etc-linux-rpm-installer">Step 5 (LINUX etc.) - Linux rpm Installer</h3>
-<p>For other packaging options (<code>msi</code> for windows, <code>rpm</code> for Linux) see this native packaging <a href="https://blogs.oracle.com/talkingjavadeployment/entry/native_packaging_for_javafx">blog post</a> or this <a href="http://docs.oracle.com/javafx/2/deployment/self-contained-packaging.htm#A1324980">oracle documentation</a>.</p>
-<h3 id="step-6-run-build-xml">Step 6 - Run build.xml</h3>
-<p>As a final step, we run the <code>build.xml</code> with Ant: <em>Right-click</em> on the <code>build.xml</code> file | <em>Run As</em> | <em>Ant Build</em>.</p>
-<p><img src="/assets/library/javafx-8-tutorial/part7/run-ant-build.png" alt="Run Ant Build"></p>
-<p>The building <strong>will take a while</strong> (about 1 minute on my computer).</p>
-<p>If everything was successful, you should find the native bundle in the folder <code>build/deploy/bundles</code>. This is how the windows version looks like:</p>
-<p><img src="/assets/library/javafx-8-tutorial/part7/deployed-file.png" alt="Deployed File"></p>
-<p>The file <code>AddressApp-1.0.exe</code> can be used as a single file to install the application. This installer will copy the bundle to <code>C:/Users/[yourname]/AppData/Local/AddressApp</code>.</p>
-<h3 id="what-s-next-">What's Next?</h3>
-<p>I hope this tutorial was a help for you to get started with JavaFX and you'll be able to write your own JavaFX project from here.</p>
-<p>I appreciate any feedback. Feel free to write comments if you have any suggestions or if something was unclear.</p>
-<h5 id="some-other-articles-you-might-find-interesting">Some other articles you might find interesting</h5>
+<h3 id="-5-mac-macos-dmg-">第5步（MAC） - MacOS dmg安装器</h3>
+<p><img src="/assets/library/javafx-8-tutorial/part7/addressapp-macos.png" alt="MAC中AddressApp"></p>
+<p>为了创建Mac OS <code>dmg</code>拖放安装器，不需要任何的要求。</p>
+<p>注意：为了让安装器映像能工作，它的名称必须与应用名称相同。</p>
+<h3 id="-5-linux-linux-rpm-">第5步（Linux等） Linux rpm安装器</h3>
+<p>其它打包选项（Windows的<code>msi</code>，Linux的<code>rpm</code>）参考本地打包<a href="https://blogs.oracle.com/talkingjavadeployment/entry/native_packaging_for_javafx">博客</a> 或者本<a href="http://docs.oracle.com/javafx/2/deployment/self-contained-packaging.htm#A1324980">oracle 文档</a>.</p>
+<h3 id="-6-build-xml">第6步 运行build.xml</h3>
+<p>最后一步，我们使用ant运行<code>build.xml</code>，<em>右击</em> <code>build.xml</code>文件| <em>Run As</em> | <em>Ant Build</em>。</p>
+<p><img src="/assets/library/javafx-8-tutorial/part7/run-ant-build.png" alt="运行Ant编译"></p>
+<p>编译将<strong>运行一会</strong>（在我的计算机上大概1分钟）。</p>
+<p>如果一切都成功，你应该在<code>build/deploy/bundles</code>目录下找到本地打包。Windows版本看起来如下所示：</p>
+<p><img src="/assets/library/javafx-8-tutorial/part7/deployed-file.png" alt="部署文件"></p>
+<p>文件<code>AddressApp-1.0.exe</code>可以用作为单个文件安装应用。该安装程序将拷贝打包到<code>C:/Users/[yourname]/AppData/Local/AddressApp</code>目录下。</p>
+<h3 id="-">下一步是什么？</h3>
+<p>我希望本教程对你开始学习JavaFX会有所帮助，从此你将能够编写自己的JavaFX项目。</p>
+<p>我感谢你的反馈。如果你有任何建议或者不清楚的地方，随便写评论。</p>
+<h5 id="-">一些其它的你可能感兴趣的文章</h5>
 <ul>
-<li><a href="/blog/javafx-8-dialogs/">JavaFX Dialogs</a></li>
-<li><a href="/blog/javafx-8-date-picker/">JavaFX Date Picker</a></li>
-<li><a href="/blog/javafx-8-event-handling-examples/">JavaFX Event Handling Examples</a></li>
-<li><a href="/blog/javafx-8-tableview-sorting-filtering/">JavaFX TableView Sorting and Filtering</a></li>
-<li><a href="/blog/javafx-8-tableview-cell-renderer/">JavaFX TableView Cell Renderer</a></li>
+<li><a href="/blog/javafx-8-dialogs/">JavaFX对话框</a></li>
+<li><a href="/blog/javafx-8-date-picker/">JavaFX日期选择器</a></li>
+<li><a href="/blog/javafx-8-event-handling-examples/">JavaFX事件处理例子</a></li>
+<li><a href="/blog/javafx-8-tableview-sorting-filtering/">JavaFX TableView排序和过滤</a></li>
+<li><a href="/blog/javafx-8-tableview-cell-renderer/">JavaFX TableView单元渲染器</a></li>
 </ul>
 
 
