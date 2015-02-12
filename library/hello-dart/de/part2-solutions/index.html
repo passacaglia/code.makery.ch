@@ -1,0 +1,309 @@
+﻿<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello Dart - Lösungen Teil 2 | code.makery.ch</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    /**
+     * @license
+     * MyFonts Webfont Build ID 2872352, 2014-08-27T06:57:40-0400
+     * 
+     * The fonts listed in this notice are subject to the End User License
+     * Agreement(s) entered into by the website owner. All other parties are 
+     * explicitly restricted from using the Licensed Webfonts(s).
+     * 
+     * You may obtain a valid license at the URLs below.
+     * 
+     * Webfont: Museo Slab 700 by exljbris
+     * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/700/
+     * Copyright: Copyright (c) 2009 by Jos Buivenga. All rights reserved.
+     * Licensed pageviews: 500,000
+     * 
+     * License: http://www.myfonts.com/viewlicense?type=web&buildid=2872352
+     * 
+     * © 2014 MyFonts Inc
+    */
+    -->
+    <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part2-solutions/" />
+  
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
+
+    <meta name="description" content="Lösungen zu Hello Dart Teil 2.">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Hello Dart - Lösungen Teil 2 | code.makery.ch" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="Lösungen zu Hello Dart Teil 2." />
+    <meta property="og:url" content="http://code.makery.ch/library/hello-dart/de/part2-solutions/" />
+    <meta property="og:image" content="http://code.makery.ch/assets/library/hello-dart/hello-dart.png" />
+    
+    <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
+    
+    <link href="/theme/css/prettify.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-34917397-3', 'makery.ch');
+  ga('send', 'pageview');
+</script>
+  </head>
+  <body onload="prettyPrint()">
+    <header class="site-header container">
+  <h1 class="site-title">
+    <a href="/"><span class="main-text">code</span>.makery</a>
+  </h1>
+  <div class="site-intro">
+    <p>Learning how to code.</p>
+  </div>
+  
+  <div class="ribbon">
+    <a href="https://tinyletter.com/code-makery" title="Get Updates">Subscribe to <i class="fa fa-envelope-o"></i> Updates </a>
+  </div>
+</header>
+    
+    <div class="container article-container">
+      
+<nav class="site-navigation">
+  <ul>
+    <li><a class="black-link" href="/">Home</a></li>
+    <li><a class="main-link" href="/library/">Library</a></li>
+    <li><a class="black-link" href="/paths/">Paths</a></li>
+    <li><a class="black-link" href="/blog/">Blog</a></li>
+    <li><a class="black-link" href="/about/">About</a></li>
+  </ul>
+</nav>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="github-edit">
+            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/hello-dart-de-part2-solutions.md">Edit on GitHub</a>
+          </div>
+        </div>
+      </div>
+      
+      <article class="row">
+        <aside class="col-md-3">
+          <div class="visible-md-block visible-lg-block">
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Artikel dieser Serie</h4>  
+  </div>
+
+  <div class="list-group">
+      <a href="/library/hello-dart/de/" class="list-group-item">
+        Einleitung</a>
+      <a href="/library/hello-dart/de/part1/" class="list-group-item">
+        Teil 1: Erste Schritte</a>
+      <a href="/library/hello-dart/de/part2/" class="list-group-item">
+        Teil 2: Programmfluss</a>
+      <a href="/library/hello-dart/de/part3/" class="list-group-item">
+        Teil 3: Variablen</a>
+      <a href="/library/hello-dart/de/part4/" class="list-group-item">
+        Teil 4: Funktionen</a>
+  </div>
+</div>
+<div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Lösungen</h4>  
+  </div>
+
+  <div class="list-group">
+      <a href="/library/hello-dart/de/part2-solutions/" class="list-group-item active">
+<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 2</a>
+  </div>
+</div>
+<div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Links</h4>  
+  </div>
+
+  <div class="list-group">
+      <a href="/library/convert-web-page-to-word/de/" class="list-group-item">
+<i class="fa fa-fw fa-file-word-o"></i>        Seite als Word-Datei</a>
+  </div>
+</div>
+
+          </div>
+        </aside>
+        <div class="col-md-9">
+          <header class="article-header">
+            <h1 class="article-title">Hello Dart - Lösungen Teil 2</h1>
+            <div class="article-date">
+  Jan 21, 2015
+
+</div>
+          </header>
+          
+          <aside class="visible-xs-block visible-sm-block">
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Artikel dieser Serie <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class=""><a href="/library/hello-dart/de/">
+        Einleitung</a></li>
+      <li class=""><a href="/library/hello-dart/de/part1/">
+        Teil 1: Erste Schritte</a></li>
+      <li class=""><a href="/library/hello-dart/de/part2/">
+        Teil 2: Programmfluss</a></li>
+      <li class=""><a href="/library/hello-dart/de/part3/">
+        Teil 3: Variablen</a></li>
+      <li class=""><a href="/library/hello-dart/de/part4/">
+        Teil 4: Funktionen</a></li>
+  </ul>
+</div>
+<div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Lösungen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class=" active"><a href="/library/hello-dart/de/part2-solutions/">
+<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 2</a></li>
+  </ul>
+</div>
+<div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Links <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class=""><a href="/library/convert-web-page-to-word/de/">
+<i class="fa fa-fw fa-file-word-o"></i>        Seite als Word-Datei</a></li>
+  </ul>
+</div>
+
+          </aside>
+          
+          <div class="article-content">
+            <h4 id="-i-class-fa-fa-check-square-o-i-l-sung-aufgabe-2-01-loop"><i class="fa fa-check-square-o"></i> LÖSUNG AUFGABE 2.01: Loop</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    while (canMove()) {
+      move();
+    }
+  }
+}
+</pre>
+
+
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-2-02-loop-star"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 2.02: Loop Star</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    while (!onStar()) {
+      move();
+    }
+  }
+}
+</pre>
+
+
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-2-03-leaving-the-tunnel"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 2.03: Leaving the Tunnel</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    while (treeLeft() &amp;&amp; treeRight()) {
+      move();
+    }
+
+    putStar();
+  }
+}
+</pre>
+
+
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-2-04-conditionals"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 2.04: Conditionals</h4>
+<h5 id="a-">a.</h5>
+<p>Nimmt den Stern weg, wenn es einen hat.</p>
+<h5 id="b-">b.</h5>
+<p>Nimmt den Stern weg, wenn es einen hat und legt einen Stern hin, wenn es keinen hat (Invertieren).</p>
+<h5 id="c-">c.</h5>
+<p>Nimmt den Stern weg, wenn links ein Baum steht.</p>
+
+
+          </div>
+          
+          <hr>
+          
+  <nav>
+    <div class="article-paging">
+      <ul class="pagination">
+              <li>
+      <a href="/library/hello-dart/de/" data-toggle="tooltip" title="Einleitung">Einleitung</a>
+      </li>
+        <li>
+      <a href="/library/hello-dart/de/part1/" data-toggle="tooltip" title="Teil 1: Erste Schritte">1</a>
+      </li>
+        <li>
+      <a href="/library/hello-dart/de/part2/" data-toggle="tooltip" title="Teil 2: Programmfluss">2</a>
+      </li>
+        <li>
+      <a href="/library/hello-dart/de/part3/" data-toggle="tooltip" title="Teil 3: Variablen">3</a>
+      </li>
+        <li>
+      <a href="/library/hello-dart/de/part4/" data-toggle="tooltip" title="Teil 4: Funktionen">4</a>
+      </li>
+      
+      </ul>
+    </div>
+  </nav>
+
+        </div>
+      </article>
+      
+      
+    </div>
+    
+    <footer class="site-footer container-fluid">
+  <div class="row">
+    <div class="col-sm-offset-2 col-sm-8">
+      <p>
+        Thanks for reading.<br />
+        Subscribe to the <a href="/rss">RSS feed</a> or receive updates by <a href="https://tinyletter.com/code-makery">Email</a>.
+      </p>
+      
+      <form class="form-inline" action="https://tinyletter.com/code-makery" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/code-makery', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+        <div class="form-group">
+          <input type="text" class="form-control" name="email" id="tlemail" placeholder="Enter email" />
+          <input type="hidden" value="1" name="embed"/>
+          <input type="submit" class="form-control btn-primary" value="Get updates" />
+        </div>
+      </form>
+      
+      <p>
+        <small>
+          Created by <a href="/about">Marco Jakob</a> • Licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a>
+        </small>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    
+    
+    
+  <script type="text/javascript" src="/theme/js/prettify.min.js"></script>
+
+    
+    
+
+    
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script type="text/javascript" src="/theme/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="/theme/js/bootstrap-init-tooltips.min.js"></script>
+    
+  </body>
+</html>

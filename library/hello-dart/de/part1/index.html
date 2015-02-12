@@ -147,9 +147,8 @@
 </div>
           </header>
           
-          <div class="visible-xs-block visible-sm-block">
-            <aside>
-              <div class="btn-group sidebar-dropdown">
+          <aside class="visible-xs-block visible-sm-block">
+            <div class="btn-group sidebar-dropdown">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Artikel dieser Serie <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
@@ -182,10 +181,9 @@
   </ul>
 </div>
 
-            </aside>
-          </div>
+          </aside>
           
-          <section class="article-content">
+          <div class="article-content">
             <p>In diesem ersten Teil wagen wir unsere ersten Schritte im Programmieren.  </p>
 <p><img src="/assets/library/hello-dart/part1/hello.png" alt="Hello Dart"></p>
 <h3 id="voraussetzungen">Voraussetzungen</h3>
@@ -199,7 +197,7 @@
 <p><img src="/assets/library/hello-dart/part1/my-player.png" alt="My Player"></p>
 <p>Betrachten wir einmal die <strong>Klasse</strong> <code>MyPlayer</code>. Zwischen den geschweiften Klammern <code>{</code> und <code>}</code> werden die Eigenschaften und das Verhalten unseres Spielers definiert. </p>
 <p>Das Einzige, was im Moment in dieser Klasse steht ist <code>start()</code> und drei Anweisungen für die Bewegungen des Spielers. <code>start()</code> ist eine Funktion (wird manchmal auch Methode genannt). Darin können wir das Verhalten unseres Spieleres verändern.</p>
-<h4 id="-i-class-fa-fa-rocket-i-aufgabe-1-01-first-steps"><i class="fa fa-rocket"></i> AUFGABE 1.01: First Steps</h4>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-1-01-first-steps"><i class="fa fa-rocket mg-t"></i> AUFGABE 1.01: First Steps</h4>
 <p>Ändern Sie die <code>start()</code>-Funktion so ab, dass der Spieler zuerst einen Schritt macht, dann einen Stern legt und schliesslich wieder einen Schritt macht.</p>
 <p>In der <a href="/library/hello-dart/de/">Einleitung</a> finden Sie alle Befehle, die ein Spieler ausführen kann.</p>
 <div class="alert alert-info">
@@ -214,7 +212,7 @@
 <h2 id="welt-gestalten">Welt gestalten</h2>
 <p>Die Szenarien von <code>Hello Dart</code> beinhalten zusätzliche Grafiken, die Sie nach Ihren Vorlieben einschalten können.</p>
 <p><img src="/assets/library/hello-dart/part1/catgirl.png" alt="Catgirl"></p>
-<h4 id="-i-class-fa-fa-rocket-i-aufgabe-1-02-world-design"><i class="fa fa-rocket"></i> AUFGABE 1.02: World Design</h4>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-1-02-world-design"><i class="fa fa-rocket mg-t"></i> AUFGABE 1.02: World Design</h4>
 <p>Ändern Sie die <code>main()</code>-Funktion wie folgt ab:</p>
 <pre class="prettyprint lang-dart">
 main() {
@@ -228,16 +226,16 @@ main() {
 <p>Für <strong>character</strong> können Sie innerhalb der Anführungszeichen die Werte <code>boy</code>, <code>catgirl</code>, <code>stargirl</code> oder <code>pinkgirl</code> verwenden.</p>
 <p>Für <strong>field</strong> sind die Werte <code>grass</code>, <code>stone</code>, <code>wood</code> oder <code>dirt</code> gültig.</p>
 <div class="alert alert-info">
-  <strong>Tipp:</strong> Um eine Änderung zu testen geht es am schnellsten, wenn man <code>Ctrl+S</code> (oder <code>⌘+S</code>) klickt zum Speichern und anschliessend im Browser <code>F5</code> (oder <code>⌘+R</code>) zum Aktualisieren.
+  <strong>Tipp:</strong> Um eine Änderung zu testen geht es am schnellsten, wenn man <code>Ctrl+S</code> (oder <code>⌘+S</code>) zum Speichern und anschliessend im Browser <code>F5</code> (oder <code>⌘+R</code>) zum Aktualisieren klickt.
 </div>
 
 
-<h4 id="-i-class-fa-fa-rocket-i-aufgabe-1-03-around-tree"><i class="fa fa-rocket"></i> AUFGABE 1.03: Around Tree</h4>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-1-03-around-tree"><i class="fa fa-rocket mg-t"></i> AUFGABE 1.03: Around Tree</h4>
 <p>Öffnen Sie <code>scenario1.03</code>. Wenn Sie das Szenario starten, dann sollten Sie eine Welt mit drei Bäumen und einem Stern sehen.</p>
 <p>Schreiben Sie ein Programm, welches Ihren Spieler auf dem angegebenen Weg zum Stern führt. Er muss dabei um die Bäume herumlaufen. Beim Stern angekommen, soll er ihn entfernen.</p>
 <p><img src="/assets/library/hello-dart/part1/around-tree.png" alt="Around Tree"></p>
 <h2 id="neue-funktionen">Neue Funktionen</h2>
-<h4 id="-i-class-fa-fa-rocket-i-aufgabe-1-04-around-tree-with-method"><i class="fa fa-rocket"></i> AUFGABE 1.04: Around Tree with Method</h4>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-1-04-around-tree-with-method"><i class="fa fa-rocket mg-t"></i> AUFGABE 1.04: Around Tree with Method</h4>
 <p>Wenn Sie Aufgabe 1.03 korrekt gelöst haben, so wird Ihr Programm wahrscheinlich <em>drei gleiche Teile</em> enthalten, nämlich für das Herumgehen um jeden Baum. Dies können wir zur besseren Übersicht noch etwas erweitern, indem wir eine neue Funktion einführen. Unterhalb der schliessenden Klammer <code>}</code> von der <code>start()</code>-Funktion erstellen wir eine neue Funktion:</p>
 <pre class="prettyprint lang-dart">
 goAroundTree() {
@@ -256,7 +254,7 @@ Viele Übungen in <code>Hello Dart</code> sind inspiriert von <a href="http://ww
 </em></p>
 
 
-          </section>
+          </div>
           
           <hr>
           
@@ -284,7 +282,6 @@ Viele Übungen in <code>Hello Dart</code> sind inspiriert von <a href="http://ww
   </nav>
 
         </div>
-        
       </article>
       
       

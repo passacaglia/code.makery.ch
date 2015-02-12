@@ -147,9 +147,8 @@
 </div>
           </header>
           
-          <div class="visible-xs-block visible-sm-block">
-            <aside>
-              <div class="btn-group sidebar-dropdown">
+          <aside class="visible-xs-block visible-sm-block">
+            <div class="btn-group sidebar-dropdown">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Artikel dieser Serie <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
@@ -182,11 +181,120 @@
   </ul>
 </div>
 
-            </aside>
-          </div>
+          </aside>
           
-          <section class="article-content">
-            <hr>
+          <div class="article-content">
+            <p>Im letzten Teil haben wir gelernt, wie wir unserem Spieler eine Reihe von Anweisungen geben können. Anstatt jede Anweisung einzeln aufzuführen, können wir auch Anweisungen wiederholen lassen. Beim Programmieren nennt man solche Wiederholungen <em>Schleifen</em>.</p>
+<h2 id="schleifen">Schleifen</h2>
+<p>Als erstes Beispiel für eine Schleife möchten wir Folgendes tun: </p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-2-01-loop"><i class="fa fa-rocket mg-t"></i> AUFGABE 2.01: Loop</h4>
+<p><img src="/assets/library/hello-dart/part2/loop.png" alt="Schleife"></p>
+<p>Der Spieler soll sich solange vorwärts bewegen, bis er nicht mehr weiter kann.</p>
+<p>In Dart können wir das wie folgt ausdrücken:</p>
+<pre class="prettyprint lang-dart">
+while (canMove()) {
+  move();
+}
+</pre>
+
+<p>Mit <code>while</code> wird etwas solange wiederholt, wie die Bedingung in der Klammer zutrifft. Wenn eine Bedingung zutrifft, dann ist sie <code>true</code> (=wahr). Sobald der Spieler am Rand ankommt, dann meldet die Sensor-Funktion <code>canMove()</code> den Wert <code>false</code> (=falsch) zurück und der Spieler hört auf, sich zu bewegen.</p>
+<p>Testen Sie dieses Programm, indem Sie die <code>while</code>-Schleife in die <code>start()</code>-Funktion von <code>scenario2.01</code> hinein schreiben.</p>
+<h2 id="logische-operatoren">Logische Operatoren</h2>
+<p>Unsere Sensor-Funktionen (siehe <a href="/library/hello-dart/de/#sensoren">Einleitung</a>) antworten alle entweder mit <code>true</code> oder <code>false</code>, wenn man diese aufruft. Solche Werte nennt man einen <a href="http://de.wikipedia.org/wiki/Boolesche_Variable">booleschen Wert</a>.  </p>
+<p>Boolesche Werte können mit Hilfe von logischen Operatoren auch kombiniert oder verändert werden. Die folgende Tabelle zeigt die drei wichtigsten logischen Operatoren in Dart:</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Beschreibung</th>
+      <th>Beispiel</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>&amp;&amp;</code></td>
+      <td>und</td>
+      <td><code>treeFront() &amp;&amp; onStar()</code></td>
+      <td>Ist erfüllt (true), wenn beide Aussagen erfüllt sind, das heisst wenn der Spieler vor einem Baum <strong>und</strong> auf einem Stern steht.</td>
+    </tr>
+    <tr>
+      <td><code>||</code></td>
+      <td>oder</td>
+      <td><code>treeFront() || onStar()</code></td>
+      <td>Ist dann erfüllt (true), wenn entweder die eine <strong>oder</strong> die andere Aussage oder beide erfüllt sind.</td>
+    </tr>
+    <tr>
+      <td><code>!</code></td>
+      <td>nicht</td>
+      <td><code>!treeFront()</code></td>
+      <td>Ändert einen Ausdruck von true in false und umgekehrt. Diese Aussage wäre also dann erfüllt (true), wenn der Spieler <strong>nicht</strong> vor einem Baum steht.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ein Beispiel in Dart würde wie folgt aussehen:</p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-2-02-loop-star"><i class="fa fa-rocket mg-t"></i> AUFGABE 2.02: Loop Star</h4>
+<p><img src="/assets/library/hello-dart/part2/loop-star.png" alt="Schleife mit Stern"></p>
+<p>Öffnen Sie das <code>scenario2.02</code> und programmieren Sie den Spieler mit einer Schleife so, dass er vorwärts läuft, bis er auf dem Stern steht. </p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-2-03-leaving-the-tunnel"><i class="fa fa-rocket mg-t"></i> AUFGABE 2.03: Leaving the Tunnel</h4>
+<p><img src="/assets/library/hello-dart/part2/leaving-the-tunnel.png" alt="Tunnel verlassen"></p>
+<p>Unser Spieler ist in einem Tunnel und möchte raus. Schreiben Sie ein Programm für <code>scenario2.03</code>, bei dem der Spieler aus dem Tunnel hinaus läuft und stehen bleibt, sobald auf einer der beiden Seiten kein Baum mehr steht.</p>
+<p>Am Schluss soll er ausserdem einen Stern ablegen.</p>
+<h2 id="bedingte-anweisungen">Bedingte Anweisungen</h2>
+<p>Neben den Schleifen gibt es eine zweite Struktur, die sehr wichtig ist, um den Programmablauf zu steuern. Mit bedingten Anweisungen kann man angeben, in wann ein Block von Anweisungen ausgeführt werden soll und wann nicht.</p>
+<pre class="prettyprint lang-dart">
+if (treeFront()) {    // Bedingung.
+  turnLeft();         // Block 1 wird ausgeführt, wenn Bedingung true ist.
+} else {
+  move();             // Block 2 wird ausgeführt, wenn Bedingung false ist.
+}
+</pre>
+
+<p><strong>Hinweis: Der <code>else</code>-Teil (Block 2) kann weggelassen werden, wenn er nicht benötigt wird.</strong></p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-2-04-conditionals"><i class="fa fa-rocket mg-t"></i> AUFGABE 2.04: Conditionals</h4>
+<p>Beschreiben Sie mit Worten, was die folgenden Codebeispiele bewirken. Testen Sie diese anschliessend im <code>scenario2.04</code>. Damit die bedingten Anweisungen nicht nur einmal ausgeführt werden, sollten sie diese in die vorbereitete Schleife setzen.</p>
+<h5 id="a-">a.</h5>
+<pre class="prettyprint lang-dart">
+if (onStar()) {
+  removeStar();
+}
+move();
+</pre>
+
+
+<h5 id="b-">b.</h5>
+<pre class="prettyprint lang-dart">
+if (onStar()) {
+  removeLeaf();
+} else {
+  putLeaf();
+}
+move();
+</pre>
+
+
+<h5 id="c-">c.</h5>
+<p>Bedingte Anweisungen können auch ineinander verschachtelt werden:</p>
+<pre class="prettyprint lang-dart">
+if (treeLeft()) {
+  if (onStar()) {
+    removeStar();
+  }
+}
+move();
+</pre>
+
+
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-2-05-star-at-tree"><i class="fa fa-rocket mg-t"></i> AUFGABE 2.05: Star at Tree</h4>
+<p><img src="/assets/library/hello-dart/part2/star-at-tree.png" alt="Blatt beim Baum"></p>
+<p>Der Spieler soll geradeaus gehen und überall dort einen Stern legen, wo entweder links oder rechts ein Baum steht.</p>
+<p>Öffnen Sie das <code>scenario2.05</code> und schreiben Sie das Programm dazu.</p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-2-06-afraid-of-tunnel"><i class="fa fa-rocket mg-t"></i> AUFGABE 2.06: Afraid of Tunnel</h4>
+<p><img src="/assets/library/hello-dart/part2/afraid-of-tunnel.png" alt="Angst vor dem Tunnel"></p>
+<p>Der Spieler hat Angst vor Tunneln. Er soll auf jedem Feld überprüfen, ob es ein Tunneleingang ist (das heisst, ob es auf beiden Seiten Bäumen hat). Ist dies der Fall, so soll er in einer Sprechblase sagen, dass er Angst hat.</p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-2-07-star-trak"><i class="fa fa-rocket mg-t"></i> AUFGABE 2.07: Star Trak</h4>
+<hr>
 <p><em>Quellen</em><br>
 <em class="small">
 <a href="http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html">Planet Cute</a> Bilder stammen von Daniel Cook (Lostgarden.com), veröffentlicht unter <a href="http://creativecommons.org/licenses/by/3.0/us/">CC BY 3.0</a>.<br>
@@ -195,7 +303,7 @@ Viele Übungen in <code>Hello Dart</code> sind inspiriert von <a href="http://ww
 </em></p>
 
 
-          </section>
+          </div>
           
           <hr>
           
@@ -223,7 +331,6 @@ Viele Übungen in <code>Hello Dart</code> sind inspiriert von <a href="http://ww
   </nav>
 
         </div>
-        
       </article>
       
       

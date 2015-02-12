@@ -86,12 +86,13 @@
   </ul>
 </nav>
       
-      <header class="post-header">
-        <h1 class="post-title">JavaFX 8 TableView Sorting and Filtering</h1>
-        
-        
-        
-        <div class="post-date text-center">
+      <article>
+        <header class="post-header">
+          <h1 class="post-title">JavaFX 8 TableView Sorting and Filtering</h1>
+          
+          
+          
+          <div class="post-date text-center">
   <span>
     Apr 30, 2014
     
@@ -109,10 +110,10 @@
     
   
 </div>
-      </header>
+        </header>
 
-      <section class="post-content">
-        <p>JavaFX 8 comes with two new classes, <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/collections/transformation/SortedList.html">SortedList</a> and <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/collections/transformation/FilteredList.html">FilteredList</a>. In JavaFX 2 we had to manually do the filtering as I've described in <a href="/blog/javafx-2-tableview-filter/">an earlier post</a>.</p>
+        <div class="post-content">
+          <p>JavaFX 8 comes with two new classes, <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/collections/transformation/SortedList.html">SortedList</a> and <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/collections/transformation/FilteredList.html">FilteredList</a>. In JavaFX 2 we had to manually do the filtering as I've described in <a href="/blog/javafx-2-tableview-filter/">an earlier post</a>.</p>
 <p>So, let's see how we can use the new classes to sort and filter a <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TableView.html">TableView</a>.</p>
 <h2 id="example-setup">Example Setup</h2>
 <p>As an example we'll create a simple table that displays <code>Person</code>s. The table should be filtered whenever the user enters something in the text field. </p>
@@ -240,7 +241,8 @@ public class PersonTableController {
 <p>Sorting and filtering has become more convenient in JavaFX 8. But not everything is straight forward: double-wrapping a list, binding a Comparator, and creating a lambda expression inside another lambda expression are things that are not all too common.</p>
 
 
-      </section>
+        </div>
+      </article>
       
       
       <hr>
