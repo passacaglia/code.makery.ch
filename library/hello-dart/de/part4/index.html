@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello Dart - Lösungen Teil 2 | code.makery.ch</title>
+    <title>Hello Dart - Teil 4: Funktionen | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -28,22 +28,22 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part2-solutions/" />
+    <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part4/" />
   
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
 
-    <meta name="description" content="Lösungen zu Hello Dart Teil 2.">
+    <meta name="description" content="">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Hello Dart - Lösungen Teil 2 | code.makery.ch" />
+    <meta property="og:title" content="Hello Dart - Teil 4: Funktionen | code.makery.ch" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Lösungen zu Hello Dart Teil 2." />
-    <meta property="og:url" content="http://code.makery.ch/library/hello-dart/de/part2-solutions/" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="http://code.makery.ch/library/hello-dart/de/part4/" />
     <meta property="og:image" content="http://code.makery.ch/assets/library/hello-dart/hello-dart.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
@@ -89,7 +89,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="github-edit">
-            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/hello-dart-de-part2-solutions.md">Edit on GitHub</a>
+            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/hello-dart-de-part4.md">Edit on GitHub</a>
           </div>
         </div>
       </div>
@@ -115,18 +115,8 @@
         Teil 2: Programmfluss</a>
       <a href="/library/hello-dart/de/part3/" class="list-group-item">
         Teil 3: Variablen</a>
-      <a href="/library/hello-dart/de/part4/" class="list-group-item">
+      <a href="/library/hello-dart/de/part4/" class="list-group-item active">
         Teil 4: Funktionen</a>
-  </div>
-</div>
-<div class="panel panel-default sidebar">
-  <div class="panel-heading">
-    <h4 class="panel-title">Lösungen</h4>  
-  </div>
-
-  <div class="list-group">
-      <a href="/library/hello-dart/de/part2-solutions/" class="list-group-item active">
-<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 2</a>
   </div>
 </div>
 <div class="panel panel-default sidebar">
@@ -144,7 +134,7 @@
         </aside>
         <div class="col-md-9">
           <header class="article-header">
-            <h1 class="article-title">Hello Dart - Lösungen Teil 2</h1>
+            <h1 class="article-title">Hello Dart - Teil 4: Funktionen</h1>
             <div class="article-date">
   Jan 21, 2015
 
@@ -168,16 +158,8 @@
         Teil 2: Programmfluss</a></li>
       <li class=""><a href="/library/hello-dart/de/part3/">
         Teil 3: Variablen</a></li>
-      <li class=""><a href="/library/hello-dart/de/part4/">
+      <li class=" active"><a href="/library/hello-dart/de/part4/">
         Teil 4: Funktionen</a></li>
-  </ul>
-</div>
-<div class="btn-group sidebar-dropdown">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Lösungen <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-      <li class=" active"><a href="/library/hello-dart/de/part2-solutions/">
-<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 2</a></li>
   </ul>
 </div>
 <div class="btn-group sidebar-dropdown">
@@ -192,54 +174,7 @@
           </aside>
           
           <div class="article-content">
-            <h4 id="-i-class-fa-fa-check-square-o-i-l-sung-aufgabe-2-01-loop"><i class="fa fa-check-square-o"></i> LÖSUNG AUFGABE 2.01: Loop</h4>
-<pre class="prettyprint lang-dart">
-class MyPlayer extends Player {
-
-  start() {
-    while (canMove()) {
-      move();
-    }
-  }
-}
-</pre>
-
-
-<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-2-02-loop-star"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 2.02: Loop Star</h4>
-<pre class="prettyprint lang-dart">
-class MyPlayer extends Player {
-
-  start() {
-    while (!onStar()) {
-      move();
-    }
-  }
-}
-</pre>
-
-
-<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-2-03-leaving-the-tunnel"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 2.03: Leaving the Tunnel</h4>
-<pre class="prettyprint lang-dart">
-class MyPlayer extends Player {
-
-  start() {
-    while (treeLeft() &amp;&amp; treeRight()) {
-      move();
-    }
-
-    putStar();
-  }
-}
-</pre>
-
-
-<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-2-04-conditionals"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 2.04: Conditionals</h4>
-<h5 id="a-">a.</h5>
-<p>Nimmt den Stern weg, wenn es einen hat.</p>
-<h5 id="b-">b.</h5>
-<p>Nimmt den Stern weg, wenn es einen hat und legt einen Stern hin, wenn es keinen hat (Invertieren).</p>
-<h5 id="c-">c.</h5>
-<p>Nimmt den Stern weg, wenn links ein Baum steht.</p>
+            <p>Kommt bald...</p>
 
 
           </div>
@@ -261,10 +196,10 @@ class MyPlayer extends Player {
         <li>
       <a href="/library/hello-dart/de/part3/" data-toggle="tooltip" title="Teil 3: Variablen">3</a>
       </li>
-        <li>
+        <li class="active">
       <a href="/library/hello-dart/de/part4/" data-toggle="tooltip" title="Teil 4: Funktionen">4</a>
       </li>
-      
+    
       </ul>
     </div>
   </nav>
