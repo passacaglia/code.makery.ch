@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello Dart - Teil 3: Bedingte Anweisungen | code.makery.ch</title>
+    <title>Hello Dart - Lösungen Teil 3 | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -28,22 +28,22 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part3/" />
+    <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part3-solutions/" />
   
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
 
-    <meta name="description" content="">
+    <meta name="description" content="Lösungen zu Hello Dart Teil 3.">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Hello Dart - Teil 3: Bedingte Anweisungen | code.makery.ch" />
+    <meta property="og:title" content="Hello Dart - Lösungen Teil 3 | code.makery.ch" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="" />
-    <meta property="og:url" content="http://code.makery.ch/library/hello-dart/de/part3/" />
+    <meta property="og:description" content="Lösungen zu Hello Dart Teil 3." />
+    <meta property="og:url" content="http://code.makery.ch/library/hello-dart/de/part3-solutions/" />
     <meta property="og:image" content="http://code.makery.ch/assets/library/hello-dart/hello-dart.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
@@ -89,7 +89,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="github-edit">
-            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/hello-dart-de-part3.md">Edit on GitHub</a>
+            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/hello-dart-de-part3-solutions.md">Edit on GitHub</a>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@
         Teil 1: Erste Schritte</a>
       <a href="/library/hello-dart/de/part2/" class="list-group-item">
         Teil 2: Schleifen</a>
-      <a href="/library/hello-dart/de/part3/" class="list-group-item active">
+      <a href="/library/hello-dart/de/part3/" class="list-group-item">
         Teil 3: Bedingte Anweisungen</a>
       <a href="/library/hello-dart/de/part4/" class="list-group-item">
         Teil 4: Variablen</a>
@@ -127,7 +127,7 @@
   </div>
 
   <div class="list-group">
-      <a href="/library/hello-dart/de/part3-solutions/" class="list-group-item">
+      <a href="/library/hello-dart/de/part3-solutions/" class="list-group-item active">
 <i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 3</a>
   </div>
 </div>
@@ -146,7 +146,7 @@
         </aside>
         <div class="col-md-9">
           <header class="article-header">
-            <h1 class="article-title">Hello Dart - Teil 3: Bedingte Anweisungen</h1>
+            <h1 class="article-title">Hello Dart - Lösungen Teil 3</h1>
             <div class="article-date">
   Jan 21, 2015
 
@@ -168,7 +168,7 @@
         Teil 1: Erste Schritte</a></li>
       <li class=""><a href="/library/hello-dart/de/part2/">
         Teil 2: Schleifen</a></li>
-      <li class=" active"><a href="/library/hello-dart/de/part3/">
+      <li class=""><a href="/library/hello-dart/de/part3/">
         Teil 3: Bedingte Anweisungen</a></li>
       <li class=""><a href="/library/hello-dart/de/part4/">
         Teil 4: Variablen</a></li>
@@ -180,7 +180,7 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Lösungen <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="/library/hello-dart/de/part3-solutions/">
+      <li class=" active"><a href="/library/hello-dart/de/part3-solutions/">
 <i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 3</a></li>
   </ul>
 </div>
@@ -196,69 +196,59 @@
           </aside>
           
           <div class="article-content">
-            <p>Neben Schleifen gibt es eine zweite Struktur, die sehr wichtig ist, um den Programmablauf zu steuern. Mit <strong>bedingten Anweisungen</strong> kann man angeben, wann ein Block von Anweisungen ausgeführt werden soll und wann nicht.</p>
-<pre class="prettyprint lang-dart">
-if (treeFront()) {  // Bedingung.
-  turnLeft();       // Block 1 wird ausgeführt, wenn Bedingung zutrifft (=true).
-} else {
-  move();           // Block 2 wird ausgeführt, wenn Bedingung nicht zutrifft (=false).
-}
-</pre>
-
-<p><strong>Hinweis: Der <code>else</code>-Teil (Block 2) kann weggelassen werden, wenn er nicht benötigt wird.</strong></p>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-01-conditionals"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.01: Conditionals</h4>
-<p>Beschreiben Sie mit Worten, was die folgenden Codebeispiele bewirken. Testen Sie diese anschliessend im <code>scenario3.01</code>. Damit die bedingten Anweisungen nicht nur einmal ausgeführt werden, sollten Sie diese in die vorbereitete Schleife setzen.</p>
+            <h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-3-01-conditionals"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 3.01: Conditionals</h4>
 <h5 id="a-">a.</h5>
-<pre class="prettyprint lang-dart">
-if (onStar()) {
-  removeStar();
-}
-move();
-</pre>
-
-
+<p>Nimmt den Stern weg, wenn es einen hat.</p>
 <h5 id="b-">b.</h5>
-<pre class="prettyprint lang-dart">
-if (onStar()) {
-  removeLeaf();
-} else {
-  putLeaf();
-}
-move();
-</pre>
-
-
+<p>Nimmt den Stern weg, wenn es einen hat und legt einen Stern hin, wenn es keinen hat (Invertieren).</p>
 <h5 id="c-">c.</h5>
-<p>Bedingte Anweisungen können auch ineinander verschachtelt werden:</p>
-<pre class="prettyprint lang-dart">
-if (treeLeft()) {
-  if (onStar()) {
-    removeStar();
-  }
-}
-move();
-</pre>
-
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-02-star-track"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.02: Star Track</h4>
-<p><img src="/assets/library/hello-dart/part3/star-track.png" alt="Sternenspur"></p>
-<p>Der Spieler soll vorwärts laufen und dabei überall einen Stern legen, wo keiner ist. Achten Sie am Schluss darauf, dass auch auf dem letzten Feld noch ein Stern liegt.</p>
-<p>Öffnen Sie das <code>scenario3.02</code> und schreiben Sie das Programm dazu.</p>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-03-star-at-tree"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.03: Star at Tree</h4>
-<p><img src="/assets/library/hello-dart/part3/star-at-tree.png" alt="Stern beim Baum"></p>
-<p>Der Spieler soll geradeaus gehen und überall dort einen Stern legen, wo entweder links oder rechts ein Baum steht.</p>
-<p>Beachten Sie, dass Sie, wie bei den Schleifen erklärt, auch hier die <em>Logischen Operatoren</em> <code>&amp;&amp;</code>, <code>||</code> und <code>!</code> verwenden können.</p>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-04-around-tree-ii"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.04: Around Tree II</h4>
-<p><img src="/assets/library/hello-dart/part3/around-tree-a.png" alt="Um Baum herum A"></p>
-<p>Um die Bäume herum laufen kennen wir bereits aus dem Teil 1. Wir haben es dort wie folgt gelöst:</p>
+<p>Nimmt den Stern weg, wenn links ein Baum steht.</p>
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-3-02-star-track"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 3.02: Star Track</h4>
 <pre class="prettyprint lang-dart">
 class MyPlayer extends Player {
 
   start() {
-    move();
-    goAroundTree();
-    goAroundTree();
-    move();
-    goAroundTree();
+    while (canMove()) {
+      if (!onStar()) {
+        putStar();
+      }
+      move();
+    }
+    putStar();
+  }
+}
+</pre>
+
+
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-3-03-star-at-tree"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 3.03: Star at Tree</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    while (canMove()) {
+      if (treeLeft() || treeRight()) {
+        putStar();
+      }
+      move();
+    }
+  }
+}
+</pre>
+
+
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-3-04-around-tree-ii"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 3.04: Around Tree II</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    while (!onStar()) {
+      if (treeFront()) {
+        goAroundTree();
+      } else {
+        move();
+      }
+    }
+
     removeStar();
   }
 
@@ -275,42 +265,106 @@ class MyPlayer extends Player {
 }
 </pre>
 
-<p>Dieses Programm funktioniert ganz gut, solange die Welt mit den Bäumen immer genau gleich aussieht. Sobald ein Baum verschoben wird, gibt es Probleme.</p>
-<p><img src="/assets/library/hello-dart/part3/around-tree-b.png" alt="Um Baum herum B"></p>
-<p>Das <code>scenario3.04</code> hat drei Varianten. Öffnen Sie dieses Szenario und ändern Sie in der <code>main()</code>-Funktion den Text <code>scenario-a.txt</code> in <code>scenario-b.txt</code> um. Testen Sie nun, was passiert, wenn Sie das Programm wie oben dargestellt starten.</p>
-<p>Sie kennen nun etliche Möglichkeiten, wie Sie mit Hilfe von Sensor-Methoden auf Umstände reagieren können. Versuchen Sie nun das Programm so abzuändern, dass unser Spieler den Stern in allen Welten mit folgenden Eigenschaften erreicht:</p>
-<ul>
-<li>Der Stern liegt immer gerade vor ihm. Er muss also um die Bäume herumlaufen.</li>
-<li>Es stehen nie zwei Bäume nebeneinander.</li>
-</ul>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-05-round-trip"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.05: Round Trip</h4>
-<p><img src="/assets/library/hello-dart/part3/round-trip.png" alt="Rundgang"></p>
-<p>Der Spieler geht in einem Rundgang auf die Suche nach einem Stern (und liest diesen auf). Jedes Feld im Rundgang hat genau zwei freie benachbarte Felder. Eines liegt immer hinter dem Spieler; von diesem Feld aus ist er auf das aktuelle Feld gekommen.</p>
-<p>Laden Sie das <code>scenario3.05</code> und schreiben Sie ein Programm dazu. Testen Sie das Programm in <strong>allen drei Welten</strong>.</p>
-<p><em>Tipp: Schreiben Sie zuerst eine Schleife, die stoppt, sobald der Spieler auf einem Stern ist. Stellen Sie sich dann vor, was nach jedem einzelnen durchgang durch die Schleife geschehen soll.</em></p>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-06-around-tree-iii"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.06: Around Tree III</h4>
-<p><img src="/assets/library/hello-dart/part3/around-tree-iii.png" alt="Um Baum herum III"></p>
-<p>Dies ist die ähnliche Übung wie die Aufgabe 3.04: Der Spieler soll den Stern finden, der geradeaus vor ihm liegt. Nun können aber eine beliebige Anzahl Bäume hintereinander stehen.</p>
-<p>Laden Sie das <code>scenario3.06</code> und verbessern Sie die Methode <code>goAroundTree()</code> so, dass der Spieler um mehrere Bäume herumgehen kann. Testen Sie Ihr Programm in allen vorgegebenen Welten (a, b, c und d).</p>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-07-schwierig-follow-the-trail"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.07 (schwierig): Follow the Trail</h4>
-<p><img src="/assets/library/hello-dart/part3/follow-the-trail.png" alt="Rundgang"></p>
-<p>Der Spieler soll einer Spur von Sternen folgen und diese jeweils auflesen. Vor den Bäumen soll er anhalten.</p>
-<p><em>Wichtig: Schreiben Sie zur besseren Übersicht für gewisse Programmteile eigene Methoden.</em></p>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-08-schwierig-guard"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.08 (schwierig): Guard</h4>
-<p><img src="/assets/library/hello-dart/part3/guard.png" alt="Wächter"></p>
-<p>Der Spieler soll einen Wald bewachen voller Sterne. Er soll aussen am Waldrand entlang laufen.</p>
-<p>Beginnen Sie mit einem einzelnen Rundgang um den Wald. Anschliessend können Sie mit einer Endlosschleife <code>while(true)</code> den Spieler mehrere Rundgänge machen lassen.</p>
-<p>Testen Sie Ihr Programm auch in der zweiten Welt.</p>
-<h2 id="wie-weiter-">Wie weiter?</h2>
-<p>Lernen Sie im <a href="/library/hello-dart/de/part4/">Teil 4</a>, wie wir mit Variablen etwas speichern können.</p>
-<hr>
-<p><em>Quellen</em><br>
-<em class="small">
-<a href="http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html">Planet Cute</a> Bilder stammen von Daniel Cook (Lostgarden.com), veröffentlicht unter <a href="http://creativecommons.org/licenses/by/3.0/us/">CC BY 3.0</a>.<br>
-<a href="https://www.linkedin.com/in/olegyadrov">Oleg Yadrov</a> hat die "Planet Cute" Bilder weiterentwickelt und sie mir zur Verfügung gestellt.<br>
-Viele Übungen in <code>Hello Dart</code> sind inspiriert von <a href="http://www.swisseduc.ch/informatik/karatojava/">Kara</a>. Kara wurde entwickelt von Jürg Nievergelt, Werner Hartmann, Raimond Reichert und anderen.
-</em></p>
 
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-3-05-round-trip"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 3.05: Round Trip</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    while (!onStar()) {
+      if (!treeFront()) {
+        move();
+      } else {
+        if (!treeLeft()) {
+          turnLeft();
+          move();
+        } else {
+          turnRight();
+          move();
+        }
+      }
+    }
+
+    removeStar();
+  }
+}
+</pre>
+
+
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-3-06-around-tree-iii"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 3.06: Around Tree III</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    while (!onStar()) {
+      if (treeFront()) {
+        goAroundTree();
+      } else {
+        move();
+      }
+    }
+
+    removeStar();
+  }
+
+  goAroundTree() {
+    turnLeft();
+    move();
+    turnRight();
+    move();
+
+    while (treeRight()) {
+      move();
+    }
+
+    turnRight();
+    move();
+    turnLeft();
+  }
+}
+</pre>
+
+
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-3-07-foillow-the-trail"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 3.07: Foillow the Trail</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    while (!treeFront()) {
+      removeStar();
+      findNextLeaf();
+    }
+
+    removeStar();
+  }
+
+  /// Funktion, um den nächsten Stern zu finden.
+  findNextLeaf() {
+    // Erst mal vorne schauen.
+    move();
+    if (!onStar()) {
+
+      // Kein Stern vorne, also zurück und links schauen.
+      turnAndGoBack();
+      turnRight();
+      move();
+      if (!onStar()) {
+
+        // Links ist auch kein Stern; dann muss er rechts liegen.
+        turnAndGoBack();
+        move();
+      }
+    }
+  }
+
+  /// Funktion, um einen Schritt zurück zu gehen.
+  turnAndGoBack() {
+    turnLeft();
+    turnLeft();
+    move();
+  }
+}
+</pre>
 
           </div>
           
@@ -328,7 +382,7 @@ Viele Übungen in <code>Hello Dart</code> sind inspiriert von <a href="http://ww
         <li>
       <a href="/library/hello-dart/de/part2/" data-toggle="tooltip" title="Teil 2: Schleifen">2</a>
       </li>
-        <li class="active">
+        <li>
       <a href="/library/hello-dart/de/part3/" data-toggle="tooltip" title="Teil 3: Bedingte Anweisungen">3</a>
       </li>
         <li>

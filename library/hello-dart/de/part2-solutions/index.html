@@ -112,11 +112,13 @@
       <a href="/library/hello-dart/de/part1/" class="list-group-item">
         Teil 1: Erste Schritte</a>
       <a href="/library/hello-dart/de/part2/" class="list-group-item">
-        Teil 2: Programmfluss</a>
+        Teil 2: Schleifen</a>
       <a href="/library/hello-dart/de/part3/" class="list-group-item">
-        Teil 3: Variablen</a>
+        Teil 3: Bedingte Anweisungen</a>
       <a href="/library/hello-dart/de/part4/" class="list-group-item">
-        Teil 4: Funktionen</a>
+        Teil 4: Variablen</a>
+      <a href="/library/hello-dart/de/part5/" class="list-group-item">
+        Teil 5: Funktionen</a>
   </div>
 </div>
 <div class="panel panel-default sidebar">
@@ -165,11 +167,13 @@
       <li class=""><a href="/library/hello-dart/de/part1/">
         Teil 1: Erste Schritte</a></li>
       <li class=""><a href="/library/hello-dart/de/part2/">
-        Teil 2: Programmfluss</a></li>
+        Teil 2: Schleifen</a></li>
       <li class=""><a href="/library/hello-dart/de/part3/">
-        Teil 3: Variablen</a></li>
+        Teil 3: Bedingte Anweisungen</a></li>
       <li class=""><a href="/library/hello-dart/de/part4/">
-        Teil 4: Funktionen</a></li>
+        Teil 4: Variablen</a></li>
+      <li class=""><a href="/library/hello-dart/de/part5/">
+        Teil 5: Funktionen</a></li>
   </ul>
 </div>
 <div class="btn-group sidebar-dropdown">
@@ -233,14 +237,44 @@ class MyPlayer extends Player {
 </pre>
 
 
-<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-2-04-conditionals"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 2.04: Conditionals</h4>
-<h5 id="a-">a.</h5>
-<p>Nimmt den Stern weg, wenn es einen hat.</p>
-<h5 id="b-">b.</h5>
-<p>Nimmt den Stern weg, wenn es einen hat und legt einen Stern hin, wenn es keinen hat (Invertieren).</p>
-<h5 id="c-">c.</h5>
-<p>Nimmt den Stern weg, wenn links ein Baum steht.</p>
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-2-04-afraid-of-tunnel"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 2.04: Afraid of Tunnel</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
 
+  start() {
+    while (!treeLeft() || !treeRight()) {
+      move();
+    }
+    say('AHHHH! This looks very dark in here!');
+  }
+}
+</pre>
+
+<p>Man könnte die <code>while</code>-Bedingung auch anders formulieren, zum Beispiel:</p>
+<pre class="prettyprint lang-dart">
+while (!(treeLeft() &amp;&amp; treeRight())
+</pre>
+
+
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-2-05-climbing-up"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 2.05: Climbing Up</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    while (treeFront()) {
+      oneStepUp();
+    }
+  }
+
+  /// Steigt eine Stufe nach oben.
+   oneStepUp() {
+    turnLeft();
+    move();
+    turnRight();
+    move();
+  }
+}
+</pre>
 
           </div>
           
@@ -256,13 +290,16 @@ class MyPlayer extends Player {
       <a href="/library/hello-dart/de/part1/" data-toggle="tooltip" title="Teil 1: Erste Schritte">1</a>
       </li>
         <li>
-      <a href="/library/hello-dart/de/part2/" data-toggle="tooltip" title="Teil 2: Programmfluss">2</a>
+      <a href="/library/hello-dart/de/part2/" data-toggle="tooltip" title="Teil 2: Schleifen">2</a>
       </li>
         <li>
-      <a href="/library/hello-dart/de/part3/" data-toggle="tooltip" title="Teil 3: Variablen">3</a>
+      <a href="/library/hello-dart/de/part3/" data-toggle="tooltip" title="Teil 3: Bedingte Anweisungen">3</a>
       </li>
         <li>
-      <a href="/library/hello-dart/de/part4/" data-toggle="tooltip" title="Teil 4: Funktionen">4</a>
+      <a href="/library/hello-dart/de/part4/" data-toggle="tooltip" title="Teil 4: Variablen">4</a>
+      </li>
+        <li>
+      <a href="/library/hello-dart/de/part5/" data-toggle="tooltip" title="Teil 5: Funktionen">5</a>
       </li>
       
       </ul>
