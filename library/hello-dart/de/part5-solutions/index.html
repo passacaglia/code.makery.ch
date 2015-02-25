@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello Dart - Teil 5: Funktionen | code.makery.ch</title>
+    <title>Hello Dart - Lösungen Teil 5 | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -28,22 +28,22 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part5/" />
+    <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part5-solutions/" />
   
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
 
-    <meta name="description" content="">
+    <meta name="description" content="Lösungen zu Hello Dart Teil 5.">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Hello Dart - Teil 5: Funktionen | code.makery.ch" />
+    <meta property="og:title" content="Hello Dart - Lösungen Teil 5 | code.makery.ch" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="" />
-    <meta property="og:url" content="http://code.makery.ch/library/hello-dart/de/part5/" />
+    <meta property="og:description" content="Lösungen zu Hello Dart Teil 5." />
+    <meta property="og:url" content="http://code.makery.ch/library/hello-dart/de/part5-solutions/" />
     <meta property="og:image" content="http://code.makery.ch/assets/library/hello-dart/hello-dart.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
@@ -89,7 +89,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="github-edit">
-            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/hello-dart-de-part5.md">Edit on GitHub</a>
+            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/hello-dart-de-part5-solutions.md">Edit on GitHub</a>
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@
         Teil 3: Bedingte Anweisungen</a>
       <a href="/library/hello-dart/de/part4/" class="list-group-item">
         Teil 4: Variablen</a>
-      <a href="/library/hello-dart/de/part5/" class="list-group-item active">
+      <a href="/library/hello-dart/de/part5/" class="list-group-item">
         Teil 5: Funktionen</a>
   </div>
 </div>
@@ -127,8 +127,8 @@
   </div>
 
   <div class="list-group">
-      <a href="/library/hello-dart/de/part5-solutions/" class="list-group-item">
-<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 5</a>
+      <a href="/library/hello-dart/de/part4-solutions/" class="list-group-item active">
+<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 4</a>
   </div>
 </div>
 <div class="panel panel-default sidebar">
@@ -146,7 +146,7 @@
         </aside>
         <div class="col-md-9">
           <header class="article-header">
-            <h1 class="article-title">Hello Dart - Teil 5: Funktionen</h1>
+            <h1 class="article-title">Hello Dart - Lösungen Teil 5</h1>
             <div class="article-date">
   Jan 21, 2015
 
@@ -172,7 +172,7 @@
         Teil 3: Bedingte Anweisungen</a></li>
       <li class=""><a href="/library/hello-dart/de/part4/">
         Teil 4: Variablen</a></li>
-      <li class=" active"><a href="/library/hello-dart/de/part5/">
+      <li class=""><a href="/library/hello-dart/de/part5/">
         Teil 5: Funktionen</a></li>
   </ul>
 </div>
@@ -180,8 +180,8 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Lösungen <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="/library/hello-dart/de/part5-solutions/">
-<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 5</a></li>
+      <li class=" active"><a href="/library/hello-dart/de/part4-solutions/">
+<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 4</a></li>
   </ul>
 </div>
 <div class="btn-group sidebar-dropdown">
@@ -196,116 +196,276 @@
           </aside>
           
           <div class="article-content">
-            <div class="row">
-  <div class="col-sm-6">
-    <img alt="Rotkäppchen" src="/assets/library/hello-dart/part5/red-riding-hood.jpg">
-  </div>
-  <div class="col-sm-6">
-    <p>
-      <em>Es war einmal ein kleines Mädchen, das immer ein rotes Käppchen trug. Darum hiess es bei allen Leuten nur „Rotkäppchen". Eines Tages sagte die Mutter zu dem Kind: "Rotkäppchen, heute hat Deine Grossmutter Geburtstag. Back ihr doch ihren Lieblingskuchen, nimm eine Flasche vom guten alten Wein aus dem Keller, leg alles in einen Korb und geh sie besuchen."</em>
-    </p>
-    <p><strong>Helfen Sie Rotkäppchen beim Kuchenbacken! Gleichzeitig erweitern wir dabei unsere Kenntnisse über Funktionen.
-    </strong></p>
-  </div>
-</div>
+            <h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-5-01-counting-stars"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 5.01: Counting Stars</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
 
+  start() {
+    drawRectangle(21, 4);
+  }
 
-<h2 id="funktionen-mit-parametern">Funktionen mit Parametern</h2>
-<p>Über Parameter können einer Funktion Werte übergeben werden. So kann man bei folgender Funktion angeben, wie viele Schritte der Spieler gehen soll:</p>
-<pre class="prettyprint lang-java">
-multiMove(int steps) {
-  int i = 0;
+  /// Zeichnet ein Rechteck mit [width] als Breite und [height] als Höhe.
+  drawRectangle(int width, int height) {
+    int i = 0;
+    while (i < height) {
+      putStars(width);
+      turnAround();
+      multiMove(width);
 
-  while (i &lt; steps)     {
-    move();
+      // Zur nächsten Zeile gehen.
+      turnRight();
+      move();
+      turnRight();
 
-    i = i + 1;
+      i = i + 1;
+    }
+  }
+
+  /// Legt eine Spur von [count] Sternen.
+  putStars(int count) {
+    int i = 0;
+    while (i < count) {
+      putStar();
+      move();
+      i = i + 1;
+    }
+  }
+
+  /// Macht die Anzahl [steps] in die aktuelle Richtung.
+  multiMove(int steps) {
+    int i = 0;
+    while (i < steps) {
+      move();
+      i = i + 1;
+    }
+  }
+
+  /// Dreht um 180 Grad um.
+  turnAround() {
+    turnLeft();
+    turnLeft();
   }
 }
 </pre>
 
-<p>Um z.B. 5 Schritte zu gehen, wird beim Aufruf der Funktion der Wert 5 in der Klammer angegeben:</p>
-<pre class="prettyprint lang-java">
-multiMove(5);
-</pre>
 
-<p>Um eine Funktion mit mehreren Parametern aufzurufen, werden die Werte durch Kommas getrennt.</p>
-<pre class="prettyprint lang-java">
-drawRectangle(21, 4);
-</pre>
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-5-02-candles-on-cake"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 5.02: Candles on Cake</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
 
+  start() {
+    drawRectangle(21, 4);
+    drawCandles(10);
+  }
 
-<h4 id="erkl-rungen">Erklärungen</h4>
-<ol>
-<li>Bei den bisherigen Programmen war es eher lästig, die Funktionen immer mit einem Klammerpaar <code>()</code> zu versehen. Nun wird klar, dass die bisher eingesetzten Funktionen nur Spezialfälle darstellten, bei denen kein Parameter übergeben wird.</li>
-<li>In der Klammer wird der Parameter (hier <code>steps</code>) mit einem Typ angegeben (hier <code>int</code>). Mehrere Parameter werden durch Kommas getrennt. Beispiel:    <pre class="prettyprint lang-java">
-public void drawRectangle(int width, int height)
-</pre></li>
-<li>Beim Aufruf einer Funktion wird der Wert in die Variable (hier <code>width</code> und <code>height</code>) kopiert.</li>
-</ol>
-<div class="alert alert-info">
-  <strong>Wichtig:</strong> Wenn Funktionen innerhalb einer Klasse stehen (was meist der Fall ist), dann werden diese oft auch <strong>Methoden</strong> genannt!
-</div>
+  /// Zeichnet Kerzen.
+  drawCandles(int count) {
+    int i = 0;
+    while (i < count) {
+      move();
+      turnLeft();
+      putStars(3);
+      turnAround();
+      multiMove(3);
+      turnLeft();
+      move();
+      i = i + 1;
+    }
+  }
 
+  /// Zeichnet ein Rechteck mit [width] als Breite und [height] als Höhe.
+  drawRectangle(int width, int height) {
+    int i = 0;
+    while (i < height) {
+      putStars(width);
+      turnAround();
+      multiMove(width);
 
-<h3 id="kuchen-backen">Kuchen backen</h3>
-<p>Wir wollen nun mit unserem Spieler für die Grossmutter einen Geburtstagskuchen "backen". Der Kuchen wird aus Sternen bestehen.</p>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-5-01-baking-a-cake"><i class="fa fa-rocket mg-t"></i> AUFGABE 5.01: Baking a Cake</h4>
-<p><img src="/assets/library/hello-dart/part5/baking-a-cake.jpg" alt="Baking a Cake"> </p>
-<p>Als Vorbereitung für das Backen sollen folgende Methoden zur Verfügung gestellt werden:</p>
-<ol>
-<li><p><code>turnAround()</code><br>Dreht den Spieler um 180 Grad.</p>
-</li>
-<li><p><code>multiMove(int steps)</code><br>Der Spieler geht die Anzahl Schritte (steps) in die aktuelle Blickrichtung (siehe Beispiel im Theorieteil oben).</p>
-</li>
-<li><p><code>putStars(int count)</code><br>Der Spieler legt die Anzahl (count) Sterne. Der erste Stern legt er an der aktuellen Position, die weiteren fortgesetzt in seine Blickrichtung.</p>
-</li>
-</ol>
-<p>Der Spieler soll mit Sternen ein Rechteck zeichnen, welches den Kuchen symbolisiert. </p>
-<p>Der Spieler startet in der Ecke unten links. Der Spieler soll nicht nur eine fixe Grösse eines Rechteckes zeichnen können, sondern ein Rechteck mit variabler Breite und Höhe! Der Funktionsaufruf <code>drawRectangle(21, 4)</code> soll demnach ein Rechteck mit der Breite 21 und der Höhe 4 erzeugen.</p>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-5-02-candles-on-cake"><i class="fa fa-rocket mg-t"></i> AUFGABE 5.02: Candles on Cake</h4>
-<p><img src="/assets/library/hello-dart/part5/candles-on-cake.jpg" alt="Candles on Cake"> </p>
-<p>Damit unser Kuchen auch wie ein Geburtstagskuchen aussieht, braucht er natürlich noch ein paar Kerzen. Erweitern Sie Ihr Programm um eine zusätzliche Funktion <code>drawCandles(int count)</code>, welche die angegebene Anzahl Kerzen auf den Kuchen setzt. </p>
-<h2 id="funktionen-mit-r-ckgabewerten">Funktionen mit Rückgabewerten</h2>
-<p>Über den Rückgabewert kann eine Funktion einen Wert als Ergebnis zurückliefern. So errechnet die folgende Funktion die angegebenen Zahl mal zwei und gibt das Resultat zurück:</p>
-<pre class="prettyprint lang-java">
-int twoTimes(int number) {
-  return 2 * number;
+      // Zur nächsten Zeile gehen.
+      turnRight();
+      move();
+      turnRight();
+
+      i = i + 1;
+    }
+  }
+
+  /// Legt eine Spur von [count] Sternen.
+  putStars(int count) {
+    int i = 0;
+    while (i < count) {
+      putStar();
+      move();
+      i = i + 1;
+    }
+  }
+
+  /// Macht die Anzahl [steps] in die aktuelle Richtung.
+  multiMove(int steps) {
+    int i = 0;
+    while (i < steps) {
+      move();
+      i = i + 1;
+    }
+  }
+
+  /// Dreht um 180 Grad um.
+  turnAround() {
+    turnLeft();
+    turnLeft();
+  }
 }
 </pre>
 
 
-<p>Das Resultat kann entweder in eine Variable gespeichert oder direkt wie folgt verwendet werden:</p>
-<pre class="prettyprint lang-java">
-multiMove(twoTimes(4));
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-5-03-candles-for-age"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 5.03: Candles for Age</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  /// Your program.
+  start() {
+    drawRectangle(21, 4);
+
+    int candles = (howOldIsGrandma() / 10).round();
+    drawCandles(candles);
+  }
+
+  /// Gibt an, wie alt die Grossmutter ist.
+  int howOldIsGrandma() {
+    return 80;
+  }
+
+  /// Zeichnet Kerzen.
+  drawCandles(int count) {
+    int i = 0;
+    while (i < count) {
+      move();
+      turnLeft();
+      putStars(3);
+      turnAround();
+      multiMove(3);
+      turnLeft();
+      move();
+      i = i + 1;
+    }
+  }
+
+  /// Zeichnet ein Rechteck mit [width] als Breite und [height] als Höhe.
+  drawRectangle(int width, int height) {
+    int i = 0;
+    while (i < height) {
+      putStars(width);
+      turnAround();
+      multiMove(width);
+
+      // Zur nächsten Zeile gehen.
+      turnRight();
+      move();
+      turnRight();
+
+      i = i + 1;
+    }
+  }
+
+  /// Legt eine Spur von [count] Sternen.
+  putStars(int count) {
+    int i = 0;
+    while (i < count) {
+      putStar();
+      move();
+      i = i + 1;
+    }
+  }
+
+  /// Macht die Anzahl [steps] in die aktuelle Richtung.
+  multiMove(int steps) {
+    int i = 0;
+    while (i < steps) {
+      move();
+      i = i + 1;
+    }
+  }
+
+  /// Dreht um 180 Grad um.
+  turnAround() {
+    turnLeft();
+    turnLeft();
+  }
+}
 </pre>
 
 
-<h4 id="erkl-rungen">Erklärungen</h4>
-<ol>
-<li>Der Typ des Rückgabewerts (hier <code>int</code>) wird vor dem Namen der Funktion angegeben. Wenn die Funktion keinen Rückgabewert enthält, wird das meist mit <code>void</code> ausgedrückt.</li>
-<li>Die Rückgabe eines Wertes in einer Funktion geschieht mit <code>return</code>, gefolgt vom Wert.</li>
-</ol>
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-5-03-candles-for-age"><i class="fa fa-rocket mg-t"></i> AUFGABE 5.03: Candles for Age</h4>
-<p>Wir möchten der Grossmutter <strong>für jedes Jahrzehnt eine Kerze</strong> auf den Kuchen stecken. Da Rotkäppchen nicht genau weiss, wie alt die Grossmutter wird, muss es zuerst ihre Mutter fragen.</p>
-<p>Programmieren Sie eine Funktion <code>howOldIsGrandma()</code>, die das Alter der Grossmutter zurückgibt. Mit Hilfe dieser Funktion soll dann für jedes Jahrzehnt eine Kerze auf dem Kuchen platziert werden.</p>
-<div class="alert alert-info">
-  <strong>Hinweis:</strong> Bei der Division von zwei Zahlen entsteht in Dart immer ein <code>double</code>. Damit wir wieder einen <code>int</code> erhalten, können wir die Funktion <code>toInt()</code> oder <code>round()</code> verwenden.<br>Beispiel: <code>(5 / 3).toInt()</code><br></div>
+<h4 id="-i-class-fa-fa-check-square-o-mg-t-lg-i-l-sung-aufgabe-5-04-layered-cake"><i class="fa fa-check-square-o mg-t-lg"></i> LÖSUNG AUFGABE 5.04: Layered Cake</h4>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
 
+  /// Your program.
+  start() {
+    int layers = (howOldIsGrandma() / 10 - 5).round();
+    drawLayers(layers);
+  }
 
+  /// Gibt an, wie alt die Grossmutter ist.
+  int howOldIsGrandma() {
+    return 80;
+  }
 
+  /// Zeichnet Schichten.
+  drawLayers(int count) {
+    int currentWidth = 21;
 
-<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-5-04-schwierig-layered-cake"><i class="fa fa-rocket mg-t"></i> AUFGABE 5.04 (schwierig): Layered Cake</h4>
-<p><img src="/assets/library/hello-dart/part5/layered-cake.jpg" alt="Candles on Cake"> </p>
-<p>"Backen" Sie mit unserem Spieler eine Torte mit einer Schicht für jedes Jahrzehnt, das die Grossmutter über 50 ist. Jede Schicht soll zwei Zeilen haben und soll auf beiden Seiten um zwei Sternen nach innen gerückt sein. </p>
-<hr>
-<h2 id="ende-und-wie-weiter-">Ende ... und wie weiter?</h2>
-<p>Herzliche Gratulation, Sie haben das Ende dieser Serie erreicht!</p>
-<p>Bald werden hier weitere Anleitungen zur Programmierung mit Dart veröffentlicht. Wenn Sie informiert werden möchten, schreiben Sie sich für den Newsletter ein.</p>
-<h3 id="feedback">Feedback</h3>
-<p>Ich freue mich von Ihnen zu hören. Schreiben Sie einen Kommentar, wenn Sie die Serie glücklich beendet haben oder auch, wenn Sie Verbesserungsvorschläge haben. <a href="#disqus_thread"><i class="fa fa-comment-o"></i></a></p>
-<p><i class="fa fa-beer"></i> Marco</p>
+    for (int i = 0; i < count; i++) {
+      drawRectangle(currentWidth, 2);
+      move();
+      move();
 
+      currentWidth = currentWidth - 4;
+    }
+  }
+
+  /// Zeichnet ein Rechteck mit [width] als Breite und [height] als Höhe.
+  drawRectangle(int width, int height) {
+    int i = 0;
+    while (i < height) {
+      putStars(width);
+      turnAround();
+      multiMove(width);
+
+      // Zur nächsten Zeile gehen.
+      turnRight();
+      move();
+      turnRight();
+
+      i = i + 1;
+    }
+  }
+
+  /// Legt eine Spur von [count] Sternen.
+  putStars(int count) {
+    int i = 0;
+    while (i < count) {
+      putStar();
+      move();
+      i = i + 1;
+    }
+  }
+
+  /// Macht die Anzahl [steps] in die aktuelle Richtung.
+  multiMove(int steps) {
+    int i = 0;
+    while (i < steps) {
+      move();
+      i = i + 1;
+    }
+  }
+
+  /// Dreht um 180 Grad um.
+  turnAround() {
+    turnLeft();
+    turnLeft();
+  }
+}
+</pre>
 
           </div>
           
@@ -329,7 +489,7 @@ multiMove(twoTimes(4));
         <li>
       <a href="/library/hello-dart/de/part4/" data-toggle="tooltip" title="Teil 4: Variablen">4</a>
       </li>
-        <li class="active">
+        <li>
       <a href="/library/hello-dart/de/part5/" data-toggle="tooltip" title="Teil 5: Funktionen">5</a>
       </li>
       

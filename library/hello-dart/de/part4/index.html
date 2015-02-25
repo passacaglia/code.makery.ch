@@ -123,6 +123,16 @@
 </div>
 <div class="panel panel-default sidebar">
   <div class="panel-heading">
+    <h4 class="panel-title">Lösungen</h4>  
+  </div>
+
+  <div class="list-group">
+      <a href="/library/hello-dart/de/part4-solutions/" class="list-group-item">
+<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 4</a>
+  </div>
+</div>
+<div class="panel panel-default sidebar">
+  <div class="panel-heading">
     <h4 class="panel-title">Links</h4>  
   </div>
 
@@ -164,6 +174,14 @@
         Teil 4: Variablen</a></li>
       <li class=""><a href="/library/hello-dart/de/part5/">
         Teil 5: Funktionen</a></li>
+  </ul>
+</div>
+<div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Lösungen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class=""><a href="/library/hello-dart/de/part4-solutions/">
+<i class="fa fa-fw fa-check-square-o"></i>        Lösungen zu Teil 4</a></li>
   </ul>
 </div>
 <div class="btn-group sidebar-dropdown">
@@ -213,7 +231,7 @@ while (i &lt; 5) {
 <h2 id="datentypen-in-dart">Datentypen in Dart</h2>
 <p>In Dart gibt es ein paar vordefinierte Datentypen. Mit Datentypen gibt man an, was in eine Variable gespeichert wird. Diese Angaben sind in Dart freiwillig. Das heisst, man kann alle Variablen einfach mit <code>var</code> deklarieren, wie wir es oben gemacht haben. Ich empfehle aber, meistens den Datentyp anzugeben, weil dies hilft, Fehler zu erkennen.</p>
 <div class="alert alert-info">
-<strong>Merke:</strong> Alles, was in eine Variable gespeichert werden kann, wird in Dart als <strong>Objekt</strong> bezeichnet. Der Datentyp eines Objektes nennen wir eine <strong>Klasse</strong>. Klassen und Objekte sind die Grundelemente der <a class="alert-link" href="http://de.wikipedia.org/wiki/Objektorientierte_Programmierung">objektorientierten Programmierung</a>.
+  <strong>Merke:</strong> Alles, was in eine Variable gespeichert werden kann, wird in Dart als <strong>Objekt</strong> bezeichnet. Der Datentyp eines Objektes nennen wir eine <strong>Klasse</strong>. Klassen und Objekte sind die Grundelemente der <a class="alert-link" href="http://de.wikipedia.org/wiki/Objektorientierte_Programmierung">objektorientierten Programmierung</a>.
 </div>
 
 <p>Später werden wir unsere eigenen Klassen erstellen. Jetzt schauen wir uns zuerst die Grunddatentypen von Dart an.</p>
@@ -239,7 +257,7 @@ while (i &lt; 5) {
     </tr>
     <tr>
       <td><code>String</code></td>
-      <td>Text in einer beliebigen Länge. Text wird immer in zwischen einfache oder doppelte Anführungszeichen gestellt.</td>.
+      <td>Text in einer beliebigen Länge. Text wird immer in <em>zwischen einfache oder doppelte Anführungszeichen</em> gestellt.</td>.
       <td><code>'Ich bin ein Text'</code> oder <code>"Ich bin auch ein Text"</code></td>
     </tr>
     <tr>
@@ -257,38 +275,17 @@ while (i &lt; 5) {
       <td>In einer Map kann man Objekte speichern als <em>Schlüssel</em> und <em>Werte</em>.</td>
       <td><code>{ 'schlüssel-1': 'wert-1', 'schlüssel-2': 'wert-2' }</code></td>
     </tr>
-
   </tbody>
 </table>
 
 
-<h3 id="wahrheitswerte">Wahrheitswerte</h3>
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Typ</th>
-      <th>Wertebereich</th>
-      <th>Speicherbedarf</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>boolean</code></td>
-      <td><code>true</code> oder <code>false</code></td>
-      <td>1 bit</td>
-    </tr>
-  </tbody>
-</table>
-
-
-<hr>
 <h2 id="vergleichsoperatoren">Vergleichsoperatoren</h2>
-<p>Folgende Operatoren können in Java für Vergleiche verwendet werden. Das Ergebnis ist jeweils ein boolean (entweder <code>true</code> oder <code>false</code>).</p>
+<p>Folgende Operatoren können in Dart für Vergleiche verwendet werden. Das Ergebnis ist jeweils ein <code>bool</code>, das heisst entweder <code>true</code> oder <code>false</code>.</p>
 <table class="table table-bordered">
   <thead>
     <tr>
       <th>Operator</th>
-      <th>Bedeutung</th>
+      <th>Beschreibung</th>
       <th>Beispiel</th>
     </tr>
   </thead>
@@ -301,7 +298,7 @@ while (i &lt; 5) {
     <tr>
       <td><code>!=</code></td>
       <td>ungleich</td>
-      <td><code>k &lt; 12</code></td>
+      <td><code>k != 12</code></td>
     </tr>
     <tr>
       <td><code>&gt;</code></td>
@@ -327,14 +324,13 @@ while (i &lt; 5) {
 </table>
 
 <p><strong>Achtung:</strong> Der Vergleich auf "Gleichheit" hat immer zwei Gleichheitszeichen <code>==</code>. Mit einem einzelnen Gleichheitszeichen <code>=</code> geschieht eine Zuweisung!</p>
-<hr>
 <h2 id="arithmetische-operatoren">Arithmetische Operatoren</h2>
 <p>Zur Berechnung können folgende arithmetische Operatoren verwendet werden:</p>
 <table class="table table-bordered">
   <thead>
     <tr>
       <th>Operator</th>
-      <th>Bedeutung</th>
+      <th>Beschreibung</th>
       <th>Beispiel</th>
     </tr>
   </thead>
@@ -369,62 +365,46 @@ while (i &lt; 5) {
 
 
 <hr>
-<h4 id="-i-class-fa-fa-rocket-i-task-3-01-kara-z-hlt-kleebl-tter"><i class="fa fa-rocket"></i> TASK 3.01: Kara zählt Kleeblätter</h4>
-<p><img src="/assets/library/greenfoot-kara/chapter3/task01.png" alt="TASK 3.01"> </p>
-<p>Kara soll waagrecht von links nach rechts gehen bis zum Baum und dabei die Kleeblätter zählen.</p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-4-01-counting-stars"><i class="fa fa-rocket mg-t"></i> AUFGABE 4.01: Counting Stars</h4>
+<p><img src="/assets/library/hello-dart/part4/counting-stars.png" alt="Sternenspur"></p>
+<p>Der Spieler soll von links nach rechts gehen und dabei die Sterne zählen.</p>
 <p><em>Hinweise:</em></p>
-<ul>
-<li>Am Schluss können Sie das Resultat mit dem folgenden Befehl auf die "Konsole" schreiben: <code>System.out.println("Das Resultat ist: " + count);</code></li>
-<li>Text muss man in Anführungszeichen schreiben. Das Pluszeichen bewirkt, dass die variable <code>count</code> hinten angefügt wird.</li>
-<li><em>Gültigkeitsbereich von Variablen</em>: Variablen sind immer nur innerhalb des Blockes (zwischen den geschweiften Klammern) gültig, in welchem sie deklariert wurden. Man kann sie auch ausserhalb der Methoden deklarieren, dann gelten sie für die ganze Klasse. </li>
-</ul>
-<h4 id="-i-class-fa-fa-rocket-i-task-3-02-kara-in-a-box-i"><i class="fa fa-rocket"></i> TASK 3.02: Kara in a Box I</h4>
-<p><img src="/assets/library/greenfoot-kara/chapter3/task02.png" alt="TASK 3.02"> </p>
-<p>Eine quadratische Fläche ist von Bäumen umrandet. Innerhalb der Fläche ist ein Muster aus Kleeblättern gelegt, das von Kara invertiert (= umgedreht) werden soll. Kara startet links oben in der Ecke mit Blick nach rechts.</p>
+<ol>
+<li>Definieren und initialisieren Sie eine Variable, zum Beispiel mit<br><code>int count = 0;</code></li>
+<li>Schreiben Sie darunter eine Schleife, in der die Variable immer um eins erhöht wird:<br><code>count = count + 1;</code></li>
+<li>Die Variable sollte nur erhöht werden, wenn der Spieler auf einem Stern ist.</li>
+<li>Am Schluss soll der Spieler angeben, wie viele Sterne er gezählt hat. Mit <code>${count}</code> können wir die Variable in einen Text einfügen:<br><code>say('Ich habe ${count} Sterne gefunden.');</code></li>
+</ol>
+<div class="alert alert-info">
+  <strong>Gültigkeitsbereich von Variablen:</strong> Variablen sind immer nur innerhalb des Blockes (zwischen den geschweiften Klammern) gültig, in welchem sie deklariert wurden. Man kann sie auch ausserhalb der Methoden deklarieren, dann gelten sie für die ganze Klasse.
+</div>
+
+
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-4-02-cleaning-up"><i class="fa fa-rocket mg-t"></i> AUFGABE 4.02: Cleaning Up</h4>
+<p><img src="/assets/library/hello-dart/part4/cleaning-up.png" alt="Aufräumen"></p>
+<p>Der Spieler soll alle Sterne wegräumen.</p>
 <p><em>Hinweise:</em></p>
-<ul>
-<li>Bei dieser Aufgabe ist es hilfreich, mit booleschen Variablen zu arbeiten, z.B.:<ul>
-<li>Deklaration und Initilalisierung: <code>boolean goingRight = false;</code></li>
-<li>Aus true wird false und umgekehrt: <code>goingRight = !goingRight;</code></li>
-<li>Boolesche Variable als Bedingung: <code>if (goingRight)</code></li>
-</ul>
-</li>
-</ul>
-<h4 id="-i-class-fa-fa-rocket-i-task-3-03-kara-in-a-box-ii"><i class="fa fa-rocket"></i> TASK 3.03: Kara in a Box II</h4>
-<p><img src="/assets/library/greenfoot-kara/chapter3/task03.png" alt="TASK 3.03"> </p>
-<p>Eine quadratische Fläche ist von Bäumen umrandet. Innerhalb der Fläche soll ein schachbrettartiges Muster aus Kleeblättern von Kara gelegt werden. Kara startet links oben in der Ecke mit Blick nach rechts.</p>
-<h4 id="-i-class-fa-fa-rocket-i-task-3-04-schwierig-die-l-ngste-baumreihe"><i class="fa fa-rocket"></i> TASK 3.04 (schwierig): Die längste Baumreihe</h4>
-<p><img src="/assets/library/greenfoot-kara/chapter3/task04.png" alt="TASK 3.04"> </p>
-<p>Auf der Wiese hat es verschiedene Baumreihen. Kara soll nun die Länge (in Anzahl Bäumen) der längsten Baumreihe ermitteln und auf die Konsole ausgeben. Zwischen d en Baumreihen ist immer mindestens ein Feld Platz. Auf dem letzten Feld liegt ein Kleeblatt.</p>
-<h4 id="-i-class-fa-fa-rocket-i-task-3-05-sehr-schwierig-push-mushroom-through-tunnel"><i class="fa fa-rocket"></i> TASK 3.05 (sehr schwierig): Push Mushroom Through Tunnel</h4>
-<p><img src="/assets/library/greenfoot-kara/chapter3/task05.png" alt="TASK 3.05"> </p>
-<p>Die Welt von Kara hat zwei Boxen, welche durch einen Tunnel verbunden sind. In der Box links befindet sich Kara und ein Kleeblatt. In der Box rechts befindet sich ein Pilz. Kara soll nun auf die andere Seite gelangen, den Pilz finden und ihn auf die andere Seite schieben. Auf der anderen Seite angekommen soll der Pilz schliesslich auf das Kleeblatt geschoben werden.</p>
-<p>Sie können davon ausgehen, dass Kara immer oben links in der Ecke startet und das Kleeblatt sich unten links befindet. Der Pilz kann jedoch an einer beliebigen Stelle rechts vom Tunnel stehen.</p>
-<p><em>Hints:</em></p>
-<ul>
-<li>Diese Aufgabe kann auch in Zusammenarbeit zu zweit gelöst werden. </li>
-<li>Dabei können die Teilprobleme untereinander aufgeteilt werden:<ul>
-<li>Tunneleingang finden</li>
-<li>Pilz finden</li>
-<li>Pilz vor den Tunneleingang stossen</li>
-<li>Pilz auf das Kleeblatt stossen</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="vertiefung-zu-variablen">Vertiefung zu Variablen</h2>
-<p>Wir hatten bereits einen ersten Kontakt zu Variablen. Nun noch ein paar zusätzliche Bemerkungen zu den verschiedenen Typen:</p>
-<h3 id="elementare-datentypen">Elementare Datentypen</h3>
-<p><img src="/assets/library/greenfoot-kara/chapter3/elementary-types.png" alt="Elementare Datentypen"> </p>
-<p>Elementare Datentypen sind wie Becher (im Speicher), wo der Wert direkt in eine Variable gespeichert wird.</p>
-<h3 id="referenztypen">Referenztypen</h3>
-<p><img src="/assets/library/greenfoot-kara/chapter3/reference-types.png" alt="Referenztypen"> </p>
-<p>Der Wert in <code>k</code> ist eine Referenz auf das Kara-Objekt. Mit dem Punktoperator (<code>k.</code>) kann <code>k</code> wie eine Fernbedienung auf das Kara-Objekt benutzt werden! </p>
-<hr>
-<p><strong><em>Credits:</em></strong> <em><a href="http://www.swisseduc.ch/informatik/karatojava/">Ideen und Konzepte von Kara</a> wurden entwickelt von Jürg Nievergelt, Werner Hartmann, Raimond Reichert et al. Einige Kara-Übungen basieren auf <a href="http://www.swisseduc.ch/informatik/karatojava/javakara/material/">Unterlagen von Horst Gierhardt</a>.</em></p>
+<ol>
+<li>Sie können den Baum verwenden, um herauszufinden, wann der Spiele am Ende angekommen ist mit einer Schleife <code>while (!treeFront()) {...}</code>.</li>
+<li>Entfernen Sie zuerst die Sterne auf der ersten Zeile.</li>
+<li>Drehen Sie am Rand und entfernen Sie die die Sterne auf der zweiten Zeile.</li>
+<li>Führen Sie nun eine <code>bool</code>-Variable ein, damit sich der Spieler merkt, in welche Richtung er läuft, zum Beispiel so:<br><code>bool goingRight = true;</code></li>
+<li>Mit dieser Variable können Sie nun herausfinden, ob der Spieler am rechten oder am linken Rand angekommen ist und entsprechend umdrehen muss. Ein <code>bool</code> kann wie folgt in einer Bedingung verwendet werden:<br><code>if (goingRight) {...}</code></li>
+<li>Denken Sie daran, die neue Richtung in die Variable zu setzen, sobald sich der Spieler dreht:<br><code>goingRight = false;</code></li>
+<li><em>Verbesserung</em>: Damit der Code übersichtlicher wird, sollen Sie zwei Funktionen machen zum Umdrehen: <code>turnAroundRight()</code> und <code>turnAroundLeft()</code>.</li>
+</ol>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-4-03-inverting"><i class="fa fa-rocket mg-t"></i> AUFGABE 4.03: Inverting</h4>
+<p><img src="/assets/library/hello-dart/part4/inverting.png" alt="Sternenspur"></p>
+<p>Die Welt hat eine quadratische Fläche und am Schluss einen Baum. Innerhalb der Fläche ist ein Muster aus Sternen gelegt, das vom Spieler invertiert (=umgedreht) werden soll. Achten Sie darauf, dass Ihr Code übersichtlich bleibt und lagern Sie allenfalls Teile in eigene Funktionen aus.</p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-4-04-chessboard"><i class="fa fa-rocket mg-t"></i> AUFGABE 4.04: Chessboard</h4>
+<p><img src="/assets/library/hello-dart/part4/chessboard.png" alt="Schachbrett"></p>
+<p>Die Welt hat eine quadratische Fläche und am Schluss einen Baum. Innerhalb der Fläche soll ein schachbrettartiges Muster aus Sternen gelegt werden.</p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-4-04-schwierig-tree-line"><i class="fa fa-rocket mg-t"></i> AUFGABE 4.04 (schwierig): Tree Line</h4>
+<p><img src="/assets/library/hello-dart/part4/tree-line.jpg" alt="Baumreihe"></p>
+<p>Auf der Wiese hat es verschiedene Baumreihen. Der Spieler soll nun die Länge (in Anzahl Bäumen) der längsten Baumreihe ermitteln und ausgeben. Zwischen den Baumreihen ist immer mindestens ein Feld Platz. Auf dem letzten Feld liegt ein Stern.</p>
 <hr>
 <h2 id="wie-weiter-">Wie weiter?</h2>
-<p>Fahren Sie weiter mit <a href="/library/greenfoot-kara/de/chapter4/">Kapitel 4: Sokoban Spiel</a></p>
+<p>Fahren Sie weiter mit <a href="/library/hello-dart/de/part5/">Teil 5: Methoden</a></p>
 
 
           </div>
@@ -452,7 +432,7 @@ while (i &lt; 5) {
         <li>
       <a href="/library/hello-dart/de/part5/" data-toggle="tooltip" title="Teil 5: Funktionen">5</a>
       </li>
-    
+      
       </ul>
     </div>
   </nav>
