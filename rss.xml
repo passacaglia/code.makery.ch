@@ -6,10 +6,29 @@
     <language>en</language>
     <webMaster>majakob@gmx.ch</webMaster>
     <copyright>2015</copyright>
-    <lastBuildDate>Thu, 12 Mar 2015 13:53:52 CET</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2015 18:51:49 CET</lastBuildDate>
     <generator>mixture.io</generator>
     
       
+<item>
+	<title><![CDATA[JavaFX Update for JDK 8u40]]></title>
+	<link>http://code.makery.ch/blog/javafx-update-for-jdk-8u40/</link>
+	<guid>/blog/javafx-update-for-jdk-8u40/</guid>
+	
+	<category>Java</category>
+	
+	<category>JavaFX</category>
+	
+	<pubDate>Thu, 12 Mar 2015 00:00:00 CET</pubDate>
+	<description>JDK 8u40 was released. It includes some new JavaFX UI controls like Spinner, Formatted TextFields, and (finally) simple Dialogs.
+
+Tutorial Update
+
+I&#39;ve updated the entire JavaFX 8 Tutorial for JDK8u40. This is what changed:
+
+Use the new Dialogs instead of the deprecated ControlsFX Dialogs (see this  article about the official JavaFX Dialogs).
+Create...</description>
+</item>
 <item>
 	<title><![CDATA[JavaFX vs. HTML5]]></title>
 	<link>http://code.makery.ch/blog/javafx-vs-html5/</link>
@@ -143,24 +162,6 @@ The DatePicker works well in combination with the new Java 8 Date and Time API. 
 
 Basic Usage
 Using the...</description>
-</item>
-<item>
-	<title><![CDATA[JavaFX 8 Dialogs]]></title>
-	<link>http://code.makery.ch/blog/javafx-8-dialogs/</link>
-	<guid>/blog/javafx-8-dialogs/</guid>
-	
-	<category>Java</category>
-	
-	<category>JavaFX</category>
-	
-	<pubDate>Fri, 18 Apr 2014 00:00:00 CET</pubDate>
-	<description>
-  
-    Deprecated! Please read the &amp;rarr; Article about the official JavaFX Dialogs! 
-  
-  
-   With JDK version 8u40, the Dialogs were finally included in the official JavaFX. This means that the ControlsFX Dialogs described in this post will be deprecated!
-...</description>
 </item>
     
   </channel>

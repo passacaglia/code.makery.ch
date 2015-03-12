@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JavaFX 8 Date Picker | code.makery.ch</title>
+    <title>JavaFX Update for JDK 8u40 | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -28,23 +28,23 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/blog/javafx-8-date-picker/" />
+    <link rel="canonical" href="http://code.makery.ch/blog/javafx-update-for-jdk-8u40/" />
   
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
 
-    <meta name="description" content="Finally, with JavaFX 8 a DatePicker control was added! Learn how to use it, together with the new Java 8 Date and Time API.">
+    <meta name="description" content="JDK 8u40 was released. It includes some new JavaFX UI controls like Dialogs, Spinner, and Formatted TextField.">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="JavaFX 8 Date Picker | code.makery.ch" />
+    <meta property="og:title" content="JavaFX Update for JDK 8u40 | code.makery.ch" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Finally, with JavaFX 8 a DatePicker control was added! Learn how to use it, together with the new Java 8 Date and Time API." />
-    <meta property="og:url" content="http://code.makery.ch/blog/javafx-8-date-picker/" />
-    <meta property="og:image" content="http://code.makery.ch/assets/blog/14-04-18-javafx-8-date-picker/date-picker.png" />
+    <meta property="og:description" content="JDK 8u40 was released. It includes some new JavaFX UI controls like Dialogs, Spinner, and Formatted TextField." />
+    <meta property="og:url" content="http://code.makery.ch/blog/javafx-update-for-jdk-8u40/" />
+    <meta property="og:image" content="http://code.makery.ch/assets/blog/15-03-12-javafx-update-for-jdk-8u40/addressapp.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
     
@@ -88,17 +88,14 @@
       
       <article>
         <header class="post-header">
-          <h1 class="post-title">JavaFX 8 Date Picker</h1>
+          <h1 class="post-title">JavaFX Update for JDK 8u40</h1>
           
           
           
           <div class="post-date text-center">
   <span>
-    Apr 18, 2014
+    Mar 12, 2015
     
-     • 
-    Updated May 14, 2014
-  
   </span>
   
      • 
@@ -116,89 +113,24 @@
         </header>
 
         <div class="post-content">
-          <p>Finally, with JavaFX 8 a <code>DatePicker</code> control was added (for JavaFX 2 we had to <a href="/blog/javafx-2-date-picker">create our own</a>)! </p>
-<p>The <code>DatePicker</code> works well in combination with the new <strong>Java 8 Date and Time API</strong>. Those two things together provide a much better experience when working with dates in Java!</p>
-<p><img src="/assets/blog/14-04-18-javafx-8-date-picker/date-picker.png" alt="JavaFX Date Picker"></p>
-<h2 id="basic-usage">Basic Usage</h2>
-<p>Using the DatePicker is straight forward:</p>
-<pre class="prettyprint lang-java">
-// Create the DatePicker.
-DatePicker datePicker = new DatePicker();
-
-// Add some action (in Java 8 lambda syntax style).
-datePicker.setOnAction(event -> {
-    LocalDate date = datePicker.getValue();
-    System.out.println("Selected date: " + date);
-});
-
-// Add the DatePicker to the Stage.
-StackPane root = new StackPane();
-root.getChildren().add(datePicker);
-stage.setScene(new Scene(root, 500, 650));
-stage.show();
-</pre>
-
-<h4 id="using-fxml">Using FXML</h4>
-<p>I usually prefer keeping as much of the view in <code>fxml</code> instead of instantiating the controls in Java code as above. With <a href="http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-info-2157684.html">Scene Builder 2.0</a> and above you can even drag-and-drop the DatePicker into your <code>fxml</code>.</p>
-<h2 id="options">Options</h2>
-<h3 id="hide-week-numbers">Hide Week Numbers</h3>
-<p>We can set the <code>showWeekNumbersProperty</code> to true/false to show/hide a column showing week numbers. Note: The default value depends on the country of the current locale. </p>
-<p><img src="/assets/blog/14-04-18-javafx-8-date-picker/date-picker-no-weeks.png" alt="JavaFX Date Picker No Weeks"></p>
-<pre class="prettyprint lang-java">
-datePicker.setShowWeekNumbers(false);
-</pre>
-
-
-<h3 id="date-converter">Date Converter</h3>
-<p>The date in the text field is automatically converted to the local format (in my case, it's <code>dd.MM.yyyy</code>). By setting a <code>StringConverter</code> we can change this, for example, to <code>yyyy-MM-dd</code>.</p>
-<p><img src="/assets/blog/14-04-18-javafx-8-date-picker/date-picker-converter.png" alt="JavaFX Date Picker Converter"></p>
-<pre class="prettyprint lang-java">
-String pattern = "yyyy-MM-dd";
-
-datePicker.setPromptText(pattern.toLowerCase());
-
-datePicker.setConverter(new StringConverter&lt;LocalDate&gt;() {
-     DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern(pattern);
-
-     @Override 
-     public String toString(LocalDate date) {
-         if (date != null) {
-             return dateFormatter.format(date);
-         } else {
-             return "";
-         }
-     }
-
-     @Override 
-     public LocalDate fromString(String string) {
-         if (string != null &amp;&amp; !string.isEmpty()) {
-             return LocalDate.parse(string, dateFormatter);
-         } else {
-             return null;
-         }
-     }
- });
-</pre>
-
-
-<h3 id="other-calendar-systems">Other Calendar Systems</h3>
-<p>If you need a different chronology, e.g. the Japanese Imperial calendar system, you can change it as follows:</p>
-<pre class="prettyprint lang-java">
-// Japanese calendar.
-datePicker.setChronology(JapaneseChronology.INSTANCE);
-
-// Hijrah calendar.
-datePicker.setChronology(HijrahChronology.INSTANCE);
-
-// Minguo calendar.
-datePicker.setChronology(MinguoChronology.INSTANCE);
-
-// Buddhist calendar.
-datePicker.setChronology(ThaiBuddhistChronology.INSTANCE);
-</pre>
-
-<p>Here is a screenshot of the Hijrah calendar:</p>
-<p><img src="/assets/blog/14-04-18-javafx-8-date-picker/hijrah-calendar.png" alt="Hijrah Calendar"></p>
+          <p><a href="https://blogs.oracle.com/thejavatutorials/entry/jdk_8u40_released">JDK 8u40 was released</a>. It includes some new JavaFX UI controls like <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Spinner.html">Spinner</a>, <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextFormatter.html">Formatted TextFields</a>, and (finally) simple <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Dialog.html">Dialogs</a>.</p>
+<p><img src="/assets/blog/15-03-12-javafx-update-for-jdk-8u40/information-dialog.png" alt="Dialog"></p>
+<h2 id="tutorial-update">Tutorial Update</h2>
+<p><img src="/assets/blog/15-03-12-javafx-update-for-jdk-8u40/addressapp.png" alt="AddressApp"></p>
+<p>I've updated the entire <a href="/java/javafx-8-tutorial-intro/">JavaFX 8 Tutorial</a> for JDK8u40. This is what changed:</p>
+<ul>
+<li>Use the new Dialogs instead of the deprecated ControlsFX Dialogs (see this  <a href="/blog/javafx-dialogs-official/">article about the official JavaFX Dialogs</a>).</li>
+<li>Create a new release for the <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/tag/v1.1">source code of all tutorial parts</a>.</li>
+<li>New download links for <a href="http://gluonhq.com/products/downloads/">Scene Builder</a> (provided by Gluon).</li>
+<li>Correct some typos and misleading texts.</li>
+</ul>
+<p><em>Here is the <a href="https://github.com/marcojakob/code.makery.ch/commit/f6b4a51b41957b753bfbfc8c1f637a6849ceeab5">commit with all tutorial changes</a>.</em> </p>
+<h2 id="translations">Translations</h2>
+<p>Every time someone contacts me, who wants to contribute a translation, I get very excited!</p>
+<p>As of today, the JavaFX 8 Tutorial is <strong>available in six languages and two are beeing translated</strong> right now!  <a href="/java/javafx-8-tutorial-intro/">English</a>, <a href="/library/javafx-8-tutorial/pt/">Portuguese</a>, <a href="/library/javafx-8-tutorial/es/">Spanish</a>, <a href="/library/javafx-8-tutorial/zh-cn/">Chinese</a>, <a href="/library/javafx-8-tutorial/ru/">Russian</a>, and <a href="/library/javafx-8-tutorial/id/">Indonesian</a>. <a href="/library/javafx-8-tutorial/fr/">French</a> has a partial translation and someone has just sent a pull request today for an Italian translation.</p>
+<h3 id="help-needed-for-updating-the-translations">Help Needed for Updating the Translations</h3>
+<p>The translated tutorials still need an update to reflect the changes described above. So, if you care about one of the languages and would like to help out, let me know.</p>
+<p>To see what has changed, you could take a look at <a href="https://github.com/marcojakob/code.makery.ch/commit/f6b4a51b41957b753bfbfc8c1f637a6849ceeab5">this commit</a>. Then, it's very simple: Just click on the <strong>Edit on GitHub</strong> link at to top of the page you would like to change and edit it online. If you're not familiar with GitHub, please read <a href="/library/how-to-contribute/">how to contribute</a>.</p>
 
 
         </div>
@@ -260,9 +192,9 @@ datePicker.setChronology(ThaiBuddhistChronology.INSTANCE);
   <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'codemakery'; // Required - the forum shortname
-    var disqus_identifier = '/blog/javafx-8-date-picker/';
-    var disqus_url = 'http://code.makery.ch/blog/javafx-8-date-picker/';
-    var disqus_title = 'JavaFX 8 Date Picker';
+    var disqus_identifier = '/blog/javafx-update-for-jdk-8u40/';
+    var disqus_url = 'http://code.makery.ch/blog/javafx-update-for-jdk-8u40/';
+    var disqus_title = 'JavaFX Update for JDK 8u40';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

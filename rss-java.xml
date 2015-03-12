@@ -6,10 +6,29 @@
     <language>en</language>
     <webMaster>majakob@gmx.ch</webMaster>
     <copyright>2015</copyright>
-    <lastBuildDate>Thu, 12 Mar 2015 13:54:04 CET</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2015 18:52:02 CET</lastBuildDate>
     <generator>mixture.io</generator>
     
       
+<item>
+	<title><![CDATA[JavaFX Update for JDK 8u40]]></title>
+	<link>http://code.makery.ch/blog/javafx-update-for-jdk-8u40/</link>
+	<guid>/blog/javafx-update-for-jdk-8u40/</guid>
+	
+	<category>Java</category>
+	
+	<category>JavaFX</category>
+	
+	<pubDate>Thu, 12 Mar 2015 00:00:00 CET</pubDate>
+	<description>JDK 8u40 was released. It includes some new JavaFX UI controls like Spinner, Formatted TextFields, and (finally) simple Dialogs.
+
+Tutorial Update
+
+I&#39;ve updated the entire JavaFX 8 Tutorial for JDK8u40. This is what changed:
+
+Use the new Dialogs instead of the deprecated ControlsFX Dialogs (see this  article about the official JavaFX Dialogs).
+Create...</description>
+</item>
 <item>
 	<title><![CDATA[JavaFX vs. HTML5]]></title>
 	<link>http://code.makery.ch/blog/javafx-vs-html5/</link>
@@ -149,22 +168,6 @@ Using the...</description>
   
    With JDK version 8u40, the Dialogs were finally included in the official JavaFX. This means that the ControlsFX Dialogs described in this post will be deprecated!
 ...</description>
-</item>
-<item>
-	<title><![CDATA[JavaFX 2 Date Picker]]></title>
-	<link>http://code.makery.ch/blog/javafx-2-date-picker/</link>
-	<guid>/blog/javafx-2-date-picker/</guid>
-	
-	<category>Java</category>
-	
-	<category>JavaFX</category>
-	
-	<pubDate>Mon, 07 Jan 2013 00:00:00 CET</pubDate>
-	<description>
-  &amp;rarr; For an UPDATED VERSION of this article go to: JavaFX 8 Date Picker
-
-
-As JavaFX 2.2 doesn&#39;t contain a Calendar control we would have to create our own to provide a convenient way to enter a date. Fortunately, Christian Schudt has created a very nice DatePicker that we...</description>
 </item>
     
   </channel>
