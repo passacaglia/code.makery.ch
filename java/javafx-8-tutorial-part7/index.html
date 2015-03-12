@@ -135,8 +135,8 @@
   </div>
 
   <div class="list-group">
-      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-7.zip" class="list-group-item">
-<i class="fa fa-fw fa-download"></i>        Part 7 as Eclipse Project <em>(requires at least JDK 8u20)</em></a>
+      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-7.zip" class="list-group-item">
+<i class="fa fa-fw fa-download"></i>        Part 7 as Eclipse Project <em>(requires at least JDK 8u40)</em></a>
   </div>
 </div>
 <div class="panel panel-default sidebar">
@@ -169,7 +169,7 @@
             <h1 class="article-title">JavaFX 8 Tutorial - Part 7: Deployment</h1>
             <div class="article-date">
   May 10, 2014
-  • Updated Aug 30, 2014
+  • Updated Mar 12, 2015
 
 </div>
           </header>
@@ -201,8 +201,8 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Download Sources <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-7.zip">
-<i class="fa fa-fw fa-download"></i>        Part 7 as Eclipse Project <em>(requires at least JDK 8u20)</em></a></li>
+      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-7.zip">
+<i class="fa fa-fw fa-download"></i>        Part 7 as Eclipse Project <em>(requires at least JDK 8u40)</em></a></li>
   </ul>
 </div>
 <div class="btn-group sidebar-dropdown">
@@ -230,7 +230,7 @@
           
           <div class="article-content">
             <p><img src="/assets/library/javafx-8-tutorial/part7/addressapp-part7.png" alt="Screenshot AddressApp Part 7"></p>
-<p>I thought I'd write one last part of this tutorial series to show how to deploy (i.e. package and publish) the AddressApp.</p>
+<p>I thought I'd write one last part of this tutorial series to show how to deploy (that means package and publish) the AddressApp.</p>
 <hr>
 <h2 id="topics-in-part-7">Topics in Part 7</h2>
 <ul>
@@ -262,7 +262,7 @@
 </li>
 <li><p>Fill out all the fields containing a star. <em>For MacOS: Do not use spaces in Application title as this seems to cause a problem.</em><br><img src="/assets/library/javafx-8-tutorial/part7/fxbuild-settings.png" alt="fxbuild settings"></p>
 </li>
-<li><p>As <strong>Packaging Format</strong> choose <code>exe</code> for Windows, <code>dmg</code> for MacOS, and <code>rpm</code> for Linux.</p>
+<li><p>As <strong>Packaging Format</strong> choose <code>exe</code> for Windows, <code>dmg</code> for MacOS, or <code>rpm</code> for Linux.</p>
 </li>
 <li><p>Click on the link <code>Generate ant build.xml only</code> (found on the right side).<br><img src="/assets/library/javafx-8-tutorial/part7/generate-ant-build.png" alt="generate ant build"></p>
 </li>
@@ -275,11 +275,12 @@
 <li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp.ico">AddressApp.ico</a> for the installer file icon</li>
 <li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp-setup-icon.bmp">AddressApp-setup-icon.bmp</a> for the installer splash screen icon</li>
 <li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp.icns">AddressApp.icns</a> for the mac installer icon</li>
+<li><a href="/assets/library/javafx-8-tutorial/part7/AddressApp-volume.icns">AddressApp-volume.icns</a> for the mac desktop icon</li>
 </ul>
 <ol>
 <li>Create the following subfolders in the <code>build</code> folder:<ul>
 <li><code>build/package/windows</code> (only used for windows)</li>
-<li><code>build/package/macos</code> (only used for macos)</li>
+<li><code>build/package/macosx</code> (only used for macos)</li>
 </ul>
 </li>
 <li>Copy the corresponding icons from above into those subfolders. It should look something like this now:<br><img src="/assets/library/javafx-8-tutorial/part7/installer-icons.png" alt="Installer Icons"></li>
@@ -287,6 +288,7 @@
 <li><code>YourAppTitle.ico</code></li>
 <li><code>YourAppTitle-setup-icon.bmp</code></li>
 <li><code>YourAppTitle.icns</code></li>
+<li><code>YourAppTitle-volume.icns</code></li>
 </ul>
 </li>
 </ol>
@@ -345,7 +347,7 @@
 </li>
 <li><p>Tell Windows about the installation path to Inno Setup (e.g. <code>C:\Program Files (x86)\Inno Setup 5</code>). To do this add Inno Setup to the <code>Path</code> variable in your windows environment variables. If you don't know where to find it, read <a href="http://www.computerhope.com/issues/ch000549.htm">How to set the path and environment variables in Windows</a>.</p>
 </li>
-<li><p>Restart Eclipse and continue with Step 5.</p>
+<li><p>Restart Eclipse and continue with Step 6.</p>
 </li>
 </ol>
 <h3 id="step-5-mac-macos-dmg-installer">Step 5 (MAC) - MacOS dmg Installer</h3>
@@ -366,7 +368,7 @@
 <p>I appreciate any feedback. Feel free to write comments if you have any suggestions or if something was unclear.</p>
 <h5 id="some-other-articles-you-might-find-interesting">Some other articles you might find interesting</h5>
 <ul>
-<li><a href="/blog/javafx-8-dialogs/">JavaFX Dialogs</a></li>
+<li><a href="/blog/javafx-dialogs-official/">JavaFX Dialogs (official)</a></li>
 <li><a href="/blog/javafx-8-date-picker/">JavaFX Date Picker</a></li>
 <li><a href="/blog/javafx-8-event-handling-examples/">JavaFX Event Handling Examples</a></li>
 <li><a href="/blog/javafx-8-tableview-sorting-filtering/">JavaFX TableView Sorting and Filtering</a></li>

@@ -6,7 +6,7 @@
     <language>en</language>
     <webMaster>majakob@gmx.ch</webMaster>
     <copyright>2015</copyright>
-    <lastBuildDate>Wed, 11 Mar 2015 22:09:31 CET</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2015 13:48:28 CET</lastBuildDate>
     <generator>mixture.io</generator>
     
       
@@ -36,8 +36,10 @@ I don&#39;t intend this to be a battle between technologies by making...</descri
 	<category>JavaFX</category>
 	
 	<pubDate>Tue, 28 Oct 2014 00:00:00 CET</pubDate>
-	<description>JavaFX 8 (update 40) finally includes simple Dialogs and Alerts! I&#39;ve been waiting for this since 2012! In the meantime I wrote about how to use Dialogs in JavaFX 2 and later in JavaFX 8 with ControlsFX.
-Now that they will be available in the official JDK, let&#39;s learn how to...</description>
+	<description>JavaFX 8u40 finally includes simple Dialogs and Alerts! I&#39;ve been waiting for this since 2012! In the meantime I wrote about how to use Dialogs in JavaFX 2 and later in JavaFX 8 with ControlsFX.
+Now that they are available in the official JDK, let&#39;s learn how to use them.
+Prerequisites
+To use...</description>
 </item>
 <item>
 	<title><![CDATA[JavaFX Tutorial in Spanish, Chinese and Portuguese]]></title>
@@ -154,10 +156,11 @@ Using the...</description>
 	<pubDate>Fri, 18 Apr 2014 00:00:00 CET</pubDate>
 	<description>
   
-    Soon Deprecated! Please read the &amp;rarr; Article about the official JavaFX Dialogs! 
+    Deprecated! Please read the &amp;rarr; Article about the official JavaFX Dialogs! 
   
   
-    It was announced that the Dialogs will finally be included in JavaFX. They will be part of the JDK version 8u40 which will be...</description>
+   With JDK version 8u40, the Dialogs were finally included in the official JavaFX. This means that the ControlsFX Dialogs described in this post will be deprecated!
+...</description>
 </item>
     
   </channel>

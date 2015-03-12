@@ -135,8 +135,8 @@
   </div>
 
   <div class="list-group">
-      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-3.zip" class="list-group-item">
-<i class="fa fa-fw fa-download"></i>        Part 3 as Eclipse Project <em>(requires at least JDK 8u20)</em></a>
+      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-3.zip" class="list-group-item">
+<i class="fa fa-fw fa-download"></i>        Part 3 as Eclipse Project <em>(requires at least JDK 8u40)</em></a>
   </div>
 </div>
 <div class="panel panel-default sidebar">
@@ -169,7 +169,7 @@
             <h1 class="article-title">JavaFX 8 Tutorial - Part 3: Interacting with the User</h1>
             <div class="article-date">
   Apr 24, 2014
-  • Updated Aug 27, 2014
+  • Updated Mar 12, 2015
 
 </div>
           </header>
@@ -201,8 +201,8 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Download Sources <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-3.zip">
-<i class="fa fa-fw fa-download"></i>        Part 3 as Eclipse Project <em>(requires at least JDK 8u20)</em></a></li>
+      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-3.zip">
+<i class="fa fa-fw fa-download"></i>        Part 3 as Eclipse Project <em>(requires at least JDK 8u40)</em></a></li>
   </ul>
 </div>
 <div class="btn-group sidebar-dropdown">
@@ -410,13 +410,7 @@ private void handleDeletePerson() {
 <p>If you run the application at this point you should be able to delete selected persons from the table. But what happenes if you <strong>click the delete button while no person is selected</strong> in the table? </p>
 <p>There will be an <code>ArrayIndexOutOfBoundsException</code> because it could not remove a person item at index <code>-1</code>. The index <code>-1</code> was returned by <code>getSelectedIndex()</code> - which means that there was no selection.</p>
 <p>To ignore such an error is not very nice, of course. We should let the user know that he/she must select a person before deleting. (Even better would be if we disabled the button so that the user doesn't even have the chance to do something wrong.)</p>
-<p>We'll add a popup dialog to inform the user. You'll need to <strong>add a library</strong> for the <a href="/blog/javafx-8-dialogs/">Dialogs</a>: </p>
-<ol>
-<li>Download this <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/controlsfx-8.0.6_20.jar">controlsfx-8.0.6_20.jar</a> (you could also get it from the <a href="http://fxexperience.com/controlsfx/">ControlsFX Website</a>).<br><strong>Important: The ControlsFX must be version <code>8.0.6_20</code> or greater to work with <code>JDK 8u20</code> and above as there was a breaking change introduced in that version.</strong></li>
-<li>Create a <strong>lib</strong> subfolder in the project and add the controlsfx-jar file to this folder.</li>
-<li>Add the library to your project's <strong>classpath</strong>: In Eclipse <em>right-click on the jar file</em> | <em>Build Path</em> | <em>Add to Build Path</em>. Now Eclipse knows about the library.</li>
-</ol>
-<p><img src="/assets/library/javafx-8-tutorial/part3/controlsfx-library.png" alt="ControlsFX Libaray"></p>
+<p>We'll add a popup dialog to inform the user.</p>
 <p>With some changes made to the <code>handleDeletePerson()</code> method, we can show a simple popup dialog whenever the user pushes the delete button while no person is selected in the table:</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
@@ -430,24 +424,25 @@ private void handleDeletePerson() {
         personTable.getItems().remove(selectedIndex);
     } else {
         // Nothing selected.
-        Dialogs.create()
-            .title("No Selection")
-            .masthead("No Person Selected")
-            .message("Please select a person in the table.")
-            .showWarning();
+        Alert alert = new Alert(AlertType.WARNING);
+        alert.initOwner(mainApp.getPrimaryStage());
+        alert.setTitle("No Selection");
+        alert.setHeaderText("No Person Selected");
+        alert.setContentText("Please select a person in the table.");
+
+        alert.showAndWait();
     }
 }
 </pre>
 
 <div class="alert alert-info">
-For more examples on how to use Dialogs read <a class="alert-link" href="/blog/javafx-8-dialogs/">JavaFX 8 Dialogs</a>.
+For more examples on how to use Dialogs read my blog post about <a class="alert-link" href="/blog/javafx-dialogs-official/">JavaFX Dialogs</a>.
 </div>
-
 
 
 <hr>
 <h2 id="the-new-and-edit-dialogs">The New and Edit Dialogs</h2>
-<p>The new and edit actions are a bit more work: We'll need a custom dialog (i.e. a new stage) with a form to ask the user for details about the person.</p>
+<p>The new and edit actions are a bit more work: We'll need a custom dialog (that means a new stage) with a form to ask the user for details about the person.</p>
 <h3 id="design-the-dialog">Design the Dialog</h3>
 <ol>
 <li><p>Create a new fxml file called <code>PersonEditDialog.fxml</code> inside the <em>view</em> package.<br><img src="/assets/library/javafx-8-tutorial/part3/person-edit-dialog1.png" alt="Create Edit Dialog"></p>
@@ -455,7 +450,6 @@ For more examples on how to use Dialogs read <a class="alert-link" href="/blog/j
 <li><p>Use a <code>GridPane</code>, <code>Label</code>s, <code>TextField</code>s and <code>Button</code>s to create a Dialog like the following:<br><img src="/assets/library/javafx-8-tutorial/part3/person-edit-dialog2.png" alt="Edit Dialog">   </p>
 </li>
 </ol>
-<p><em>If you don't to do the work, you can download this <a href="/assets/library/javafx-8-tutorial/part3/PersonEditDialog.fxml">PersonEditDialog.fxml</a>.</em> </p>
 <h3 id="create-the-controller">Create the Controller</h3>
 <p>Create the controller for the Dialog as <code>PersonEditDialogController.java</code>:</p>
 <h5 id="personeditdialogcontroller-java">PersonEditDialogController.java</h5>
@@ -463,11 +457,10 @@ For more examples on how to use Dialogs read <a class="alert-link" href="/blog/j
 package ch.makery.address.view;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import org.controlsfx.dialog.Dialogs;
-
 import ch.makery.address.model.Person;
 import ch.makery.address.util.DateUtil;
 
@@ -610,11 +603,14 @@ public class PersonEditDialogController {
             return true;
         } else {
             // Show the error message.
-            Dialogs.create()
-                .title("Invalid Fields")
-                .masthead("Please correct invalid fields")
-                .message(errorMessage)
-                .showError();
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.initOwner(dialogStage);
+            alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
             return false;
         }
     }
@@ -709,11 +705,13 @@ private void handleEditPerson() {
 
     } else {
         // Nothing selected.
-        Dialogs.create()
-            .title("No Selection")
-            .masthead("No Person Selected")
-            .message("Please select a person in the table.")
-            .showWarning();
+        Alert alert = new Alert(AlertType.WARNING);
+        alert.initOwner(mainApp.getPrimaryStage());
+        alert.setTitle("No Selection");
+        alert.setHeaderText("No Person Selected");
+        alert.setContentText("Please select a person in the table.");
+
+        alert.showAndWait();
     }
 }
 </pre>
@@ -727,7 +725,7 @@ private void handleEditPerson() {
 <p>In <a href="/java/javafx-8-tutorial-part4/">Tutorial Part 4</a> we will add some CSS styling.</p>
 <h5 id="some-other-articles-you-might-find-interesting">Some other articles you might find interesting</h5>
 <ul>
-<li><a href="/blog/javafx-8-dialogs/">JavaFX Dialogs</a></li>
+<li><a href="/blog/javafx-dialogs-official/">JavaFX Dialogs (official)</a></li>
 <li><a href="/blog/javafx-8-date-picker/">JavaFX Date Picker</a></li>
 <li><a href="/blog/javafx-8-event-handling-examples/">JavaFX Event Handling Examples</a></li>
 <li><a href="/blog/javafx-8-tableview-sorting-filtering/">JavaFX TableView Sorting and Filtering</a></li>

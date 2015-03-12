@@ -135,8 +135,8 @@
   </div>
 
   <div class="list-group">
-      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-5.zip" class="list-group-item">
-<i class="fa fa-fw fa-download"></i>        Part 5 as Eclipse Project <em>(requires at least JDK 8u20)</em></a>
+      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-5.zip" class="list-group-item">
+<i class="fa fa-fw fa-download"></i>        Part 5 as Eclipse Project <em>(requires at least JDK 8u40)</em></a>
   </div>
 </div>
 <div class="panel panel-default sidebar">
@@ -169,7 +169,7 @@
             <h1 class="article-title">JavaFX 8 Tutorial - Part 5: Storing Data as XML</h1>
             <div class="article-date">
   Apr 25, 2014
-  • Updated Aug 27, 2014
+  • Updated Mar 12, 2015
 
 </div>
           </header>
@@ -201,8 +201,8 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Download Sources <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-5.zip">
-<i class="fa fa-fw fa-download"></i>        Part 5 as Eclipse Project <em>(requires at least JDK 8u20)</em></a></li>
+      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-5.zip">
+<i class="fa fa-fw fa-download"></i>        Part 5 as Eclipse Project <em>(requires at least JDK 8u40)</em></a></li>
   </ul>
 </div>
 <div class="btn-group sidebar-dropdown">
@@ -382,10 +382,12 @@ public void loadPersonDataFromFile(File file) {
         setPersonFilePath(file);
 
     } catch (Exception e) { // catches ANY exception
-        Dialogs.create()
-                .title("Error")
-                .masthead("Could not load data from file:\n" + file.getPath())
-                .showException(e);
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText("Could not load data");
+        alert.setContentText("Could not load data from file:\n" + file.getPath());
+
+        alert.showAndWait();
     }
 }
 
@@ -411,9 +413,12 @@ public void savePersonDataToFile(File file) {
         // Save the file path to the registry.
         setPersonFilePath(file);
     } catch (Exception e) { // catches ANY exception
-        Dialogs.create().title("Error")
-                .masthead("Could not save data to file:\n" + file.getPath())
-                .showException(e);
+        Alert alert = new Alert(AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText("Could not save data");
+        alert.setContentText("Could not save data to file:\n" + file.getPath());
+
+        alert.showAndWait();
     }
 }
 </pre>
@@ -434,10 +439,9 @@ package ch.makery.address.view;
 import java.io.File;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.FileChooser;
-
-import org.controlsfx.dialog.Dialogs;
-
 import ch.makery.address.MainApp;
 
 /**
@@ -533,11 +537,12 @@ public class RootLayoutController {
      */
     @FXML
     private void handleAbout() {
-        Dialogs.create()
-            .title("AddressApp")
-            .masthead("About")
-            .message("Author: Marco Jakob\nWebsite: http://code.makery.ch")
-            .showInformation();
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("AddressApp");
+        alert.setHeaderText("About");
+        alert.setContentText("Author: Marco Jakob\nWebsite: http://code.makery.ch");
+
+        alert.showAndWait();
     }
 
     /**
@@ -657,7 +662,7 @@ public LocalDate getBirthday() {
 <p>In Tutorial <a href="/java/javafx-8-tutorial-part6/">Part 6</a> we'll add a birthday statistics chart.</p>
 <h5 id="some-other-articles-you-might-find-interesting">Some other articles you might find interesting</h5>
 <ul>
-<li><a href="/blog/javafx-8-dialogs/">JavaFX Dialogs</a></li>
+<li><a href="/blog/javafx-dialogs-official/">JavaFX Dialogs (official)</a></li>
 <li><a href="/blog/javafx-8-date-picker/">JavaFX Date Picker</a></li>
 <li><a href="/blog/javafx-8-event-handling-examples/">JavaFX Event Handling Examples</a></li>
 <li><a href="/blog/javafx-8-tableview-sorting-filtering/">JavaFX TableView Sorting and Filtering</a></li>

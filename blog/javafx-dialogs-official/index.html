@@ -34,7 +34,7 @@
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
 
-    <meta name="description" content="Examples of how to create simple popup Dialogs and Alerts in JavaFX.">
+    <meta name="description" content="Examples of how to create simple popup Dialogs and Alerts in JavaFX. Official Dialogs were included in JDK 8u40.">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary">
@@ -42,7 +42,7 @@
     <!-- Open Graph data -->
     <meta property="og:title" content="JavaFX Dialogs (official) | code.makery.ch" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Examples of how to create simple popup Dialogs and Alerts in JavaFX." />
+    <meta property="og:description" content="Examples of how to create simple popup Dialogs and Alerts in JavaFX. Official Dialogs were included in JDK 8u40." />
     <meta property="og:url" content="http://code.makery.ch/blog/javafx-dialogs-official/" />
     <meta property="og:image" content="http://code.makery.ch/assets/blog/14-10-28-javafx-dialogs-official/login-dialog.png" />
     
@@ -113,12 +113,11 @@
         </header>
 
         <div class="post-content">
-          <p>JavaFX 8 (update 40) finally includes simple Dialogs and Alerts! I've been waiting for this since 2012! In the meantime I wrote about how to use Dialogs <a href="/blog/javafx-2-dialogs/">in JavaFX 2</a> and later <a href="/blog/javafx-8-dialogs/">in JavaFX 8 with ControlsFX</a>.</p>
-<p>Now that they will be available in the official JDK, let's learn how to use them.</p>
+          <p>JavaFX 8u40 finally includes simple Dialogs and Alerts! I've been waiting for this since 2012! In the meantime I wrote about how to use Dialogs <a href="/blog/javafx-2-dialogs/">in JavaFX 2</a> and later <a href="/blog/javafx-8-dialogs/">in JavaFX 8 with ControlsFX</a>.</p>
+<p>Now that they are available in the official JDK, let's learn how to use them.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>To use the official JavaFX Dialogs you need JDK 8u40 or later. JDK 8u40 will be <a href="http://openjdk.java.net/projects/jdk8u/releases/8u40.html">released in March 2015</a> but you can get an early access version on the following website:</p>
-<p>&rarr; <a href="https://jdk8.java.net/download.html">Download JDK 8u40</a></p>
-<p><em>(In case you don't want to use the early access release, you can alternatively use the <code>openjfx-dialogs-1.x.x.jar</code> included in the <a href="http://fxexperience.com/controlsfx/">ControlsFX zip file</a>.)</em></p>
+<p>To use the official JavaFX Dialogs you need JDK 8u40 or later. </p>
+<p>&rarr; <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Download JDK 8u40</a> or newer.</p>
 <h2 id="standard-dialogs">Standard Dialogs</h2>
 <h3 id="information-dialog">Information Dialog</h3>
 <p><img src="/assets/blog/14-10-28-javafx-dialogs-official/information-dialog.png" alt="JavaFX Information Dialog"></p>
@@ -305,6 +304,8 @@ result.ifPresent(letter -> System.out.println("Your choice: " + letter));
 Dialog&lt;Pair&lt;String, String>> dialog = new Dialog&lt;>();
 dialog.setTitle("Login Dialog");
 dialog.setHeaderText("Look, a Custom Login Dialog");
+
+// Set the icon (must be included in the project).
 dialog.setGraphic(new ImageView(this.getClass().getResource("login.png").toString()));
 
 // Set the button types.
@@ -396,6 +397,17 @@ dialog.initOwner(parentWindow);
 <pre class="prettyprint lang-java">
 dialog.initModality(Modality.NONE);
 </pre>
+
+
+<h2 id="api-documentation">API Documentation</h2>
+<p>For more information on the Dialogs have a look at the JavaFX API docs:</p>
+<ul>
+<li><a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Alert.html">Alert</a></li>
+<li><a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Dialog.html">Dialog</a></li>
+<li><a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextInputDialog.html">TextInputDialog</a></li>
+<li><a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ChoiceDialog.html">ChoiceDialog</a></li>
+<li><a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/DialogPane.html">DialogPane</a></li>
+</ul>
 
 
         </div>
