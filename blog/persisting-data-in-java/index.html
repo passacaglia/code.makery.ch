@@ -111,20 +111,20 @@
         <div class="post-content">
           <p>Almost every application will need some way to persistently store data. There are many different ways to accomplish that. We'll start with a simple way to save a small amount of data and continue to more advanced techniques. </p>
 <p><img src="/assets/blog/12-12-13-persisting-data-in-java/floppy.png" alt="Floppy"></p>
-<p>Some of the techniques (Preferences, XML and reading/writing Files) described here were already used in the <a href="/java/javafx-2-tutorial-part5/">JavaFX 2 Tutorial Part 5</a>. </p>
+<p>Some of the techniques (Preferences, XML and reading/writing Files) described here were already used in the <a href="/library/javafx-2-tutorial/part5/">JavaFX 2 Tutorial Part 5</a>. </p>
 <hr>
 <h2 id="preferences">Preferences</h2>
 <p>With the class <a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/util/prefs/Preferences.html"><code>Preferences</code></a> of the standard Java library we can save some small values. Typically, you'd save some simple user preferences in it like path to the <em>last opened file</em>. </p>
 <p>Depending on the operating system, the <code>Preferences</code> are saved in different places (e.g. the registry file in Windows).</p>
 <ul>
-<li><code>Preferences</code> example in <a href="/java/javafx-2-tutorial-part5/">JavaFX 2 Tutorial Part 5</a>.</li>
+<li><code>Preferences</code> example in <a href="/library/javafx-2-tutorial/part5/">JavaFX 2 Tutorial Part 5</a>.</li>
 <li>Instructions in <em>German</em> in the book <a href="http://openbook.galileocomputing.de/javainsel/javainsel_11_009.html#dodtp29221705-11a7-4fe0-8f23-bfb46d58ff59">Java ist auch eine Insel</a></li>
 </ul>
 <hr>
 <h2 id="saving-files">Saving Files</h2>
 <p>There are various possibilities to load and save a file in Java.</p>
 <ul>
-<li>An example is the <code>FileUtil</code> helper class in <a href="/java/javafx-2-tutorial-part5">JavaFX 2 Tutorial Part 5</a>.</li>
+<li>An example is the <code>FileUtil</code> helper class in <a href="/library/javafx-2-tutorial/part5">JavaFX 2 Tutorial Part 5</a>.</li>
 <li>The official Java <a href="http://docs.oracle.com/javase/tutorial/essential/io/fileio.html">File I/O Tutorial</a>.</li>
 </ul>
 <p>Simple text files can directly be saved to the disk. You construct a String (from objects) and save it using the means described above. But if you later want to read from the text files and use the information in your application, you might have some difficulties. You would have to manually parse the elements from one big unstructured String. Then, to get objects again, you would have to create new objects and fill them with the information from the String.</p>
@@ -133,7 +133,7 @@
 <h2 id="xml-with-xstream">XML with XStream</h2>
 <p>XStream is a simple library to serialize objects to XML and back again. Serializing means that, given an object (which may contain a reference to other objects), XStream will create a single XML-String representing this object(s). The XML-String can then be saved to a file. XStream will later accept this XML-String to reproduce the object(s) again.</p>
 <ul>
-<li>XML example in <a href="/java/javafx-2-tutorial-part5/">JavaFX 2 Tutorial Part 5</a>.</li>
+<li>XML example in <a href="/library/javafx-2-tutorial/part5/">JavaFX 2 Tutorial Part 5</a>.</li>
 <li>Official <a href="http://xstream.codehaus.org/">XStream Website</a> with a good <a href="http://xstream.codehaus.org/tutorial.html">Two Minute Tutorial</a>.</li>
 </ul>
 <p>When data gets more complex then a database instead of XML is appropriate.</p>

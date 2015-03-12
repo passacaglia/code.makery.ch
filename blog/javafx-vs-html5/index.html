@@ -143,8 +143,8 @@
 <h4 id="javafx">JavaFX</h4>
 <ul>
 <li>JavaFX comes with a decent default theme called <a href="http://fxexperience.com/2013/01/modena-new-theme-for-javafx-8/">Modena</a>.</li>
-<li>The theme is easily <a href="http://code.makery.ch/java/javafx-8-tutorial-part4/">customizable with CSS</a>.</li>
-<li>There are <a href="http://fxexperience.com/2013/01/modena-new-theme-for-javafx-8/">many UI widgets</a> (scroll down to "All controls in Modena"). It comes with complex widgets and interactions out of the box: <a href="http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/tree-table-view.htm">TreeTableView</a>, TextFlow (supports rich text), <a href="http://code.makery.ch/blog/javafx-8-date-picker/">DatePicker</a>, Charts, 3D support, <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/web/WebView.html">WebView</a> (with a modified Webkit engine), Drag and Drop, and more.</li>
+<li>The theme is easily <a href="/library/javafx-8-tutorial/part4/">customizable with CSS</a>.</li>
+<li>There are <a href="http://fxexperience.com/2013/01/modena-new-theme-for-javafx-8/">many UI widgets</a> (scroll down to "All controls in Modena"). It comes with complex widgets and interactions out of the box: <a href="http://docs.oracle.com/javase/8/javafx/user-interface-tutorial/tree-table-view.htm">TreeTableView</a>, TextFlow (supports rich text), <a href="/blog/javafx-8-date-picker/">DatePicker</a>, Charts, 3D support, <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/scene/web/WebView.html">WebView</a> (with a modified Webkit engine), Drag and Drop, and more.</li>
 <li>If you need more widgets there is the excellent <a href="http://fxexperience.com/controlsfx/">ControlsFX</a> project and also <a href="http://jfxtras.org/">JFXtras</a>.</li>
 <li>JavaFX also comes with a nice visual designer called <a href="http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-info-2157684.html">JavaFX Scene Builder</a> which I like a lot.</li>
 </ul>
@@ -154,7 +154,7 @@
 <li>The options of libraries and frameworks are immense.</li>
 <li>HTML5 targets many browsers and all possible screen sizes. This is great but it is also very difficult to implement one clean solution that works everywhere.</li>
 <li>Complex widgets (like tree-tables) are hard to implement.</li>
-<li>Complex interactions with good performance are hard to implement. I've had my share of experiences by writing a <a href="http://code.makery.ch/blog/drag-and-drop-without-html5/">drag and drop library</a>!</li>
+<li>Complex interactions with good performance are hard to implement. I've had my share of experiences by writing a <a href="/blog/drag-and-drop-without-html5/">drag and drop library</a>!</li>
 </ul>
 <h4 id="result">Result</h4>
 <p>Since JavaFX mainly targets the desktop and HTML5 all possible screen sizes, it is <strong>not really fair to compare</strong> the two in terms of <em>richness and aesthetics of UI</em>.</p>
@@ -176,7 +176,7 @@
 <h2 id="learning-curve">Learning Curve</h2>
 <h4 id="javafx">JavaFX</h4>
 <p>When you're a Java programmer and you've created some Swing GUIs, learning JavaFX will be straigt forward. As a Java Swing developer you should be excited by the new possibilities of JavaFX.</p>
-<p>If you work through my <a href="http://code.makery.ch/java/javafx-8-tutorial-intro/">JavaFX 8 Tutorial</a> you will get familiar with the most important concepts of JavaFX and even some new Java 8 language features:</p>
+<p>If you work through my <a href="/library/javafx-8-tutorial/">JavaFX 8 Tutorial</a> you will get familiar with the most important concepts of JavaFX and even some new Java 8 language features:</p>
 <ul>
 <li>Separating the presentation layer with FXML and SceneBuilder (you can also create JavaFX applications in Java code completely, if you want).</li>
 <li>Using the new Properties classes and ObservableLists for automatic UI updates.</li>
@@ -205,7 +205,7 @@
 <p>I think it takes quite some time but it is possible for Java developers to make the switch to HTML5 if they are excited about learning new web technologies. </p>
 <p>But it will be really <strong>difficult for unexperienced web developers to create a well architected and maintainable project</strong>. It takes a lot of experience and discipline to stick to good practices in JavaScript projects. If the project is fairly large and multiple developers are working on the same web client it's easy to end up in a mess.</p>
 <p>Because many larger organizations have experienced those problems they created their own solutions to tackle them. In my opinion, the best approach so far is <a href="https://www.dartlang.org/">Dart</a>. Dart is an open source language developed by Google that provides a very nice and fresh but still familiar language. It comes with lots of libraries and tools that make developing large web application much easier. And, of course, it compiles to JavaScript so it can be used everywhere.</p>
-<p>The other web technology I can recommend is <a href="http://webcomponents.org/">Web Components</a> which I believe is the primary way how we will develop for the web in the future. Web Components enable real encapsulation of HTML, CSS and JavaScript (or Dart) so they don't interfere with the rest of the page. Nicely encapsulated, the UI widgets are reusable as components anywhere in your application. Web Components is an evolving standard but it isn't implemented in all browsers yet. It's still early days but you can use it today with the polyfill libraries <a href="http://www.polymer-project.org/">polymer</a> or <a href="http://x-tags.org/">x-tags</a>. If you're using Dart instead of JavaScript there is <a href="https://www.dartlang.org/polymer-dart/">Polymer.dart</a>.</p>
+<p>The other web technology I can recommend is <a href="http://webcomponents.org/">Web Components</a> which I believe is the primary way how we will develop for the web in the future. Web Components enable real encapsulation of HTML, CSS and JavaScript (or Dart) so they don't interfere with the rest of the page. Nicely encapsulated, the UI widgets are reusable as components anywhere in your application. Web Components is an evolving standard but it isn't implemented in all browsers yet. It's still early days but you can use it today with the polyfill libraries <a href="http://www.polymer-project.org/">polymer</a> or <a href="http://x-tags.org/">x-tags</a>. If you're using Dart instead of JavaScript there is <a href="https://www.dartlang.org/polymer/">Polymer.dart</a>.</p>
 <h4 id="result">Result</h4>
 <p>For Java developers it is quite a large step until they will be able to design reasonable web applications. Migrating a larger Swing application to HTML5 without experienced web developers would entail a significant risk of failure.</p>
 <p><strong>JavaFX is the obvious winner</strong> concering the learning curve if your primary background is in a non-web language like Java, C#,... If you're already comfortable with web technologies or you're excited to learn something new I recommend you give Dart a try.</p>

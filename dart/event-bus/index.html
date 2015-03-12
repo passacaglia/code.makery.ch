@@ -18,77 +18,7 @@
     <p style="text-align: center;">
     This website moved. If you are not redirected automatically please follow <a href="/library/dart-event-bus/">this link</a>.
     </p>
-    <p>A simple Event Bus using Dart <a href="http://api.dartlang.org/docs/releases/latest/dart_async/Stream.html">Streams</a> 
-for decoupling applications.</p>
-<p>For installation instructions and source code see <a href="https://github.com/marcojakob/dart-event-bus"> Dart Event Bus on GitHub</a>.</p>
-<h2 id="event-bus-pattern">Event Bus Pattern</h2>
-<p>An Event Bus follows the publish/subscribe pattern. It allows listeners to 
-subscribe for events and publishers to fire events. This enables objects to
-interact without requiring to explicitly define listeners and keeping track of
-them.</p>
-<h3 id="event-bus-and-mvc">Event Bus and MVC</h3>
-<p>The Event Bus pattern is especially helpful for decoupling <a href="http://wikipedia.org/wiki/Model_View_Controller">MVC</a> 
-(or <a href="http://wikipedia.org/wiki/Model_View_Presenter">MVP</a>) applications.</p>
-<p><strong>One group of MVC</strong> is not a problem.</p>
-<p><img src="/assets/dart/event-bus/mvc.png" alt="Model-View-Controller"></p>
-<p>But as soon as there are <strong>multiple groups of MVCs</strong>, those groups will have to talk
-to each other. This creates a tight coupling between the controllers.</p>
-<p><img src="/assets/dart/event-bus/mvc-multi.png" alt="Multi Model-View-Controllers"></p>
-<p>By communication through an <strong>Event Bus</strong>, the coupling is reduced.</p>
-<p><img src="/assets/dart/event-bus/event-bus.png" alt="Event Bus"></p>
-<hr>
-<h2 id="demo">Demo</h2>
-<div id="example-container">
-  <div class="row">
-    <div class="listener col-xs-6" id="listener-1">
-      <h4>Listener 1</h4>
-      <p>
-        <textarea class="form-control" rows="4"></textarea>
-      </p>
-      <p>
-        <button class="listen-a btn btn-primary btn-sm">Listen for Event A</button>
-        <button class="listen-b btn btn-success btn-sm">Listen for Event B</button>
-      </p>
-      <p>
-        <button class="pause btn btn-default btn-sm">Pause</button>
-        <button class="resume btn btn-default btn-sm">Resume</button>
-        <button class="cancel btn btn-default btn-sm">Cancel</button>
-      </p>
-    </div>
-    <div class="listener col-xs-6" id="listener-2">
-      <h4>Listener 2</h4>
-      <p>
-        <textarea class="form-control" rows="4"></textarea>
-      </p>
-      <p>
-        <button class="listen-a btn btn-primary btn-sm">Listen for Event A</button>
-        <button class="listen-b btn btn-success btn-sm">Listen for Event B</button>
-      </p>
-      <p>
-        <button class="pause btn btn-default btn-sm">Pause</button>
-        <button class="resume btn btn-default btn-sm">Resume</button>
-        <button class="cancel btn btn-default btn-sm">Cancel</button>
-      </p>
-    </div>
-  </div>
-
-<p>  <h4>Fire Events</h4>
-  <div class="row">
-    <div class="event col-xs-12">
-      <p>
-        <button id="fire-button-a" class="btn btn-primary btn-sm">Fire Event A [1]</button>
-        <label id="fire-label-a"></label>
-      </p>
-    </div>
-    <div class="event col-xs-12">
-      <p>
-        <button id="fire-button-b" class="btn btn-success btn-sm">Fire Event B [1]</button>
-        <label id="fire-label-b"></label>
-      </p>
-    </div>
-  </div>
-</div></p>
-
+    
 
   </body>
 </html>
