@@ -136,8 +136,8 @@
   </div>
 
   <div class="list-group">
-      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-1.zip" class="list-group-item">
-<i class="fa fa-fw fa-download"></i>        Bagian 1 - Proyek dari Eclise <em>(Diperlukan setidaknya JDK 8u20)</em></a>
+      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-1.zip" class="list-group-item">
+<i class="fa fa-fw fa-download"></i>        Bagian 1 - Proyek dari Eclise <em>(Diperlukan setidaknya JDK 8u40)</em></a>
   </div>
 </div>
 
@@ -180,7 +180,7 @@
             <h1 class="article-title">Tutorial JavaFX 8 - Bagian 1: Scene Builder</h1>
             <div class="article-date">
   Apr 19, 2014
-  • Updated Jan 04, 2015
+  • Updated Mar 12, 2015
 
 </div>
           </header>
@@ -212,8 +212,8 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Unduh kode sumber <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-1.zip">
-<i class="fa fa-fw fa-download"></i>        Bagian 1 - Proyek dari Eclise <em>(Diperlukan setidaknya JDK 8u20)</em></a></li>
+      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-1.zip">
+<i class="fa fa-fw fa-download"></i>        Bagian 1 - Proyek dari Eclise <em>(Diperlukan setidaknya JDK 8u40)</em></a></li>
   </ul>
 </div>
 
@@ -263,8 +263,8 @@
 <h3 id="prasyarat">Prasyarat</h3>
 <ul>
 <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK 8</a> terbaru (termasuk <strong>JavaFX 8</strong>).</li>
-<li>Eclipse 4.3 atau lebih besar dengan e(fx)clipse plugin. Eclipse 4.3 atau lebih besar dengan e(fx)clipse plugin dar <a href="http://efxclipse.bestsolution.at/install.html#all-in-one">website e(fx)clipse</a>. Sebagai alternatif bisa menggunakan <a href="http://www.eclipse.org/efxclipse/install.html">situs pembaharuan</a> untuk instalasi Eclipse.</li>
-<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/javafxscenebuilder-info-2157684.html">Scene Builder 2.0</a> atau yang lebih baru.</li>
+<li>Eclipse 4.4 atau lebih besar dengan e(fx)clipse plugin. Eclipse 4.3 atau lebih besar dengan e(fx)clipse plugin dar <a href="http://efxclipse.bestsolution.at/install.html#all-in-one">website e(fx)clipse</a>. Sebagai alternatif bisa menggunakan <a href="http://www.eclipse.org/efxclipse/install.html">situs pembaharuan</a> untuk instalasi Eclipse.</li>
+<li><a href="http://gluonhq.com/products/downloads/">Scene Builder 8.0</a> (provided by Gluon because <a href="http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html">Oracle hanya memberikan ini dalam bentuk code</a>).</li>
 </ul>
 <h3 id="konfigurasi-eclipse">Konfigurasi Eclipse</h3>
 <p>Kita perlu untuk memberitahu Eclipse untuk menggunakan JDK 8 dan dimana dapat ditemukannya Scene Builder:</p>
@@ -313,6 +313,7 @@
   <strong>Note:</strong> Jika anda tidak berhasil mengikuti, unduh kode sumber dari bagian-bagian tutorial ini, dan cobalah dengan fxml yang telah disertakan.
 </div>
 
+<p>(jika Scene builder tidak dapat terbuka, pergi ke "Window | Prefrences | JavaFX" dan atur </p>
 <p>Klik kanan pada <code>PersonOverview.fxml</code> dan pilih <em>Open with Scene Builder</em>. Sekarang anda seharusnya melihat Scene Builder dengan sebuah <em>AncherPane</em> (terlihat di bawah Hierarchy pada sisi kiri).</p>
 <ol>
 <li><p>Pilih <em>Anchor Pane</em> di Hierarchy adan sesuaikan ukuran di bawah pada Layout (pada sisi kanan):<br><img src="/assets/library/javafx-8-tutorial/part1/anchor-pane-size.png" alt="Ukuran Anchor Pane"></p>
@@ -337,7 +338,7 @@
 </li>
 <li><p>Tambah label-label berikut ke sel-sel.<br><em>Catatan: Untuk menambah pada GridPane pilih sebuah baris(akan berwarna kuning), klik kanan dan pilih "Add Row".</em><br><img src="/assets/library/javafx-8-tutorial/part1/add-labels.png" alt="Tambah Label-Lbael"></p>
 </li>
-<li><p>Tambah 3 tombol pada bawah. Tip: Pilih semua, klik kanan dan panggil <em>Wrap In | HBox</em>. Ini akan mengelompokan mereka bersama. Anda mungkin perlu menetapkan <em>spacing</em> didalam HBox. Lalu, atur jangkar (kanan dan bawah) jadi merekaakan tetap berada di tempat yang tepat.<br><img src="/assets/library/javafx-8-tutorial/part1/button-group.png" alt="Kelompok Button"></p>
+<li><p>Tambah sebuah <em>ButtonBar</em> di bawah, lalu tambah 3 tombol pada bar. Sekarang, atur jangkar (kanan dan bawah) pada <em>ButtonBar</em> sehingga itu tetap pada tempat yang tepat.<br><img src="/assets/library/javafx-8-tutorial/part1/button-group.png" alt="Kelompok Button"></p>
 </li>
 <li><p>Sekarang anda seharusnya melihat sesuatu seperti berikut. Gunakan menu <em>Preview</em> untuk mencoba perilaku perubahan ukuran.
 <img src="/assets/library/javafx-8-tutorial/part1/scene-builder-preview.png" alt="Pratinjau"></p>
@@ -466,7 +467,7 @@ Jika masih tidak berfungsi, unduh kode sumber dari tutorial ini, dan coba dengan
 <p>Di <a href="/library/javafx-8-tutorial/id/part2/">Tutorial bagian 2</a> kita akan menambah beberapa data fungsi pada AddressApp.</p>
 <h5 id="beberapa-artikel-menarik-lainnya">Beberapa artikel menarik lainnya</h5>
 <ul>
-<li><a href="/blog/javafx-8-dialogs/">JavaFX Dialogs</a></li>
+<li><a href="/blog/javafx-dialogs-official/">JavaFX Dialogs (resmi)</a></li>
 <li><a href="/blog/javafx-8-date-picker/">JavaFX Date Picker</a></li>
 <li><a href="/blog/javafx-8-event-handling-examples/">JavaFX Event Handling Examples</a></li>
 <li><a href="/blog/javafx-8-tableview-sorting-filtering/">JavaFX TableView Sorting and Filtering</a></li>
