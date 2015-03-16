@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JavaFX 8 Tutorial - Part 1: Scene Builder | code.makery.ch</title>
+    <title>JavaFX 8 Tutorial - Parte 1: Scene Builder | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -49,7 +49,7 @@
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="JavaFX 8 Tutorial - Part 1: Scene Builder | code.makery.ch" />
+    <meta property="og:title" content="JavaFX 8 Tutorial - Parte 1: Scene Builder | code.makery.ch" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Impariamo come impostare un progetto JavaFX. Questo tutorial in sette parti, guida nella progettazione, nella programmazione e nel deploying di una applicazione rubrica con JavaFX." />
     <meta property="og:url" content="http://code.makery.ch/library/javafx-8-tutorial/it/part1/" />
@@ -177,7 +177,7 @@
         </aside>
         <div class="col-md-9">
           <header class="article-header">
-            <h1 class="article-title">JavaFX 8 Tutorial - Part 1: Scene Builder</h1>
+            <h1 class="article-title">JavaFX 8 Tutorial - Parte 1: Scene Builder</h1>
             <div class="article-date">
   Apr 19, 2014
   • Updated Mar 12, 2015
@@ -362,10 +362,10 @@
 <li><p>Chiameremo la classe <code>MainApp</code> e la metteremo nel controller package <code>ch.makery.address</code> (nota: questo è un package parente dei <code>view</code> e <code>model</code> subpackages).<br><img src="/assets/library/javafx-8-tutorial/part1/new-main-class2.png" alt="New JavaFX Main Class"></p>
 </li>
 </ol>
-<p>La classe <code>MainApp.java</code> generata è estesa da <code>Application</code> e contiene due metodi. Questa è la struttura base di cui abbiamo bisogno per avviare una applicazione JavaFX. La parte più importante è il metodo <code>start(Stage primaryStage)</code>. Questo è automaticamente chiamato quando l'applicazione viene <code>lanciata</code> dall'interno del metodo <code>main</code>.</p>
-<p>come puoi vedere, il metodo <code>start(...)</code> riceve uno <code>Stage</code> come parametro. Il seguente grafico illustra la struttura di ogni applicazione JavaFX:</p>
+<p>La classe <code>MainApp.java</code> generata è estesa da <code>Application</code> e contiene due metodi. Questa è la struttura base di cui abbiamo bisogno per avviare una applicazione JavaFX. La parte più importante è il metodo <code>start(Stage primaryStage)</code>. Questo è automaticamente chiamato quando l'applicazione viene <code>lanciata</code> dall'interno del metodo <code>main</code>.
+Come puoi vedere, il metodo <code>start(...)</code> riceve uno <code>Stage</code> come parametro. Il seguente grafico illustra la struttura di ogni applicazione JavaFX:</p>
 <p><img src="/assets/library/javafx-8-tutorial/part1/javafx-hierarchy.png" alt="New FXML Document"><br><em>Image Source: <a href="http://www.oracle.com">http://www.oracle.com</a></em></p>
-<p><strong>E' come uno spettacolo teatrale</strong>:<code>Stage</code> è un il contenitore principale, di solito un finistra <code>Window</code> con dei bordi e i tipici pulsanti per minimizzare, massimizzare e chiudere. All'interno di <code>Stage</code> si aggiunge una <code>Scene</code> che può, naturalmente, avvicendarsi ad un'altra. All'interno della <code>Scene</code> gli effettivi nodi JAvaFX come <code>AnchorPane</code>, <code>TextBox</code>, etc. vengono aggiunti.</p>
+<p><strong>E' come uno spettacolo teatrale</strong>:<code>Stage</code> è un il contenitore principale, di solito un finistra <code>Window</code> con dei bordi e i tipici pulsanti per minimizzare, massimizzare e chiudere. All'interno di <code>Stage</code> si aggiunge una <code>Scene</code> che può, naturalmente, avvicendarsi ad un'altra. All'interno della <code>Scene</code> gli effettivi nodi JavaFX come <code>AnchorPane</code>, <code>TextBox</code>, etc. vengono aggiunti.</p>
 <p>Per ulteriori informazioni <a href="http://docs.oracle.com/javase/8/javafx/scene-graph-tutorial/scenegraph.htm">Working with the JavaFX Scene Graph</a>.</p>
 <hr>
 <p>Aprire <code>MainApp.java</code> e stostituire il codice con il seguente:</p>
@@ -568,7 +568,7 @@ public class MainApp extends Application {
     var disqus_shortname = 'codemakery'; // Required - the forum shortname
     var disqus_identifier = '/library/javafx-8-tutorial/it/part1/';
     var disqus_url = 'http://code.makery.ch/library/javafx-8-tutorial/it/part1/';
-    var disqus_title = 'JavaFX 8 Tutorial - Part 1: Scene Builder';
+    var disqus_title = 'JavaFX 8 Tutorial - Parte 1: Scene Builder';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

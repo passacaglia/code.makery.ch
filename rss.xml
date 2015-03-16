@@ -6,10 +6,20 @@
     <language>en</language>
     <webMaster>majakob@gmx.ch</webMaster>
     <copyright>2015</copyright>
-    <lastBuildDate>Sun, 15 Mar 2015 21:40:10 CET</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2015 16:56:51 CET</lastBuildDate>
     <generator>mixture.io</generator>
     
       
+<item>
+	<title><![CDATA[Making Content Editors and Web Developers Happy Again]]></title>
+	<link>http://code.makery.ch/blog/making-content-editors-and-web-developers-happy/</link>
+	<guid>/blog/making-content-editors-and-web-developers-happy/</guid>
+	
+	<category>Web</category>
+	
+	<pubDate>Mon, 16 Mar 2015 00:00:00 CET</pubDate>
+	<description>I love static websites. I have been using and enjoying various static website generators for almost three years now (like this website) and I wouldn&#39;t want to go back to using more complex systems. But, while I&#39;m comfortable writing my Markdown files in a text editer most non-technical content editors...</description>
+</item>
 <item>
 	<title><![CDATA[JavaFX Update for JDK 8u40]]></title>
 	<link>http://code.makery.ch/blog/javafx-update-for-jdk-8u40/</link>
@@ -34,7 +44,7 @@ Create...</description>
 	<link>http://code.makery.ch/blog/javafx-vs-html5/</link>
 	<guid>/blog/javafx-vs-html5/</guid>
 	
-	<category>HTML5</category>
+	<category>Web</category>
 	
 	<category>Java</category>
 	
@@ -84,7 +94,7 @@ Wow, I&#39;m really excited about the community contributions that were made to 
 	
 	<category>Dart</category>
 	
-	<category>HTML5</category>
+	<category>Web</category>
 	
 	<pubDate>Thu, 17 Jul 2014 00:00:00 CET</pubDate>
 	<description>I gave up on HTML5 drag and drop! A step I should have made a long time ago. Even though I read some reports of people struggling with it (like the HTML5 drag and drop disaster article) I thought I could takle it and make it work for the most...</description>
@@ -146,22 +156,6 @@ I like to keep the...</description>
 So, let&#39;s see how we can use the new classes to sort and filter a TableView.
 Example Setup
 As an example we&#39;ll create a simple table...</description>
-</item>
-<item>
-	<title><![CDATA[JavaFX 8 Date Picker]]></title>
-	<link>http://code.makery.ch/blog/javafx-8-date-picker/</link>
-	<guid>/blog/javafx-8-date-picker/</guid>
-	
-	<category>Java</category>
-	
-	<category>JavaFX</category>
-	
-	<pubDate>Fri, 18 Apr 2014 01:00:00 CET</pubDate>
-	<description>Finally, with JavaFX 8 a DatePicker control was added (for JavaFX 2 we had to create our own)! 
-The DatePicker works well in combination with the new Java 8 Date and Time API. Those two things together provide a much better experience when working with dates in Java!
-
-Basic Usage
-Using the...</description>
 </item>
     
   </channel>
