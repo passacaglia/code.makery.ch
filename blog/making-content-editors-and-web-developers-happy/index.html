@@ -34,7 +34,7 @@
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
 
-    <meta name="description" content="">
+    <meta name="description" content="How to create a Static CMS that combines the advantages of a static site generator and a web-based CMS.">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary">
@@ -42,7 +42,7 @@
     <!-- Open Graph data -->
     <meta property="og:title" content="Making Content Editors and Web Developers Happy Again | code.makery.ch" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="" />
+    <meta property="og:description" content="How to create a Static CMS that combines the advantages of a static site generator and a web-based CMS." />
     <meta property="og:url" content="http://code.makery.ch/blog/making-content-editors-and-web-developers-happy/" />
     <meta property="og:image" content="http://code.makery.ch/assets/blog/15-03-16-making-content-editors-and-web-developers-happy/static-cms-workflow.png" />
     
@@ -246,16 +246,13 @@ name = "Book"
 <p>An easy and cheap solution would be to use <a href="https://pages.github.com/">GitHub Pages</a> as hosting platform. How this can be done is already described in the Hugo/Wercker tutorial mentioned above.</p>
 <p>If more features are needed I would use a platform like <a href="https://divshot.com/">DivShot</a> that has spezialized hosting for static websites. Another option is <a href="https://www.netlify.com/">Netlify</a> which is a combination of deployment and hosting.</p>
 <h2 id="summary">Summary</h2>
-<p>I tried to show how the best aspects of <strong>static site generators</strong> and <strong>file-based CMS</strong> could be combined:</p>
+<p>I tried to show how the best aspects of <strong>static site generators</strong> and <strong>file-based CMS</strong> could be combined to create a <strong>Static CMS</strong>:</p>
 <ol>
-<li>All content is stored in <code>TOML</code> text files that have a well-defined structure.</li>
-<li>The structure (content types) are also defined as <code>TOML</code>. The CMS picks up the content types and shows a nice form where the <em>content editor</em> can write the content.</li>
-<li>The <em>develper</em> works with the static generator (Hugo) and sets up templates, themes and the content types.</li>
-<li>Whenever the <em>content editor</em> or <em>developer</em> commits a change (to GitHub), the site is automatically rebuilt by the deployment server.</li>
+<li>All content is stored in <code>TOML</code>files that have a well-defined structure. All content is in simple text files that can be versioned and provides easy backup and migration posibilities.</li>
+<li>The structure (content types) are also defined as <code>TOML</code>. The CMS picks up the content types and shows a nice form where the <em>content editor</em> can write the content.<br>&rarr; <strong>the content editor is happy :-)</strong></li>
+<li>The <em>develper</em> works with his favorite static generator (Hugo) and sets up templates, themes and the content types.<br>&rarr; <strong>the developer is happy :-)</strong></li>
+<li>Whenever the <em>content editor</em> or <em>developer</em> commits a change (to GitHub), the site is automatically rebuilt. The served website is static with all its benefits (speed, security, reliability, etc.).<br>&rarr; <strong>everybody is happy :-)</strong></li>
 </ol>
-<p>For me this would be the "perfect" solution for almost all of my websites: 
-All content is nicely structured in files. They are simple text files and can be versioned and provide easy backup and migration possibilities. The <strong>content editor is happy</strong> because he has a nice CMS. The <strong>developer is happy</strong> because he can work with Hugo. And <strong>everybody is happy</strong> because the served website is static with all its benefits (speed, security, reliability, etc.).</p>
-<p>We're not that far away from an awesome way to build websites, IMO. All content is nicely structured in files. They are simple text files and can be versioned and provide easy backup and migration possibilities. The <strong>content editor is happy</strong> because he has a nice CMS. The <strong>developer is happy</strong> because he can work with Hugo. And <strong>everybody is happy</strong> because the served website is static with all its benefits (speed, security, reliability, etc.). </p>
 
 
         </div>
