@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Icons auf Website verwenden | code.makery.ch</title>
+    <title>Bilder gestalten | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -28,7 +28,7 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/library/more-html-css/de/icons/" />
+    <link rel="canonical" href="http://code.makery.ch/library/more-html-css/de/image-processing/" />
   
 
     <!-- RSS Feed -->
@@ -40,10 +40,10 @@
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Icons auf Website verwenden | code.makery.ch" />
+    <meta property="og:title" content="Bilder gestalten | code.makery.ch" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="" />
-    <meta property="og:url" content="http://code.makery.ch/library/more-html-css/de/icons/" />
+    <meta property="og:url" content="http://code.makery.ch/library/more-html-css/de/image-processing/" />
     <meta property="og:image" content="http://code.makery.ch" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
@@ -89,7 +89,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="github-edit">
-            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/more-html-css-de-icons.md">Edit on GitHub</a>
+            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/more-html-css-de-image-processing.md">Edit on GitHub</a>
           </div>
         </div>
       </div>
@@ -107,11 +107,11 @@
         Einleitung</a>
       <a href="/library/more-html-css/de/website-layout/" class="list-group-item">
 <i class="fa fa-fw fa-th-large"></i>        Website-Layout</a>
-      <a href="/library/more-html-css/de/icons/" class="list-group-item active">
+      <a href="/library/more-html-css/de/icons/" class="list-group-item">
 <i class="fa fa-fw fa-flag"></i>        Icons</a>
       <a href="/library/more-html-css/de/image-bootstrap/" class="list-group-item">
 <i class="fa fa-fw fa-image"></i>        Bilder mit Bootstrap</a>
-      <a href="/library/more-html-css/de/image-processing/" class="list-group-item">
+      <a href="/library/more-html-css/de/image-processing/" class="list-group-item active">
 <i class="fa fa-fw fa-image"></i>        Bilder gestalten</a>
       <a href="/library/more-html-css/de/image-sources/" class="list-group-item">
 <i class="fa fa-fw fa-image"></i>        Kostenlose Bilder</a>
@@ -127,9 +127,9 @@
         </aside>
         <div class="col-md-9">
           <header class="article-header">
-            <h1 class="article-title">Icons auf Website verwenden</h1>
+            <h1 class="article-title">Bilder gestalten</h1>
             <div class="article-date">
-  Aug 20, 2014
+  Mar 18, 2015
 
 </div>
           </header>
@@ -143,11 +143,11 @@
         Einleitung</a></li>
       <li class=""><a href="/library/more-html-css/de/website-layout/">
 <i class="fa fa-fw fa-th-large"></i>        Website-Layout</a></li>
-      <li class=" active"><a href="/library/more-html-css/de/icons/">
+      <li class=""><a href="/library/more-html-css/de/icons/">
 <i class="fa fa-fw fa-flag"></i>        Icons</a></li>
       <li class=""><a href="/library/more-html-css/de/image-bootstrap/">
 <i class="fa fa-fw fa-image"></i>        Bilder mit Bootstrap</a></li>
-      <li class=""><a href="/library/more-html-css/de/image-processing/">
+      <li class=" active"><a href="/library/more-html-css/de/image-processing/">
 <i class="fa fa-fw fa-image"></i>        Bilder gestalten</a></li>
       <li class=""><a href="/library/more-html-css/de/image-sources/">
 <i class="fa fa-fw fa-image"></i>        Kostenlose Bilder</a></li>
@@ -162,50 +162,21 @@
           </aside>
           
           <div class="article-content">
-            <p>Icons in eine Webseite einzufügen ist nicht schwer. Aber wenn man Texte und Icons kombiniert (z.B. für einen Button) oder wenn die Icons in der Grösse veränderbar sein sollen, dann wird es schwierig.</p>
-<p>Die Lösung für dieses Problem sind <strong>Icon Fonts</strong>. Icon Fonts sind Schriftarten, welche anstatt Buchstaben nur Icons enthalten. Dadurch können diese Icons genauso verwendet werden, wie gewöhnliche Schriften, d.h. man kann ihre Grösse und auch die Farbe verändern. </p>
-<p><i class="fa fa-umbrella" style="color: #333"></i> 
-<i class="fa fa-umbrella fa-3x" style="color: #333"></i> 
-<i class="fa fa-umbrella fa-5x" style="color: #333"></i>
-<i class="fa fa-umbrella" style="color: #ffc107"></i> 
-<i class="fa fa-umbrella fa-3x" style="color: #ffa000"></i> 
-<i class="fa fa-umbrella fa-5x" style="color: #ff6f00"></i></p>
-<p>Im Folgenden schauen wir ein paar Icon Fonts und deren Verwendung an.</p>
-<h2 id="glyphicons-mit-bootstrap-3-">Glyphicons (mit Bootstrap 3)</h2>
-<div class="alert alert-warning">
-Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuerst den Teil über <a href="/library/html-css/de/part6/" class="alert-link">Bootstrap Framework verwenden</a> aus dem HTML &amp; CSS Tutorial.
-</div>
-
-<p>Wenn Sie Bootstrap verwenden, dann sind bereits 200 Icons von <a href="http://glyphicons.com/">Glyphicons</a> integriert.</p>
-<p>Sie finden eine Liste der Verfügbaren Icons in der <a href="http://holdirbootstrap.de/komponenten/#glyphicons">Bootstrap Dokumentation unter Glyphicons</a>.</p>
-<p>Um ein Icon zu verwenden definieren wir jeweils ein <code>&lt;span&gt;</code>-Element und geben ihm zwei CSS-Klassen:</p>
-<pre class="prettyprint lang-html">
-&lt;span class="glyphicon glyphicon-send">&lt;/span>
-</pre>
-
-<p>Dieses <code>span</code> kann nun irgendwo eigenfügt werden. Zum Beispiel in den Titel einer Kontaktseite: </p>
-<p><img src="/assets/library/more-html-css/icons/contact-icon-de.png" alt="Kontakt Icon"></p>
-<h2 id="font-awesome">Font Awesome</h2>
-<p>Eine der bekanntesten frei verfügbaren Icon Fonts ist <a href="http://fontawesome.io/">Font Awesome</a>. Font Awesome kommt mit über 400 Icons.</p>
-<p>Um <a href="http://fontawesome.io/get-started/">Font Awesome zu integrieren</a> steht wie für Bootstrap auch ein CDN-Link zur Verfügung. Damit muss gar nichts heruntergeladen werden, sondern wir können einfach einen Link zum CSS in den <code>&lt;head&gt;</code>-Bereich unserer HTML-Datei einfügen:</p>
-<pre class="prettyprint lang-html">
-&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-</pre>
-
-<p><strong>Hinweis:</strong> <em>Schauen Sie auf <a href="http://fontawesome.io/get-started/">Font Awesome</a> nach, welches der aktuelle Link mit der neusten Versionsnummer ist.</em></p>
-<p>Wie bei den Glyphicons werden die Font Awesome Icons mit zwei CSS-Klassen verwendet. Anstelle des <code>&lt;span&gt;</code>-Elements wird bei Font Awesome meistens das <code>&lt;i&gt;</code>-Element verwendet, wobei dies eigentlich keine Rolle spielt.</p>
-<pre class="prettyprint lang-html">
-&lt;i class="fa fa-flag">&lt;i>
-</pre>
-
-<p>Dieses Beispiel gibt uns eine Flagge: <img src="/assets/library/more-html-css/icons/fontawesome-flag.png" alt="Font Awesome Flagge"></p>
-<p>Schauen Sie sich die <a href="http://fontawesome.io/examples/">Beispiele auf Font Awesome</a> an, um zu sehen, auf welche Arten die Icons verwendet werden können. Sie finden dort auch Beispiele zur Verwendung mit für Bootstrap 3. </p>
-<h2 id="weitere-m-glichkeiten">Weitere Möglichkeiten</h2>
+            <p>Es gibt zahlreiche Programme zur Bildbearbeitung. Eine Liste mit Links finden Sie unten.</p>
+<p>Um Bildbearbeitung zu lernen, suchen Sie am besten auf Videoplattformen nach Anleitungsvideos. Zum Beispiel diese <a href="https://www.youtube.com/watch?v=p9pzkB0Mykk">Anleitung zum Freistellen von Objekten mit Gimp</a>.   </p>
+<h3 id="grafikprogramme-zum-installieren">Grafikprogramme zum Installieren</h3>
 <ul>
-<li>Eine Liste von <a href="http://t3n.de/news/10-kostenlose-icon-fonts-450651/">12 kostenlosen Icon Fonts</a>.</li>
-<li>Auf <a href="https://icomoon.io/">IcoMoon</a> gibt es eine App, um eine eigene Icon Font zusammen zu stellen.</li>
-<li><a href="http://fontello.com/">Fontello</a> ist ein weiterer Generator, um eigene Icon Fonts zu erstellen.</li>
-<li><a href="https://www.iconfinder.com/">Iconfinder</a> - Viele frei verfügbare Icons (Achtung: je nach Lizenz muss der Author genannt werden)</li>
+<li><a href="http://www.adobe.com/products/photoshop.html">Photoshop</a> - professionell, teuer</li>
+<li><a href="http://www.adobe.com/products/photoshop-elements.html">Photoshop Elements</a> - kleiner Bruder von Photoshop</li>
+<li><a href="http://www.gimp.org/">GIMP</a> - beste Gratis-Alternative</li>
+<li><a href="http://www.getpaint.net/">Paint.net</a> - auch gratis, aber einfacher als GIMP</li>
+<li><a href="http://www.inkscape.org/">Inkscape</a> - ein Gratis-Programm für <strong>Vektorgrafiken</strong></li>
+</ul>
+<h3 id="grafikprogramme-online">Grafikprogramme Online</h3>
+<ul>
+<li><a href="http://pixlr.com/editor/">PIXLR Editor</a> - beste online Bildbearbeitung</li>
+<li><a href="http://pixlr.com/express/">PIXLR Express</a> - schnelle Effekte und Filter für Fotos</li>
+<li><a href="http://ipiccy.com/">iPiccy</a></li>
 </ul>
 
 
@@ -222,13 +193,13 @@ Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuer
         <li>
       <a href="/library/more-html-css/de/website-layout/" data-toggle="tooltip" title="Website-Layout">1</a>
       </li>
-        <li class="active">
+        <li>
       <a href="/library/more-html-css/de/icons/" data-toggle="tooltip" title="Icons">2</a>
       </li>
         <li>
       <a href="/library/more-html-css/de/image-bootstrap/" data-toggle="tooltip" title="Bilder mit Bootstrap">3</a>
       </li>
-        <li>
+        <li class="active">
       <a href="/library/more-html-css/de/image-processing/" data-toggle="tooltip" title="Bilder gestalten">4</a>
       </li>
         <li>
@@ -305,9 +276,9 @@ Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuer
   <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'codemakery'; // Required - the forum shortname
-    var disqus_identifier = '/library/more-html-css/de/icons/';
-    var disqus_url = 'http://code.makery.ch/library/more-html-css/de/icons/';
-    var disqus_title = 'Icons auf Website verwenden';
+    var disqus_identifier = '/library/more-html-css/de/image-processing/';
+    var disqus_url = 'http://code.makery.ch/library/more-html-css/de/image-processing/';
+    var disqus_title = 'Bilder gestalten';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

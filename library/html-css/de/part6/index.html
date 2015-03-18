@@ -117,8 +117,8 @@
         Teil 5: Navigieren zwischen Seiten</a>
       <a href="/library/html-css/de/part6/" class="list-group-item active">
         Teil 6: Bootstrap Framework verwenden</a>
-      <a href="/library/html-css/de/part7/" class="list-group-item">
-        Teil 7: Wie weiter?</a>
+      <a href="/library/html-css/de/next/" class="list-group-item">
+        Nächste Schritte</a>
   </div>
 </div>
 <div class="panel panel-default sidebar">
@@ -163,8 +163,8 @@
         Teil 5: Navigieren zwischen Seiten</a></li>
       <li class=" active"><a href="/library/html-css/de/part6/">
         Teil 6: Bootstrap Framework verwenden</a></li>
-      <li class=""><a href="/library/html-css/de/part7/">
-        Teil 7: Wie weiter?</a></li>
+      <li class=""><a href="/library/html-css/de/next/">
+        Nächste Schritte</a></li>
   </ul>
 </div>
 <div class="btn-group sidebar-dropdown">
@@ -214,13 +214,13 @@
 <pre class="prettyprint lang-html">
 &lt;head>
   &lt;meta charset="utf-8">
-  <mark>&lt;link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></mark>
+  <mark>&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></mark>
   &lt;link rel="stylesheet" href="main.css">
   &lt;title>Web Portfolio von Marco&lt;/title>
 &lt;/head>
 </pre>
 
-<p><strong>Wichtig:</strong> <em>Fügen Sie, wie im Code oben, beim Link zum Bootstrap-CSS ein <code>http:</code> vorne dran. Ansonsten gibt es Probleme, wenn man die Webseite auf dem eigenen Computer aufrufen möchte (<a href="http://www.paulirish.com/2010/the-protocol-relative-url/">hier</a> können Sie lesen weshalb).</em></p>
+
 <h3 id="wie-funktioniert-bootstrap-">Wie funktioniert Bootstrap?</h3>
 <p>Manche <em>Styles</em> aus dem Bootstrap-CSS werden direkt auf HTML-Elemente angewandt. Schauen wir uns zum Beispiel einen Link in <em>Chrome DevTools</em> an, sehen wir, wie im Bootstrap-CSS die Link-Farbe geändert wird und mit <code>text-decoration</code> der Unterstrich entfernt wird:</p>
 <p><img src="/assets/library/html-css/part6/bootstrap-link-color.png" alt="Bootstrap Link-Farbe"></p>
@@ -322,7 +322,7 @@ Ich möchte &lt;span class="text-warning">diese Worte&lt;/span> besonders hervor
 &lt;head>
   &lt;meta charset="utf-8">
   <mark>&lt;meta name="viewport" content="width=device-width, initial-scale=1"></mark>
-  &lt;link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   &lt;link rel="stylesheet" href="main.css">
   &lt;title>Web Portfolio von Marco&lt;/title>
 &lt;/head>
@@ -332,6 +332,10 @@ Ich möchte &lt;span class="text-warning">diese Worte&lt;/span> besonders hervor
 <p><img src="/assets/library/html-css/part6/mobile-with-viewport-de.png" alt="Mobile mit Viewport"></p>
 <p>Bootstrap wurde so entworfen, dass es auf <a href="http://holdirbootstrap.de/css/#overview-mobile">mobilen Bilschirmen gut funktioniert</a>. Im Screenshot oben sehen Sie, wie die Navigation automatisch untereinander angezeigt wird, sobald die Bildschirmbreite zu klein wird. Dies können Sie auch ausprobieren, indem Sie einfach das Browserfenster verkleinern.</p>
 <p>Ein Webdesign, welches auf die Bildschirmgrösse reagiert, nennt man <a href="http://de.wikipedia.org/wiki/Responsive_Webdesign">Responsive Webdesign</a>.</p>
+<div class="alert alert-warning">
+  <strong>Hinweis:</strong> Bootstrap kann die Navigation auch automatisch zusammenklappen in ein Menu. Dafür müssen aber zusätzliche JavaScript-Dateien eingebunden werden. Im Artikel <a class="alert-link" href="/library/more-html-css/de/javascript-bootstrap/">JavaScript mit Bootstrap</a> erkläre ich, wie Sie eine solche Navigation programmieren können.<br></div>
+
+
 <h2 id="bootstrap-und-navigation-auf-allen-seiten">Bootstrap und Navigation auf allen Seiten</h2>
 <p>Bis jetzt haben wir Bootstrap und die Navigation nur auf unserer Startseite eingefügt. Das Ziel ist natürlich, dass diese auf allen Seiten eingebunden sind.</p>
 <p>Mit kleinen Anpassung können wir den Code aus der Startseite in alle anderen Seiten (Blog, Blogeinträge, Kontakt, etc.) kopieren:</p>
@@ -339,7 +343,7 @@ Ich möchte &lt;span class="text-warning">diese Worte&lt;/span> besonders hervor
 <p>Kopieren Sie aus dem <code>head</code>-Bereich der Startseite die Zeile mit dem <code>viewport</code> und die Zeile mit dem Bootstrap CSS und fügen Sie diese in alle anderen Seiten ein:</p>
 <pre class="prettyprint lang-html">
   &lt;meta name="viewport" content="width=device-width, initial-scale=1">
-  &lt;link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </pre>
 
 
@@ -413,7 +417,7 @@ Da die Blogeinträge noch ein Unterverzeichnis tiefer liegen, müssen die Links 
       <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Bootstrap Framework verwenden">6</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part7/" data-toggle="tooltip" title="Teil 7: Wie weiter?">7</a>
+      <a href="/library/html-css/de/next/" data-toggle="tooltip" title="Nächste Schritte">7</a>
       </li>
     
       </ul>

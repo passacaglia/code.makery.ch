@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mehr HTML & CSS: Bilder | code.makery.ch</title>
+    <title>Bilder mit Bootstrap verwenden | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -28,7 +28,7 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/library/more-html-css/de/images/" />
+    <link rel="canonical" href="http://code.makery.ch/library/more-html-css/de/image-bootstrap/" />
   
 
     <!-- RSS Feed -->
@@ -40,10 +40,10 @@
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Mehr HTML & CSS: Bilder | code.makery.ch" />
+    <meta property="og:title" content="Bilder mit Bootstrap verwenden | code.makery.ch" />
     <meta property="og:type" content="article" />
     <meta property="og:description" content="" />
-    <meta property="og:url" content="http://code.makery.ch/library/more-html-css/de/images/" />
+    <meta property="og:url" content="http://code.makery.ch/library/more-html-css/de/image-bootstrap/" />
     <meta property="og:image" content="http://code.makery.ch" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
@@ -89,7 +89,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="github-edit">
-            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/more-html-css-de-images.md">Edit on GitHub</a>
+            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/more-html-css-de-image-bootstrap.md">Edit on GitHub</a>
           </div>
         </div>
       </div>
@@ -106,13 +106,19 @@
       <a href="/library/more-html-css/de/" class="list-group-item">
         Einleitung</a>
       <a href="/library/more-html-css/de/website-layout/" class="list-group-item">
-        Website-Layout</a>
+<i class="fa fa-fw fa-th-large"></i>        Website-Layout</a>
       <a href="/library/more-html-css/de/icons/" class="list-group-item">
-        Icons</a>
-      <a href="/library/more-html-css/de/images/" class="list-group-item active">
-        Bilder</a>
+<i class="fa fa-fw fa-flag"></i>        Icons</a>
+      <a href="/library/more-html-css/de/image-bootstrap/" class="list-group-item active">
+<i class="fa fa-fw fa-image"></i>        Bilder mit Bootstrap</a>
+      <a href="/library/more-html-css/de/image-processing/" class="list-group-item">
+<i class="fa fa-fw fa-image"></i>        Bilder gestalten</a>
+      <a href="/library/more-html-css/de/image-sources/" class="list-group-item">
+<i class="fa fa-fw fa-image"></i>        Kostenlose Bilder</a>
       <a href="/library/more-html-css/de/text/" class="list-group-item">
-        Textformatierung</a>
+<i class="fa fa-fw fa-font"></i>        Textformatierung</a>
+      <a href="/library/more-html-css/de/javascript-bootstrap/" class="list-group-item">
+<i class="fa fa-fw fa-code"></i>        JavaScript mit Bootstrap</a>
   </div>
 </div>
 
@@ -121,9 +127,9 @@
         </aside>
         <div class="col-md-9">
           <header class="article-header">
-            <h1 class="article-title">Mehr HTML & CSS: Bilder</h1>
+            <h1 class="article-title">Bilder mit Bootstrap verwenden</h1>
             <div class="article-date">
-  Aug 22, 2014
+  Mar 18, 2015
 
 </div>
           </header>
@@ -136,13 +142,19 @@
       <li class=""><a href="/library/more-html-css/de/">
         Einleitung</a></li>
       <li class=""><a href="/library/more-html-css/de/website-layout/">
-        Website-Layout</a></li>
+<i class="fa fa-fw fa-th-large"></i>        Website-Layout</a></li>
       <li class=""><a href="/library/more-html-css/de/icons/">
-        Icons</a></li>
-      <li class=" active"><a href="/library/more-html-css/de/images/">
-        Bilder</a></li>
+<i class="fa fa-fw fa-flag"></i>        Icons</a></li>
+      <li class=" active"><a href="/library/more-html-css/de/image-bootstrap/">
+<i class="fa fa-fw fa-image"></i>        Bilder mit Bootstrap</a></li>
+      <li class=""><a href="/library/more-html-css/de/image-processing/">
+<i class="fa fa-fw fa-image"></i>        Bilder gestalten</a></li>
+      <li class=""><a href="/library/more-html-css/de/image-sources/">
+<i class="fa fa-fw fa-image"></i>        Kostenlose Bilder</a></li>
       <li class=""><a href="/library/more-html-css/de/text/">
-        Textformatierung</a></li>
+<i class="fa fa-fw fa-font"></i>        Textformatierung</a></li>
+      <li class=""><a href="/library/more-html-css/de/javascript-bootstrap/">
+<i class="fa fa-fw fa-code"></i>        JavaScript mit Bootstrap</a></li>
   </ul>
 </div>
 
@@ -155,7 +167,6 @@
 <li><a href="#responsive-bilder">Responsive Bilder</a> - passen sich auf Bildschirmgrösse an</li>
 <li><a href="#bilder-ausrichten">Bilder ausrichten</a> - zentrieren, links, rechts</li>
 <li><a href="#bilder-mit-konturen">Bilder mit Konturen</a> - Ecken abrunden, etc.</li>
-<li><a href="#gute-bildquellen">Gute Bildquellen</a> - hier finden Sie gute Bilder</li>
 </ul>
 <p>Für die meisten Beispiele wird <a href="http://holdirbootstrap.de/">Bootstrap 3</a> verwendet.</p>
 <div class="alert alert-warning">
@@ -190,7 +201,7 @@ Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuer
 <h2 id="bilder-ausrichten">Bilder ausrichten</h2>
 <h3 id="zentrieren">Zentrieren</h3>
 <p>Mit der CSS-Klasse <code>center-block</code> können Sie mit Bootstrap 3 Bilder zentrieren (siehe auch <a href="http://holdirbootstrap.de/css/#helper-classes-center">center</a> in der Bootstrap Dokumentation):</p>
-<p><img src="/assets/library/more-html-css/images/center-block.png" class="center-block"></p>
+<p><img src="/assets/library/more-html-css/image-bootstrap/center-block.png" class="center-block"></p>
 <h5 id="bild-zentrieren">Bild zentrieren</h5>
 <pre class="prettyprint lang-html">
 &lt;img src="..." alt="..." class="center-block">
@@ -208,13 +219,13 @@ Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuer
 &lt;img src="..." alt="..." class="pull-left">
 </pre>
 
-<p><img src="/assets/library/more-html-css/images/pull-left.png" alt="Links ausrichten"></p>
+<p><img src="/assets/library/more-html-css/image-bootstrap/pull-left.png" alt="Links ausrichten"></p>
 <h5 id="rechts-ausrichten">Rechts ausrichten</h5>
 <pre class="prettyprint lang-html">
 &lt;img src="..." alt="..." class="pull-right">
 </pre>
 
-<p><img src="/assets/library/more-html-css/images/pull-right.png" alt="Rechts ausrichten"></p>
+<p><img src="/assets/library/more-html-css/image-bootstrap/pull-right.png" alt="Rechts ausrichten"></p>
 <h4 id="neue-zeile">Neue Zeile</h4>
 <p>Beim Ausrichten nach links oder rechts werden alle nachfolgenden Elemente neben dem  Bild dargestellt. Falls man in einer neuen Zeile beginnen möchte, muss man die <code>clearfix</code>-Klasse verwenden. Diese Klasse wird meistens auf ein übergeordnetes <code>&lt;div&gt;</code>-Element angewendet (mehr Infos zu <a href="http://holdirbootstrap.de/css/#helper-classes-clearfix">clearfix</a> in der Bootstrap Dokumentation):</p>
 <pre class="prettyprint lang-html">
@@ -225,7 +236,7 @@ Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuer
 &lt;p>Dieser Text ist unter dem Bild.&lt;/p>
 </pre>
 
-<p><img src="/assets/library/more-html-css/images/clearfix.png" alt="Clearfix"></p>
+<p><img src="/assets/library/more-html-css/image-bootstrap/clearfix.png" alt="Clearfix"></p>
 <h4 id="abstand-neben-dem-bild">Abstand neben dem Bild</h4>
 <p>Meist möchte man neben dem Bild einen Abstand zum Text oder zu einem anderen Inhalt. Dies erreicht man am einfachsten durch definieren eines <code>margins</code> im CSS.</p>
 <p>Wenn wir im CSS eine Regel für das <code>img</code>-Element erstellen würden, dann würde diese auf alle Bilder auf der Webseite angewendet werden. Dies ist meist nicht sinnvoll. </p>
@@ -244,11 +255,11 @@ Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuer
 }
 </pre> 
 
-<p><img src="/assets/library/more-html-css/images/margin.png" alt="Abstand"></p>
+<p><img src="/assets/library/more-html-css/image-bootstrap/margin.png" alt="Abstand"></p>
 <p>Neben <code>margin-right</code> gibt es natürlich <code>margin-top</code>, <code>margin-bottom</code> und <code>margin-left</code>.</p>
 <h2 id="bilder-mit-konturen">Bilder mit Konturen</h2>
 <p>Bootstrap 3 bietet Möglichkeiten, um Bilder ganz einfach auf einer Webseite zu gestalten. Sie können die Ecken abrunden, einen Kreis ausschneiden oder einen dezenten Rahmen hinzufügen:</p>
-<p><img src="/assets/library/more-html-css/images/image-shapes.png" alt="Bilder mit Konturen"></p>
+<p><img src="/assets/library/more-html-css/image-bootstrap/image-shapes.png" alt="Bilder mit Konturen"></p>
 <p>Mit den folgenden drei CSS-Klassen können Sie Ihren Bildern solche Konturen hinzufügen (weitere Infos unter <a href="http://holdirbootstrap.de/css/#images-shapes">Bilder-Konturen</a> in der Bootstrap Dokumentation):</p>
 <h5 id="konturen-mit-bootstrap">Konturen mit Bootstrap</h5>
 <pre class="prettyprint lang-html">
@@ -258,27 +269,11 @@ Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuer
 </pre>
 
 
-<h2 id="gute-bildquellen">Gute Bildquellen</h2>
-<p>Es gibt viele Quellen für Bilder im Internet, aber solche, die gute Bilder frei zur Verfügung stellen sind manchmal schwer zu finden. Hier sind ein paar, die ich empfehlen kann:</p>
+<h2 id="andere-artikel-zu-bilder">Andere Artikel zu Bilder</h2>
+<p>Folgende Artikel zu Bilder könnte Sie auch interessieren:</p>
 <ul>
-<li><a href="https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b">Stock photos that don't suck</a> - eine Liste von Webseiten mit den besten gratis Fotos</li>
-<li><a href="http://www.labnol.org/internet/find-free-images/24990/">The Best Places to Find Free, High-Res Images for your Website</a> - eine weitere Liste mit den besten Webseiten für gratis Bilder mit hoher Auflösung</li>
-<li><a href="https://www.iconfinder.com/">Iconfinder</a> - Viele frei verfügbare Icons (Achtung: je nach Lizenz muss der Author genannt werden)</li>
-</ul>
-<h2 id="tools-f-r-die-bildbearbeitung">Tools für die Bildbearbeitung</h2>
-<h3 id="grafikprogramme-zum-installieren">Grafikprogramme zum Installieren</h3>
-<ul>
-<li><a href="http://www.adobe.com/products/photoshop.html">Photoshop</a> - professionell, teuer</li>
-<li><a href="http://www.adobe.com/products/photoshop-elements.html">Photoshop Elements</a> - kleiner Bruder von Photoshop</li>
-<li><a href="http://www.gimp.org/">GIMP</a> - beste Gratis-Alternative</li>
-<li><a href="http://www.getpaint.net/">Paint.net</a> - auch gratis, aber einfacher als GIMP</li>
-<li><a href="http://www.inkscape.org/">Inkscape</a> - ein Gratis-Programm für <strong>Vektorgrafiken</strong></li>
-</ul>
-<h3 id="grafikprogramme-online">Grafikprogramme Online</h3>
-<ul>
-<li><a href="http://pixlr.com/editor/">PIXLR Editor</a> - beste online Bildbearbeitung</li>
-<li><a href="http://pixlr.com/express/">PIXLR Express</a> - schnelle Effekte und Filter für Fotos</li>
-<li><a href="http://ipiccy.com/">iPiccy</a></li>
+<li><a href="/library/more-html-css/de/image-processing/">Bilder gestalten</a></li>
+<li><a href="/library/more-html-css/de/image-sources/">Kostenlose Bilder</a></li>
 </ul>
 
 
@@ -299,10 +294,19 @@ Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuer
       <a href="/library/more-html-css/de/icons/" data-toggle="tooltip" title="Icons">2</a>
       </li>
         <li class="active">
-      <a href="/library/more-html-css/de/images/" data-toggle="tooltip" title="Bilder">3</a>
+      <a href="/library/more-html-css/de/image-bootstrap/" data-toggle="tooltip" title="Bilder mit Bootstrap">3</a>
       </li>
         <li>
-      <a href="/library/more-html-css/de/text/" data-toggle="tooltip" title="Textformatierung">4</a>
+      <a href="/library/more-html-css/de/image-processing/" data-toggle="tooltip" title="Bilder gestalten">4</a>
+      </li>
+        <li>
+      <a href="/library/more-html-css/de/image-sources/" data-toggle="tooltip" title="Kostenlose Bilder">5</a>
+      </li>
+        <li>
+      <a href="/library/more-html-css/de/text/" data-toggle="tooltip" title="Textformatierung">6</a>
+      </li>
+        <li>
+      <a href="/library/more-html-css/de/javascript-bootstrap/" data-toggle="tooltip" title="JavaScript mit Bootstrap">7</a>
       </li>
   
       </ul>
@@ -369,9 +373,9 @@ Falls Sie Bootstrap in Ihrem Projekt noch nicht integriert haben, lesen Sie zuer
   <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'codemakery'; // Required - the forum shortname
-    var disqus_identifier = '/library/more-html-css/de/images/';
-    var disqus_url = 'http://code.makery.ch/library/more-html-css/de/images/';
-    var disqus_title = 'Mehr HTML & CSS: Bilder';
+    var disqus_identifier = '/library/more-html-css/de/image-bootstrap/';
+    var disqus_url = 'http://code.makery.ch/library/more-html-css/de/image-bootstrap/';
+    var disqus_title = 'Bilder mit Bootstrap verwenden';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
