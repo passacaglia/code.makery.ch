@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JavaFX 8 Tutorial - Part 2: Model and TableView | code.makery.ch</title>
+    <title>JavaFX 8 Tutorial - Parte 2: Model and TableView | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -28,7 +28,7 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/library/javafx-8-tutorial/part2/" />
+    <link rel="canonical" href="http://code.makery.ch/library/javafx-8-tutorial/it/part2/" />
   
     <!-- Alternate Languages -->
     <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/javafx-8-tutorial/part2/" />
@@ -43,15 +43,15 @@
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
 
-    <meta name="description" content="Use a JavaFX TableView to display an ObservableList of Persons.">
+    <meta name="description" content="Uso della TabletView JavaFX per visualizzare una  ObservableList di Persons.">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="JavaFX 8 Tutorial - Part 2: Model and TableView | code.makery.ch" />
+    <meta property="og:title" content="JavaFX 8 Tutorial - Parte 2: Model and TableView | code.makery.ch" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Use a JavaFX TableView to display an ObservableList of Persons." />
+    <meta property="og:description" content="Uso della TabletView JavaFX per visualizzare una  ObservableList di Persons." />
     <meta property="og:url" content="http://code.makery.ch/library/javafx-8-tutorial/it/part2/" />
     <meta property="og:image" content="http://code.makery.ch/assets/library/javafx-8-tutorial/part2/addressapp-part2.png" />
     
@@ -137,7 +137,7 @@
 
   <div class="list-group">
       <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-2.zip" class="list-group-item">
-<i class="fa fa-fw fa-download"></i>        Part 2 as Eclipse Project <em>(requires at least JDK 8u40)</em></a>
+<i class="fa fa-fw fa-download"></i>        Parte 2 come progetto Eclipse <em>(requires at least JDK 8u40)</em></a>
   </div>
 </div>
 
@@ -177,7 +177,7 @@
         </aside>
         <div class="col-md-9">
           <header class="article-header">
-            <h1 class="article-title">JavaFX 8 Tutorial - Part 2: Model and TableView</h1>
+            <h1 class="article-title">JavaFX 8 Tutorial - Parte 2: Model and TableView</h1>
             <div class="article-date">
   Apr 23, 2014
   • Updated Mar 12, 2015
@@ -213,7 +213,7 @@
   </button>
   <ul class="dropdown-menu" role="menu">
       <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-2.zip">
-<i class="fa fa-fw fa-download"></i>        Part 2 as Eclipse Project <em>(requires at least JDK 8u40)</em></a></li>
+<i class="fa fa-fw fa-download"></i>        Parte 2 come progetto Eclipse <em>(requires at least JDK 8u40)</em></a></li>
   </ul>
 </div>
 
@@ -251,20 +251,16 @@
           </aside>
           
           <div class="article-content">
-            <div class="alert alert-warning">
-  <i class="fa fa-language"></i> This page needs an Italian translation. If you'd like to help out please read <a href="/library/how-to-contribute/" class="alert-link">how to contribute</a>.
-</div>
-
-<p><img src="/assets/library/javafx-8-tutorial/part2/addressapp-part2.png" alt="Screenshot AddressApp Part 2"></p>
-<h2 id="topics-in-part-2">Topics in Part 2</h2>
+            <p><img src="/assets/library/javafx-8-tutorial/part2/addressapp-part2.png" alt="Screenshot AddressApp Part 2"></p>
+<h2 id="argomenti-della-parte-2">Argomenti della Parte 2</h2>
 <ul>
-<li>Creating a <strong>model</strong> class</li>
-<li>Using the model class in an <strong>ObservableList</strong></li>
-<li>Show data in the <strong>TableView</strong> using <strong>Controllers</strong></li>
+<li>Creazione di una <strong>model</strong> class</li>
+<li>Uso della model class in una <strong>ObservableList</strong></li>
+<li>Visualizzazione dei dati nella <strong>TableView</strong> usando un <strong>Controllers</strong></li>
 </ul>
 <hr>
-<h2 id="create-the-model-class">Create the Model Class</h2>
-<p>We need a model class to hold information about the people in our address book. Add a new class to the model package (<code>ch.makery.address.model</code>) called <code>Person</code>. The <code>Person</code> class will have a few instance variables for the name, address and birthday. Add the following code to the class. I'll explain some JavaFX specifics after the code.</p>
+<h2 id="creare-la-model-class">Creare la Model Class</h2>
+<p>Abbiamo bisogno della model class per tenere le informazioni sulle persone nella nostra rubrica. Aggiungere una nuova classe al model package (<code>ch.makery.address.model</code>) chiamata <code>Person</code>. La classe <code>Person</code> avrà alcune variabili d'istanza per il nome, l'indirizzo e il compleanno. Aggiungere il seguente codice alla classe. Spiegerò alcune cose specifiche di JavaFX dopo il codice.</p>
 <h5 id="person-java">Person.java</h5>
 <pre class="prettyprint lang-java">
 package ch.makery.address.model;
@@ -391,17 +387,17 @@ public class Person {
 </pre>
 
 
-<h3 id="explanations">Explanations</h3>
+<h3 id="spiegazioni">Spiegazioni</h3>
 <ul>
-<li>With JavaFX it's common to use <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/beans/property/Property.html"><code>Properties</code></a> for all fields of a model class. A <code>Property</code> allows us, for example, to automatically be notified when the <code>lastName</code> or any other variable is changed. This helps us keep the view in sync with the data. To learn more about <code>Properties</code> read <a href="http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm">Using JavaFX Properties and Binding</a>.</li>
-<li><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html"><code>LocalDate</code></a>, the type we're using for <code>birthday</code>, is part of the new <a href="http://docs.oracle.com/javase/tutorial/datetime/iso/">Date and Time API for JDK 8</a>.</li>
+<li>Con JavaFX è usuale usare le <a href="http://docs.oracle.com/javase/8/javafx/api/javafx/beans/property/Property.html"><code>Properties</code></a> per tutti i campi di una model class. Le <code>Property</code> ci permettono, per esempio, di avere una notifica automatica quando <code>lastName</code> o qualunque altra variabile vengono modificate. Questo ci aiuta a tenere sincronizzato ciò che è visualizzato con i dati. Per saperne di più sulle <code>Properties</code> leggere <a href="http://docs.oracle.com/javase/8/javafx/properties-binding-tutorial/binding.htm">Using JavaFX Properties and Binding</a>.</li>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html"><code>LocalDate</code></a>, il tipo che usiamo per <code>birthday</code>, è parte delle nuove <a href="http://docs.oracle.com/javase/tutorial/datetime/iso/">Date and Time API for JDK 8</a>.</li>
 </ul>
 <hr>
-<h2 id="a-list-of-persons">A List of Persons</h2>
-<p>The main Data that our application manages, is a bunch of persons. Let's create a list for <code>Person</code> objects inside the <code>MainApp</code> class. All other controller classes will later get access to that central list inside the <code>MainApp</code>. </p>
+<h2 id="una-lista-di-persons">Una lista di Persons</h2>
+<p>I principali dati che la nostra applicazione gestisce sono un gruppo di persone. Creiamo una lista di oggetti <code>Person</code> all'interno della classe <code>MainApp</code>. Tutti agli altri controller della classi avranno in seguito accesso alla lista centrale all'interno della classe <code>MainApp</code>. </p>
 <h3 id="observablelist">ObservableList</h3>
-<p>We are working with JavaFX view classes that need to be informed about any changes made to the list of persons. This is important, since otherwise the view would not be in sync with the data. For this purpose, JavaFX introduces some new <a href="http://docs.oracle.com/javase/8/javafx/collections-tutorial/collections.htm">Collection classes</a>. </p>
-<p>From those collections, we need the <code>ObservableList</code>. To create a new <code>ObservableList</code>, add the following code at the beginning of the <code>MainApp</code> class. We'll also add a constructor that creates some sample data and a public getter method:</p>
+<p>Stiamo lavorando con le classi di visualizzazione JavaFX che hanno bisogno di essere informate su eventuali modifiche apportate alla lista delle persone. Questo è importante, poiché altrimenti la vista non sarebbe sincronizzata con i dati. Per questo scopo, JavaFX ha introdotto alcune nuove <a href="http://docs.oracle.com/javase/8/javafx/collections-tutorial/collections.htm">Collection classes</a>. </p>
+<p>Di quelle "Collections", utiliziamo una <code>ObservableList</code>. Per creare una nuova <code>ObservableList</code>, aggiungere il seguente codice all'inizio della classe <code>MainApp</code>. Dobbiamo inoltre aggiungere un costruttore che crei alcuni dati di esempio e un metodo getter pubblico:</p>
 <h5 id="mainapp-java">MainApp.java</h5>
 <pre class="prettyprint lang-java">
 
@@ -441,14 +437,14 @@ public class Person {
 
 
 <hr>
-<h2 id="the-personoverviewcontroller">The PersonOverviewController</h2>
-<p>Now let's finally get some data into our table. We'll need a controller for our <code>PersonOverview.fxml</code>.</p>
+<h2 id="il-personoverviewcontroller">Il PersonOverviewController</h2>
+<p>Abbiamo bisogno di un controller per il nostro <code>PersonOverview.fxml</code>.</p>
 <ol>
-<li>Create a normal class inside the <strong>view</strong> package called <code>PersonOverviewController.java</code>. (We must put it in the same package as the <code>PersonOverview.fxml</code>, otherwise the SceneBuilder won't find it.</li>
-<li>We'll add some instance variables that give us access to the table and the labels inside the view. The fields and some methods have a special <code>@FXML</code> annotation. This is necessary for the fxml file to have access to private fields and private methods. After we have everything set up in the fxml file, the application will automatically fill the variables when the fxml file is loaded. So let's add the following code:</li>
+<li>Creare una normale classe dentro il <strong>view</strong> package chiamata <code>PersonOverviewController.java</code>. (Dobbiamo metterla nello stesso package di <code>PersonOverview.fxml</code>, altrimenti SceneBuilder non la troverà.</li>
+<li>Aggiungeremo alcune variabili d'istanza che ci daranno accesso alla tabella e alle labels all'interno della vista. I campi e alcuni metodi hanno una speciale annotazione <code>@FXML</code>. Questa è necessaria per il file fxml per avere accesso ai campi e metodi privati. Dopo aver impostato tutto nel file fxml, l'applicazione popolerà automaticamente le variabili quando il file fxml sarà caricato. Aggiungiamo il seguente codice:</li>
 </ol>
 <div class="alert alert-info">
-<strong>Note:</strong> Remember to always use the <strong>javafx imports</strong>, NOT awt or swing!
+<strong>Note:</strong> Ricordarsi di usare sempre <strong>javafx imports</strong>, NON awt o swing!
 </div>
 
 
@@ -520,29 +516,29 @@ public class PersonOverviewController {
 </pre>
 
 
-<p>Now this code will probably need some explaining:</p>
+<p>Adesso questo codice ha probabilmente bisogno di alune spiegazioni:</p>
 <ul>
-<li>All fields and methods where the fxml file needs access must be annotated with <code>@FXML</code>. Actually, only if they are private, but it's better to have them private and mark them with the annotation!</li>
-<li>The <code>initialize()</code> method is automatically called after the fxml file has been loaded. At this time, all the FXML fields should have been initialized already.</li>
-<li>The <code>setCellValueFactory(...)</code> that we set on the table colums are used to determine which field inside the <code>Person</code> objects should be used for the particular column. The arrow <code>-&gt;</code> indicates that we're using a Java 8 feature called <em>Lambdas</em>. (Another option would be to use a <a href="http://docs.oracle.com/javase/8/javafx/api/">PropertyValueFactory</a>, but this is not type-safe).</li>
+<li>Tutti i campi e i metodi a cui il file fxml ha bisogno di accedere devono essere annotati con <code>@FXML</code>. Attualmente, solo se sono privati, ma è meglio averli privati e comunque marcarli con l'annotazione!</li>
+<li>Il metodo <code>initialize()</code> è automaticamente chiamato dopo che il file fxml è stato caricato. In questo momento, tutti i campi FXML dovrebbero essere già inizializzati.</li>
+<li><code>setCellValueFactory(...)</code> che impostiamo sulle colonne della tabella è usato per determinare quale campo all'interno dell'oggetto <code>Person</code> dovrebbe essere usato per quella particolare colonna. La freccia <code>-&gt;</code> indica che stiamo usando una caratteristica di Java 8 chiamata <em>Lambdas</em>. (Un'altra opzione potrebbe essere quella di usare una <a href="http://docs.oracle.com/javase/8/javafx/api/">PropertyValueFactory</a>, ma non è un tipo sicuro).</li>
 </ul>
 <div class="alert alert-info">
   <p>
-    We're only using <code>StringProperty</code> values for our table columns in this example. When you want to use <code>IntegerProperty</code> or <code>DoubleProperty</code>, the <code>setCellValueFactory(...)</code> must have an additional <code>asObject()</code>:
+    In questo esempio stiamo usando solo un valore <code>StringProperty</code> per le colonne. Quando si vuole usare un <code>IntegerProperty</code> o un <code>DoubleProperty</code>, <code>setCellValueFactory(...)</code> deve vare anche un <code>asObject()</code>:
   </p>
   <p>
   <pre>myIntegerColumn.setCellValueFactory(cellData -&gt; 
       cellData.getValue().myIntegerProperty().<mark>asObject()</mark>);</pre>
   </p>
   <p>
-    This is necessary because of a bad design decision of JavaFX (see <a href="https://community.oracle.com/thread/2575601">this discussion</a>).
+    Questo è necessario per una cattiva scelta di design di JavaFX (vedi <a href="https://community.oracle.com/thread/2575601">questa discussione</a>).
   </p>
 </div>
 
 
-<h3 id="connecting-mainapp-with-the-personoverviewcontroller">Connecting MainApp with the PersonOverviewController</h3>
-<p>The <code>setMainApp(...)</code> method must be called by the <code>MainApp</code> class. This gives us a way to access the <code>MainApp</code> object and get the list of <code>Persons</code> and other things. Replace the <code>showPersonOverview()</code> method with the following. It contains two additional lines:</p>
-<h5 id="mainapp-java-new-showpersonoverview-method">MainApp.java - new showPersonOverview() method</h5>
+<h3 id="connessione-di-mainapp-con-personoverviewcontroller">Connessione di MainApp con PersonOverviewController</h3>
+<p>Il metodo <code>setMainApp(...)</code> deve essere chiamato dalla classe <code>MainApp</code>. Questo ci dà modo di accedere ad un oggeto <code>MainApp</code> e di prendere una lista di <code>Persons</code> e altre cose. Sostituire il metodo <code>showPersonOverview()</code> con il seguente. Questo contiene due linee aggiuntive:</p>
+<h5 id="mainapp-java-nuovo-metodo-showpersonoverview-">MainApp.java - nuovo metodo showPersonOverview()</h5>
 <pre class="prettyprint lang-java">
 /**
  * Shows the person overview inside the root layout.
@@ -570,30 +566,30 @@ public void showPersonOverview() {
 
 
 <hr>
-<h2 id="hook-the-view-to-the-controller">Hook the View to the Controller</h2>
-<p>We're almost there! But one little thing is missing: We haven't told our <code>PersonOverview.fxml</code> file yet, which controller to use and which element should match to which field inside the controller.</p>
+<h2 id="agganciare-la-vista-al-controller">Agganciare la vista al Controller</h2>
+<p>Ci siamo quasi! Ma manca una piccola cosa: Non abbiamo ancora detto al nostro file <code>PersonOverview.fxml</code> quale controller usare e come accoppiare elemento e campo all'interno del controller .</p>
 <ol>
-<li><p>Open <code>PersonOverview.fxml</code> with the <em>SceneBuilder</em>.</p>
+<li><p>Aprire <code>PersonOverview.fxml</code> con <em>SceneBuilder</em>.</p>
 </li>
-<li><p>Open the <em>Controller</em> group on the left side and select the <code>PersonOverviewController</code> as <strong>controller class</strong>.<br><img src="/assets/library/javafx-8-tutorial/part2/set-controller-class.png" alt="Set Controller Class"></p>
+<li><p>Aprire il gruppo <em>Controller</em> sul lato sinistro e selezionare <code>PersonOverviewController</code> come <strong>controller class</strong>.<br><img src="/assets/library/javafx-8-tutorial/part2/set-controller-class.png" alt="Set Controller Class"></p>
 </li>
-<li><p>Select the <code>TableView</code> in the <em>Hierarchy</em> group and choose in the <em>Code</em> group the <code>personTable</code> field as <strong>fx:id</strong>.<br><img src="/assets/library/javafx-8-tutorial/part2/set-tableview-fx-id.png" alt="Set TableView fx:id"></p>
+<li><p>Selezionare la <code>TableView</code> nel gruppo <em>Hierarchy</em> e selezionare <code>personTable</code> nel campo <strong>fx:id</strong>.<br><img src="/assets/library/javafx-8-tutorial/part2/set-tableview-fx-id.png" alt="Set TableView fx:id"></p>
 </li>
-<li><p>Do the same for the columns and select <code>firstNameColumn</code> and <code>lastNameColumn</code> as <strong>fx:id</strong> respectively.</p>
+<li><p>Fare lo stesso per le colonne selezionando rispettivamente <code>firstNameColumn</code> e <code>lastNameColumn</code> nel campo <strong>fx:id</strong>.</p>
 </li>
-<li><p>For <strong>each label</strong> in the second column, choose the corresponding <strong>fx:id</strong>.<br><img src="/assets/library/javafx-8-tutorial/part2/set-label-fx-id.png" alt="Set Label fx:id"></p>
+<li><p><strong>Per ogni label</strong> nella seconda colonna, scegliere il corrispondente <strong>fx:id</strong>.<br><img src="/assets/library/javafx-8-tutorial/part2/set-label-fx-id.png" alt="Set Label fx:id"></p>
 </li>
-<li><p>Important: Go back to Eclipse and <strong>refresh the entire AddressApp project</strong> (F5). This is necessary because Eclipse sometimes doesn't know about changes that were made inside the Scene Builder.</p>
+<li><p>Importante: Tornare su Eclipse e <strong>e aggiornare l'intero progetto</strong> (F5). Questo è necessario perchè alcune volte Eclipse non rileva i cambiamenti apportati in Scene Builder.</p>
 </li>
 </ol>
 <hr>
-<h2 id="start-the-application">Start the Application</h2>
-<p>When you start your application now, you should see something like the screenshot at the beginning of this blog post. </p>
-<p>Congratulations!</p>
-<p><em>Note: The labels will not update when a person is selected, yet. We will program user interactions in the next part of the tutorial.</em></p>
+<h2 id="avviare-dell-applicazione">Avviare dell'applicazione</h2>
+<p>Se avvii l'applicazione adesso dovresti vedere qualcosa di simile allo screenshot all'inizio del post. </p>
+<p>Congratulazioni!</p>
+<p><em>Nota: Le label non si aggiornano ancora quando viene selezionata una persona. Gestiremo l'interazione con l'utente nella prossima parte del tutorial</em></p>
 <h3 id="what-s-next-">What's Next?</h3>
-<p>In <a href="/library/javafx-8-tutorial/part3/">Tutorial Part 3</a> we will add more functionality like adding, deleting and editing Persons.</p>
-<h5 id="some-other-articles-you-might-find-interesting">Some other articles you might find interesting</h5>
+<p>Nella <a href="http://code.makery.ch/library/javafx-8-tutorial/it/part3/">Parte 3 del tutorial</a> aggiungeremo nuove funzionalità per aggiungere, cancellare e modificare una persona.</p>
+<h5 id="alcuni-articoli-che-potresti-trovare-interessanti">Alcuni articoli che potresti trovare interessanti</h5>
 <ul>
 <li><a href="/blog/javafx-dialogs-official/">JavaFX Dialogs (official)</a></li>
 <li><a href="/blog/javafx-8-date-picker/">JavaFX Date Picker</a></li>
@@ -701,7 +697,7 @@ public void showPersonOverview() {
     var disqus_shortname = 'codemakery'; // Required - the forum shortname
     var disqus_identifier = '/library/javafx-8-tutorial/it/part2/';
     var disqus_url = 'http://code.makery.ch/library/javafx-8-tutorial/it/part2/';
-    var disqus_title = 'JavaFX 8 Tutorial - Part 2: Model and TableView';
+    var disqus_title = 'JavaFX 8 Tutorial - Parte 2: Model and TableView';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
