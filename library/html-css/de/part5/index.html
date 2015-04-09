@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HTML & CSS Tutorial - Teil 5: Navigieren zwischen Seiten | code.makery.ch</title>
+    <title>HTML & CSS Tutorial - Teil 5: Blog und weitere Seiten | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -30,21 +30,24 @@
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="canonical" href="http://code.makery.ch/library/html-css/de/part5/" />
   
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/html-css/part5/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/html-css/de/part5/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
 
-    <meta name="description" content="Lernen Sie, wie man eine Navigation für die Website erstellt.">
+    <meta name="description" content="Erstellen Sie eine Dateistruktur für mehrere Webseiten. Lernen Sie eine Struktur für einen Blog aufzustellen.">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="HTML & CSS Tutorial - Teil 5: Navigieren zwischen Seiten | code.makery.ch" />
+    <meta property="og:title" content="HTML & CSS Tutorial - Teil 5: Blog und weitere Seiten | code.makery.ch" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Lernen Sie, wie man eine Navigation für die Website erstellt." />
+    <meta property="og:description" content="Erstellen Sie eine Dateistruktur für mehrere Webseiten. Lernen Sie eine Struktur für einen Blog aufzustellen." />
     <meta property="og:url" content="http://code.makery.ch/library/html-css/de/part5/" />
-    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio.png" />
+    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio-de.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
     
@@ -114,9 +117,11 @@
       <a href="/library/html-css/de/part4/" class="list-group-item">
         Teil 4: Entwicklertools im Browser</a>
       <a href="/library/html-css/de/part5/" class="list-group-item active">
-        Teil 5: Navigieren zwischen Seiten</a>
+        Teil 5: Blog und weitere Seiten</a>
       <a href="/library/html-css/de/part6/" class="list-group-item">
-        Teil 6: Bootstrap Framework verwenden</a>
+        Teil 6: Navigation</a>
+      <a href="/library/html-css/de/part7/" class="list-group-item">
+        Teil 7: Bootstrap Framework</a>
       <a href="/library/html-css/de/next/" class="list-group-item">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a>
   </div>
@@ -127,17 +132,30 @@
   </div>
 
   <div class="list-group">
-      <a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v0.4/portfolio-de-part5.zip" class="list-group-item">
+      <a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v1.0/portfolio-part5.zip" class="list-group-item">
 <i class="fa fa-fw fa-file-archive-o"></i>        Portfolio Teil 5</a>
   </div>
 </div>
 
-          
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Sprachen</h4>  
+  </div>
+  <div class="list-group">
+      <a href="/library/html-css/part5/" class="list-group-item">
+        <i class="fa fa-fw fa-globe"></i> English
+      </a>
+      <a href="/library/html-css/de/part5/" class="list-group-item active">
+        <i class="fa fa-fw fa-globe"></i> Deutsch
+      </a>
+  </div>
+</div>
+
           </div>
         </aside>
         <div class="col-md-9">
           <header class="article-header">
-            <h1 class="article-title">HTML & CSS Tutorial - Teil 5: Navigieren zwischen Seiten</h1>
+            <h1 class="article-title">HTML & CSS Tutorial - Teil 5: Blog und weitere Seiten</h1>
             <div class="article-date">
   Aug 13, 2014
   • Updated Mar 18, 2015
@@ -161,9 +179,11 @@
       <li class=""><a href="/library/html-css/de/part4/">
         Teil 4: Entwicklertools im Browser</a></li>
       <li class=" active"><a href="/library/html-css/de/part5/">
-        Teil 5: Navigieren zwischen Seiten</a></li>
+        Teil 5: Blog und weitere Seiten</a></li>
       <li class=""><a href="/library/html-css/de/part6/">
-        Teil 6: Bootstrap Framework verwenden</a></li>
+        Teil 6: Navigation</a></li>
+      <li class=""><a href="/library/html-css/de/part7/">
+        Teil 7: Bootstrap Framework</a></li>
       <li class=""><a href="/library/html-css/de/next/">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a></li>
   </ul>
@@ -172,16 +192,28 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Downloads <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v0.4/portfolio-de-part5.zip">
+      <li class=""><a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v1.0/portfolio-part5.zip">
 <i class="fa fa-fw fa-file-archive-o"></i>        Portfolio Teil 5</a></li>
   </ul>
 </div>
 
-            
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sprachen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class="">
+        <a href="/library/html-css/part5/"><i class="fa fa-fw fa-globe"></i> English</a>
+    </li>
+      <li class=" active">
+        <a href="/library/html-css/de/part5/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+    </li>
+  </ul>
+</div>
+
           </aside>
           
           <div class="article-content">
-            <p>Unser Portfolio hat bis hierhin nur eine Startseite. Die meisten <em>Websites</em> (gemeint ist damit der ganze Webauftritt) haben natürlich mehr als nur eine Seite. In diesem Teil werden wir weitere Seiten erstellen und eine Navigation einfügen, damit die Besucher zwischen den verschiedenen Seiten wechseln können.</p>
+            <p>Unser Portfolio hat bis hierhin nur eine Startseite. Die meisten <em>Websites</em> (gemeint ist damit der ganze Webauftritt) haben natürlich mehr als nur eine Seite. In diesem Teil werden wir weitere Seiten erstellen.</p>
 <h2 id="neue-seiten-erstellen">Neue Seiten erstellen</h2>
 <p>Wir erstellen drei neue Seiten: Eine Seite für unseren eigenen <strong>Blog</strong>, eine für <strong>Projekte</strong> und eine für <strong>Kontaktinformationen</strong>. </p>
 <p>Diese drei Seiten stellen unsere "Hauptseiten" dar. Das heisst, dass wir daran denken müssen, dass jeweils weitere Unterseiten dazukommen könnten. So wird es zum Beispiel im Blog später für jeden Blogeintrag eine eigenen Unterseite geben. Aus diesem Grund werden wir für diese drei Seiten <strong>je einen eigenen Unterordner</strong> erstellen. Das gibt uns eine gute Ordnung. </p>
@@ -192,7 +224,7 @@
 </div>
 
 
-<h3 id="seite-f-r-den-blog">Seite für den Blog</h3>
+<h2 id="seite-f-r-den-blog">Seite für den Blog</h2>
 <p>Erstellen Sie einen Unterordner in Ihrem <em>Portfolio</em>-Ordner namens <code>blog</code>. Kopieren Sie die Datei <code>index.html</code> in diesen Unterordner. Nun sollte Ihre Dateistruktur so aussehen:</p>
 <p><img src="/assets/library/html-css/part5/blog-subfolder.png" alt="Blog Unterordner"></p>
 <p>Öffnen Sie nun die kopierte Datei <code>blog/index.html</code> in Ihrem Browser (wenn Sie den Brackets-Editor verwenden, klicken Sie auf den Blitz für die <em>Live-Vorschau</em>). Nun werden Sie merken, dass zwei Dinge nicht funktionieren:</p>
@@ -233,12 +265,11 @@
 </pre>
 
 <p>Im HTML-Code oben sehen Sie ein neues Element mit den Tags <code>&lt;!--</code> und <code>--&gt;</code>. Mit diesen Tags können wir in HTML einen <strong>Kommentar</strong> hinschreiben. Kommentare sind nur für uns als Programmierer gedacht und werden vom Browser ignoriert.</p>
-<h4 id="blogeintrag-als-unterseite">Blogeintrag als Unterseite</h4>
-<p>Der Blog braucht natürlich noch Einträge. Wir erstellen für jeden Blogeintrag eine eigen HTML-Unterseite. Erstellen Sie einen Unterordner innerhalb des <code>blog</code>-Ordners mit dem Namen <code>2014-08-02-erster-eintrag</code>. Kopieren Sie die Datei <code>blog/index.html</code> in diesen Ordner hinein.</p>
+<h3 id="blogeintrag-als-unterseite">Blogeintrag als Unterseite</h3>
+<p>Der Blog braucht natürlich noch Einträge. Wir erstellen für jeden Blogeintrag eine eigen HTML-Unterseite. Erstellen Sie einen Unterordner innerhalb des <code>blog</code>-Ordners mit dem Namen <code>erster-eintrag</code>. Kopieren Sie die Datei <code>blog/index.html</code> in diesen Ordner hinein.</p>
 <p><img src="/assets/library/html-css/part5/blog-entry-subfolder-de.png" alt="Blogeintrag"></p>
-<p>Die Zahlenkombination <code>2014-08-02</code> ist das Datum in umgekehrter Reihenfolge, also der 2. August 2014. Man könnte natürlich irgend einen Namen vergeben, aber wenn man das Datum so in den Dateinamen integriert, dann hat man automatisch eine chronologische Sortierung der Dateien oder Ordner. Dies gibt uns eine bessere Übersicht, wenn wir später viele Blogeinträge haben.</p>
 <p>Im Blogeintrag ändern wir den Inhalt wie folgt ab:</p>
-<h5 id="blog-2014-08-02-erster-eintrag-index-html-erster-blogeintrag">blog/2014-08-02-erster-eintrag/index.html - Erster Blogeintrag</h5>
+<h5 id="blog-erster-eintrag-index-html-erster-blogeintrag">blog/erster-eintrag/index.html - Erster Blogeintrag</h5>
 <pre class="prettyprint lang-html">
 &lt;!DOCTYPE html>
 
@@ -261,7 +292,7 @@
 </pre>
 
 <p>Auch hier ist ein neues HTML-Element enthalten (<code>hr</code>). Sie werden mit ausprobieren oder einer Internetsuche schnell herausfinden, was es bewirkt.</p>
-<h4 id="legen-sie-los-mit-blogeintr-gen-">Legen Sie los mit Blogeinträgen!</h4>
+<h3 id="legen-sie-los-mit-blogeintr-gen-">Legen Sie los mit Blogeinträgen!</h3>
 <p>Ich empfehle Ihnen, dass Sie sofort damit anfangen, Blogeinträge zu schreiben. Sie könnten an jedem Tag, an dem Sie etwas Neues über Programmieren gelernt haben, einen kurzen Eintrag dazu schreiben. Ich notiere hier ein paar Gedanken, die Sie zu mögliche Inhalten inspirieren könnten:</p>
 <ul>
 <li>Was habe ich heute gelernt?<ul>
@@ -278,18 +309,18 @@
 <li>Sie werden sich bewusst, was Sie gelernt haben &rarr; mehr Motivation!</li>
 <li>Sie können später in ihrer persönlichen Dokumentation etwas nachschlagen, z.B. Links zu hilfreichen Seiten.</li>
 <li>Sie üben beim Schreiben der Einträge gleich die gelernten HTML-Elemente und CSS-Regeln.</li>
-<li>Wenn wir später anschauen, wie man Webseiten veröffentlicht, dann können Sie Ihren Blog auch anderen zugänglich machen. So können Sie Ihr Wissen mit anderen Teilen oder jemanden einladen, Ihnen bei einem Problem zu helfen.</li>
+<li>Wenn Sie Ihre Website veröffentlichen, dann können Sie Ihren Blog auch anderen zugänglich machen. So können Sie Ihr Wissen mit anderen Teilen oder jemanden einladen, Ihnen bei einem Problem zu helfen.</li>
 <li>Falls Sie Ihr Portfolio veröffentlichen, würde mich das sehr interessieren. Schreiben Sie dann irgendwo einen Kommentar mit dem Link!</li>
 </ol>
 <p><em>Also, warten Sie nicht und legen Sie los. Es lohnt sich!</em></p>
+<h4 id="zweiter-blogeintrag">Zweiter Blogeintrag</h4>
 <div class="alert alert-info">
-<strong>Hinweis:</strong> Erstellen Sie für jeden Blogeintrag einen eigenen Unterordner (mit einer <code>index.html</code>-Seite). So haben Sie eine gute Ordnung und können Bilder oder andere Dateien für den Blogeintrag im Unterordner ablegen.
+  <strong>Hinweis:</strong> Erstellen Sie für jeden Blogeintrag einen eigenen Unterordner (mit einer <code>index.html</code>-Seite). So haben Sie eine gute Ordnung und können Bilder oder andere Dateien für den Blogeintrag im Unterordner ablegen.
 </div>
 
-<h5 id="zweiter-blogeintrag">Zweiter Blogeintrag</h5>
 <p><img src="/assets/library/html-css/part5/blog-entry-subfolder2-de.png" alt="Blogeintrag 2"></p>
-<h3 id="seite-f-r-projekte">Seite für Projekte</h3>
-<p>Wenn wir später verschiedene Webapplikationen programmieren, wäre es natürlich nützlich, dafür eine separate Seite zu haben. Wir bereiten schon mal eine Seite für unsere Projekte vor, jedoch noch ohne Inhalt.</p>
+<h2 id="seite-f-r-projekte">Seite für Projekte</h2>
+<p>Wenn wir später verschiedene Webseiten und Webapplikationen programmieren, wäre es natürlich nützlich, eine separate Seite zu haben, wo wir diese aufführen könnten. Wir bereiten schon mal eine Seite für unsere Projekte vor, jedoch noch ohne Inhalt.</p>
 <p>Gehen Sie wie oben beim Blog vor und erstellen Sie einen Unterordner <code>projekte</code> mit einer Datei <code>index.html</code>:</p>
 <h5 id="projekte-index-html">projekte/index.html</h5>
 <pre class="prettyprint lang-html">
@@ -311,11 +342,12 @@
 </pre>
 
 
-<h3 id="seite-f-r-kontakt">Seite für Kontakt</h3>
+<h2 id="seite-f-r-kontakt">Seite für Kontakt</h2>
 <p>Als letzte Hauptseite fügen wir eine Seite mit Kontaktinformationen hinzu. Erstellen Sie einen Unterordner <code>kontakt</code> mit einer Datei <code>index.html</code>.</p>
 <div class="alert alert-danger">
 <strong>Wichtig:</strong> <em>Überlegen Sie sich gut, welche Informationen Sie öffentlich machen wollen! Geben Sie zum Beispiel <strong>nicht Ihre Haupt-E-Mail-Adresse an</strong>, denn es kann sein, dass Sie nachher auf diese Adresse Spamnachrichten erhalten.</em>
 </div>
+
 
 <h5 id="kontakt-index-html">kontakt/index.html</h5>
 <pre class="prettyprint lang-html">
@@ -345,126 +377,9 @@
 <p>Bei der Adresse sehen Sie ein neues Element: <code>&lt;br&gt;</code>. Es bewirkt einen Zeilenumbruch. Beachten Sie auch den speziellen Link mit <code>mailto:</code> und der E-Mail-Adresse. Dieser Link bewirkt, dass das E-Mail-Programm geöffnet wird und gleich die Adresse ausgefüllt ist.</p>
 <p>Nun haben wir bereits fünf HTML-Seiten:</p>
 <p><img src="/assets/library/html-css/part5/all-files-de.png" alt="Alle Dateien"></p>
-<p>Was natürlich fehlt, ist eine Navigation, so dass man einfach zwischen diesen Seiten hin und her wechseln kann. Das nehmen wir gleich als nächstes in Angriff.</p>
-<h2 id="navigation">Navigation</h2>
-<p>Eine Navigation besteht eigentlich aus ganz normalen Links zu anderen Seiten. Wir beginnen mit einer ganz einfachen Variante und werden diese dann laufend verbessern, bis wir eine schöne und komplette Navigation auf allen Seiten haben.</p>
-<p>Zuerst werden wir die Navigation nur für unsere Startseite programmieren. Erst am Schluss werden wir diese dann in alle anderen Seiten hinein kopieren.</p>
-<h3 id="navigation-mit-links">Navigation mit Links</h3>
-<p>Öffnen Sie <code>index.html</code> von der Startseite. </p>
-<p>Mit einfachen Links können wir von der Startseite auf die anderen Seiten springen. Die Navigation kommt im <code>body</code>-Teil noch vor dem Titel. Fügen Sie also folgende vier Links zwischen <code>body</code>-Tag und dem Titel ein:</p>
-<h5 id="index-html">index.html</h5>
-<pre class="prettyprint lang-html">
-&lt;body>
-  <mark>&lt;a href="./">Home&lt;/a></mark>
-  <mark>&lt;a href="blog/">Blog&lt;/a></mark>
-  <mark>&lt;a href="projekte/">Projekte&lt;/a></mark>
-  <mark>&lt;a href="kontakt/">Kontakt&lt;/a></mark>
-
-  &lt;h1 class="title">Web Portfolio von Marco&lt;/h1>
-</pre>
-
-<div class="alert alert-info">
-<strong>Hinweis:</strong> Der Link zu <code>./</code> verweist auf das aktuelle Verzeichnis. Mehr dazu im Abschnitt <a class="alert-link" href="/library/html-css/de/part1/#relative-und-absolute-urls">relative und absolute URLs</a>.
-</div>
-
-<p>Und so sieht die Navigation nun aus:</p>
-<p><img src="/assets/library/html-css/part5/navigation-links-de.png" alt="Navigation mit Links"></p>
-<p>Überprüfen Sie, ob die Links auch wirklich funktionieren und Sie zur gewollten Seite bringen.</p>
-<div class="alert alert-info">
-<p>
-<strong>Hinweis:</strong> Wenn Sie die Seite als Datei direkt im Browser öffnen (ohne die <em>Live-Vorschau</em> vom Brackets-Editor), dann werden die Links nicht ganz korrekt funktionieren. Der Grund ist, dass das Dateisystem einfach den Ordnerinhalt anzeigt und nicht automatisch <code>index.html</code> öffnet. Sie müssen dann manuell auf <code>index.html</code> klicken. 
-</p>
-<p>
-Sobald Sie aber die Seite auf einem Server veröffentlichen, sollten die Links ganz normal funktionieren.
-</p>
-</div>
-
-<p>Im Moment ist unsere Navigation einfach eine Aneinanderreihung von Links. Meistens verwendet man für eine Navigation aber eine HTML-Liste von Links. Mit einer Liste werden die Navigationselemente entweder horizontal oder vertikal zusammen gruppiert und können so später besser formatiert werden. </p>
-<p>Wir lernen nun, wie man in HTML Listen erstellen kann.</p>
-<h2 id="listen">Listen</h2>
-<p>Es gibt viele Situationen, in denen man Listen verwendet. In HTML gibt es drei verschiedene Arten von Listen: <strong>ungeordnete Listen</strong>, <strong>geordnete Listen</strong> und <strong>Definitionslisten</strong>. Definitionslisten werden nicht so häufig verwendet. Deshalb werden wir uns hier nur die ersten beiden genauer anschauen.</p>
-<h3 id="ungeordnete-listen">Ungeordnete Listen</h3>
-<p>Eine ungeordnete Liste ist ganz einfach eine Liste von Einträgen, bei welchen die Reihenfolge beliebig ist. Ungeordnete Listen werden in HTML mit dem Element <code>&lt;ul&gt;</code> erstellt (steht für <em>unordered list</em>). Für jeden Eintrag in der Liste braucht es innerhalb des <code>&lt;ul&gt;</code>-Elements ein <code>&lt;li&gt;</code>-Element (steht für <em>list item</em>).</p>
-<p>Hier ein Beispiel einer Todo-Liste:</p>
-<pre class="prettyprint lang-html">
-&lt;ul>
-  &lt;li>Einkaufen&lt;/li>
-  &lt;li>Katze füttern&lt;/li>
-  &lt;li>Grossmutter besuchen&lt;/li>
-&lt;/ul>
-</pre>
-
-<p>Das Resultat sieht dann so aus:</p>
-<div class="panel panel-default">
-  <div class="panel-body">
-      <ul style="margin-bottom: 0">
-        <li>Einkaufen</li>
-        <li>Katze füttern</li>
-        <li>Grossmutter besuchen</li>
-      </ul>
-  </div>
-</div>
-
-
-<h3 id="geordnete-listen">Geordnete Listen</h3>
-<p>Bei geordneten ist die Reihenfolge entscheidend und wird deshalb nummeriert. In HTML sieht sie sehr ähnlich aus wie die ungeordnete Liste: Anstelle des <code>&lt;ul&gt;</code>-Elementes wird ein <code>&lt;ol&gt;</code>-Element verwendet (steht für <em>ordered list</em>).</p>
-<p>Ein typisches Beispiel für eine geordnete Liste ist die Zubereitung in einem Rezept:</p>
-<pre class="prettyprint lang-html">
-&lt;ol>
-  &lt;li>Eier aufschlagen, salzen und mit einer Gabel leicht verschlagen.&lt;/li>
-  &lt;li>Milch darunter mischen.&lt;/li>
-  &lt;li>Butter in einer Pfanne schmelzen und die Eimischung hineingeben.&lt;/li>
-  &lt;li>Wenn es cremig ist, vom Herd nehmen und mit Schnittlauch bestreuen.&lt;/li>
-&lt;/ol>
-</pre>
-
-<p>Das Resultat sieht so aus:</p>
-<div class="panel panel-default">
-  <div class="panel-body">
-    <ol style="margin-bottom: 0">
-      <li>Eier aufschlagen, salzen und mit einer Gabel leicht verschlagen.</li>
-      <li>Milch darunter mischen.</li>
-      <li>Butter in einer Pfanne schmelzen und die Eimischung hineingeben.</li>
-      <li>Wenn es cremig ist, vom Herd nehmen und mit Schnittlauch bestreuen.</li>
-    </ol>
-  </div>
-</div>
-
-
-<h3 id="navigation-als-liste">Navigation als Liste</h3>
-<p>Wir werden die Navigation von unserem Portfolio nun als ungeordnete Liste programmieren.</p>
-<p>Die Links unserer Navigation werden also alle verpackt in <code>&lt;li&gt;</code>-Elemente, welche innerhalb eines <code>&lt;ol&gt;</code>-Elements liegen:</p>
-<pre class="prettyprint lang-html">
-&lt;ul>
-  &lt;li>&lt;a href="./">Home&lt;/a>&lt;/li>
-  &lt;li>&lt;a href="blog/">Blog&lt;/a>&lt;/li>
-  &lt;li>&lt;a href="projekte/">Projekte&lt;/a>&lt;/li>
-  &lt;li>&lt;a href="kontakt/">Kontakt&lt;/a>&lt;/li>
-&lt;/ul>
-</pre>
-
-<p>Im nächsten Teil sehen wir, wie die Navigation horizontal dargestellt und schön formatiert werden kann. Sobald die Navigation fertig gestellt ist, werden wir sie auch in allen anderen Seiten einfügen.</p>
-<h3 id="blogeintr-ge-als-liste">Blogeinträge als Liste</h3>
-<p>Auf unserer Blog-Seite hatten wir noch etwas Platz gelassen, wo wir unserer Blogeinträge auflisten können. Da wir nun wissen, wie Listen in HTML erstellt werden, können wir die Blogeinträge angeben.</p>
-<p>Öffnen Sie die Blog-Seite <code>blog/index.html</code>. Fügen Sie unterhalb der Überschrift "Blogeinträge" eine Liste mit Blogeinträgen ein:</p>
-<h5 id="blog-index-html">blog/index.html</h5>
-<pre class="prettyprint lang-html">
-&lt;h2>Blogeinträge&lt;/h2>
-
-&lt;!-- Hier kommt eine Liste mit allen Blogeinträgen. -->
-&lt;ul>
-  &lt;li>Weitere Einträge folgen...&lt;/li>
-  &lt;li>&lt;a href="2014-08-02-erster-eintrag/">Erster Eintrag&lt;/a>&lt;/li>
-&lt;/ul>
-</pre>
-
-<div class="alert alert-info">
-<strong>Hinweis:</strong> <em>Blogeinträge werden meist in umgekehrter Reihenfolge aufgelistet, so dass der letzte Eintrag zuoberst in der Liste erscheint.</em>
-</div>
-
-
-<hr>
-<p>&rarr; Fahren Sie weiter mit <a href="/library/html-css/de/part6/">Teil 6: Bootstrap Framework verwenden</a>.</p>
+<h2 id="wie-weiter-">Wie weiter?</h2>
+<p>Was natürlich fehlt, ist eine Navigation, so dass man einfach zwischen diesen Seiten hin und her wechseln kann. </p>
+<p>&rarr; Das nehmen wir gleich in Angriff im <a href="/library/html-css/de/part6/">Teil 6: Navigieren zwischen Seiten</a>.</p>
 
 
           </div>
@@ -490,10 +405,13 @@ Sobald Sie aber die Seite auf einem Server veröffentlichen, sollten die Links g
       <a href="/library/html-css/de/part4/" data-toggle="tooltip" title="Teil 4: Entwicklertools im Browser">4</a>
       </li>
         <li class="active">
-      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Navigieren zwischen Seiten">5</a>
+      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Blog und weitere Seiten">5</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Bootstrap Framework verwenden">6</a>
+      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Navigation">6</a>
+      </li>
+        <li>
+      <a href="/library/html-css/de/part7/" data-toggle="tooltip" title="Teil 7: Bootstrap Framework">7</a>
       </li>
         <li>
       <a href="/library/html-css/de/next/" data-toggle="tooltip" title="Nächste Schritte"><i class="fa fa-flag-checkered"></i></a>
@@ -565,7 +483,7 @@ Sobald Sie aber die Seite auf einem Server veröffentlichen, sollten die Links g
     var disqus_shortname = 'codemakery'; // Required - the forum shortname
     var disqus_identifier = '/library/html-css/de/part5/';
     var disqus_url = 'http://code.makery.ch/library/html-css/de/part5/';
-    var disqus_title = 'HTML & CSS Tutorial - Teil 5: Navigieren zwischen Seiten';
+    var disqus_title = 'HTML & CSS Tutorial - Teil 5: Blog und weitere Seiten';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

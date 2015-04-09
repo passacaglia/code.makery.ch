@@ -30,6 +30,9 @@
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="canonical" href="http://code.makery.ch/library/html-css/de/part2/" />
   
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/html-css/part2/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/html-css/de/part2/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
@@ -44,7 +47,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Lernen Sie, wie man eine Webseite live im Internet veröffentlicht." />
     <meta property="og:url" content="http://code.makery.ch/library/html-css/de/part2/" />
-    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio.png" />
+    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio-de.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
     
@@ -114,15 +117,30 @@
       <a href="/library/html-css/de/part4/" class="list-group-item">
         Teil 4: Entwicklertools im Browser</a>
       <a href="/library/html-css/de/part5/" class="list-group-item">
-        Teil 5: Navigieren zwischen Seiten</a>
+        Teil 5: Blog und weitere Seiten</a>
       <a href="/library/html-css/de/part6/" class="list-group-item">
-        Teil 6: Bootstrap Framework verwenden</a>
+        Teil 6: Navigation</a>
+      <a href="/library/html-css/de/part7/" class="list-group-item">
+        Teil 7: Bootstrap Framework</a>
       <a href="/library/html-css/de/next/" class="list-group-item">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a>
   </div>
 </div>
 
-          
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Sprachen</h4>  
+  </div>
+  <div class="list-group">
+      <a href="/library/html-css/part2/" class="list-group-item">
+        <i class="fa fa-fw fa-globe"></i> English
+      </a>
+      <a href="/library/html-css/de/part2/" class="list-group-item active">
+        <i class="fa fa-fw fa-globe"></i> Deutsch
+      </a>
+  </div>
+</div>
+
           </div>
         </aside>
         <div class="col-md-9">
@@ -151,21 +169,35 @@
       <li class=""><a href="/library/html-css/de/part4/">
         Teil 4: Entwicklertools im Browser</a></li>
       <li class=""><a href="/library/html-css/de/part5/">
-        Teil 5: Navigieren zwischen Seiten</a></li>
+        Teil 5: Blog und weitere Seiten</a></li>
       <li class=""><a href="/library/html-css/de/part6/">
-        Teil 6: Bootstrap Framework verwenden</a></li>
+        Teil 6: Navigation</a></li>
+      <li class=""><a href="/library/html-css/de/part7/">
+        Teil 7: Bootstrap Framework</a></li>
       <li class=""><a href="/library/html-css/de/next/">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a></li>
   </ul>
 </div>
 
-            
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sprachen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class="">
+        <a href="/library/html-css/part2/"><i class="fa fa-fw fa-globe"></i> English</a>
+    </li>
+      <li class=" active">
+        <a href="/library/html-css/de/part2/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+    </li>
+  </ul>
+</div>
+
           </aside>
           
           <div class="article-content">
             <p>Im ersten Teil haben wir unsere erste Webseite erstellt. Es wäre ja schade, wenn diese Webseite nur auf unserem Computer liegt und sie gar nie von jemand anderem angeschaut werden kann. Deshalb werden wir jetzt die Webseite gleich live ins Internet stellen. </p>
 <div class="alert alert-info">
-<strong>Keine Angst:</strong> Sie können die Webseite später jederzeit ändern oder löschen. Sie müssen auch nicht befürchten, dass sofort viele Besucher Ihre Webseite anschauen werden. Denn solange Sie niemandem einen Link auf die Seite schicken oder den Link irgendwo veröffentlichen, wird wohl kaum jemand einfach auf Ihre Seite stossen.
+<strong>Hinweis:</strong> Sie werden nicht von Beginn weg viele Besucher auf Ihrer Webseite haben. Denn solange Sie niemandem einen Link auf die Seite schicken oder den Link irgendwo veröffentlichen, wird kaum jemand einfach auf Ihre Seite stossen.
 </div>
 
 
@@ -195,12 +227,12 @@
 </li>
 <li><p>Selektieren Sie den Ordner in Drive und wählen Sie <em>Freigeben</em>. Ändern Sie die Zugriff auf <em>"Öffentlich im Web"</em>. </p>
 </li>
-<li><p>Öffnen Sie den Ordner in Drive und laden Sie alle Webseitendateien (index.html, Bilder, CSS, etc.) in den Ordner hoch.</p>
+<li><p>Öffnen Sie den Ordner in Drive und überprüfen Sie, ob alle Webseitendateien (index.html, Bilder, CSS, etc.) enthalten sind.</p>
 </li>
-<li><p>Kopieren Sie die Zeichen nach <code>#folders</code> in der Adresszeile Ihres Browsers.<br><img src="/assets/library/html-css/part2/google-drive-copy-string.png" alt="Google Drive Zeichen Kopieren"></p>
+<li><p>Kopieren Sie die Zeichen nach <code>#folders/</code> in der Adresszeile Ihres Browsers.<br><img src="/assets/library/html-css/part2/google-drive-copy-string.png" alt="Google Drive Zeichen Kopieren"></p>
 </li>
 <li><p>Geben Sie in der Addresszeile Ihres Browsers <code>http://googledrive.com/host/</code> und anschliessend die kopierten Zeichen ein.
-<img src="/assets/library/html-css/part2/google-drive-host-address.png" alt="Google Drive Hosting Addresse"></p>
+<img src="/assets/library/html-css/part2/google-drive-host-address.png" alt="Google Drive Hosting Adresse"></p>
 </li>
 </ol>
 <p>Unter diesem Link kann nun jeder Ihre Webseite aufrufen.</p>
@@ -250,10 +282,13 @@
       <a href="/library/html-css/de/part4/" data-toggle="tooltip" title="Teil 4: Entwicklertools im Browser">4</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Navigieren zwischen Seiten">5</a>
+      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Blog und weitere Seiten">5</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Bootstrap Framework verwenden">6</a>
+      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Navigation">6</a>
+      </li>
+        <li>
+      <a href="/library/html-css/de/part7/" data-toggle="tooltip" title="Teil 7: Bootstrap Framework">7</a>
       </li>
         <li>
       <a href="/library/html-css/de/next/" data-toggle="tooltip" title="Nächste Schritte"><i class="fa fa-flag-checkered"></i></a>

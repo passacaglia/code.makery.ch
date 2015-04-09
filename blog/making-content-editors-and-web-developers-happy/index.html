@@ -129,7 +129,7 @@
 <h2 id="the-content">The Content</h2>
 <p>The most valuable part of a website usually is its content. I want my content to be in a format that can be used in various contexts. The content should stay readable even years from now and should be easy to convert to other formats.</p>
 <p><strong>Databases make me nervous.</strong> They are very complex systems that store my precious data in some format I don't really understand. If some day the database stops working I might have a lot of trouble getting my data out of the system. Things change quickly and I don't want to depend on some strange database export tool to migrate my data to the next system.</p>
-<p>Text-based file formats have been gaining a lot of popularity, Markdown probably beeing the most prominent. Most static site generators support Markdown (I'm also writing this post in Markdown). I love it and it makes data simple again. It's also very easy to create backups or version the data so that we can revert any changes. </p>
+<p>Text-based file formats have been gaining a lot of popularity, Markdown probably being the most prominent. Most static site generators support Markdown (I'm also writing this post in Markdown). I love it and it makes data simple again. It's also very easy to create backups or version the data so that we can revert any changes. </p>
 <h3 id="complex-content">Complex Content</h3>
 <p><strong>Markdownify everything?</strong> I believe we need just a little bit more. Most static generators use a <a href="http://en.wikipedia.org/wiki/YAML">YAML</a> front-matter in every file for meta-data like <em>title</em>, <em>date</em>, and <em>author</em> followed by the Markdown content. For more <strong>complex content</strong> this might still not be enough because we might need <strong>multiple content sections</strong> instead of just one per file.</p>
 <p>Instead of using YAML only for the meta-data, we could use it also for the content. This allows us to define multiple content sections. While we're at it I would strongly suggest to use <a href="https://github.com/toml-lang/toml">TOML</a> as an alternative to YAML.</p>
@@ -230,7 +230,7 @@ name = "Book"
 <p>The obvious choice for storing the files is <a href="https://github.com">GitHub</a>. It  is a nice tool for developers to work with and provides the versioning we need. </p>
 <h3 id="web-based-cms">Web-Based CMS</h3>
 <p>The CMS is currently the biggest missing piece in our setup.</p>
-<p>Although, an interactive web based editor is is already beeing <a href="http://discuss.gohugo.io/t/web-based-editor/155/18">discussed</a> and is on the <a href="http://gohugo.io/meta/roadmap/">Hugo Roadmap</a>, I don't know if it is such a good idea to include this in Hugo. I think it would be better to <strong>keep the CMS and website generation separate</strong>.</p>
+<p>Although, an interactive web based editor is is already being <a href="http://discuss.gohugo.io/t/web-based-editor/155/18">discussed</a> and is on the <a href="http://gohugo.io/meta/roadmap/">Hugo Roadmap</a>, I don't know if it is such a good idea to include this in Hugo. I think it would be better to <strong>keep the CMS and website generation separate</strong>.</p>
 <p>There are some File-Based CMS systems but none of them are complete:</p>
 <ul>
 <li><a href="http://prose.io/">prose.io</a>: This is the closest to what we would need. It is missing a way of reading <code>TOML</code> config files and displaying a corresponding form with fields. It has something similar for <code>YAML</code>, but it's too basic.</li>

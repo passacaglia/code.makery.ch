@@ -30,6 +30,9 @@
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="canonical" href="http://code.makery.ch/library/html-css/de/" />
   
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/html-css/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/html-css/de/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
@@ -44,7 +47,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Mit dieser Anleitung lernen Sie die Grundlagen von HTML & CSS, damit Sie eigene Webprojekte realisieren können. Wir beginnen sofort mit einer eigenen Webseite für Ihr Portfolio." />
     <meta property="og:url" content="http://code.makery.ch/library/html-css/de/" />
-    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio.png" />
+    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio-de.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
     
@@ -114,15 +117,30 @@
       <a href="/library/html-css/de/part4/" class="list-group-item">
         Teil 4: Entwicklertools im Browser</a>
       <a href="/library/html-css/de/part5/" class="list-group-item">
-        Teil 5: Navigieren zwischen Seiten</a>
+        Teil 5: Blog und weitere Seiten</a>
       <a href="/library/html-css/de/part6/" class="list-group-item">
-        Teil 6: Bootstrap Framework verwenden</a>
+        Teil 6: Navigation</a>
+      <a href="/library/html-css/de/part7/" class="list-group-item">
+        Teil 7: Bootstrap Framework</a>
       <a href="/library/html-css/de/next/" class="list-group-item">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a>
   </div>
 </div>
 
-          
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Sprachen</h4>  
+  </div>
+  <div class="list-group">
+      <a href="/library/html-css/" class="list-group-item">
+        <i class="fa fa-fw fa-globe"></i> English
+      </a>
+      <a href="/library/html-css/de/" class="list-group-item active">
+        <i class="fa fa-fw fa-globe"></i> Deutsch
+      </a>
+  </div>
+</div>
+
           </div>
         </aside>
         <div class="col-md-9">
@@ -151,15 +169,29 @@
       <li class=""><a href="/library/html-css/de/part4/">
         Teil 4: Entwicklertools im Browser</a></li>
       <li class=""><a href="/library/html-css/de/part5/">
-        Teil 5: Navigieren zwischen Seiten</a></li>
+        Teil 5: Blog und weitere Seiten</a></li>
       <li class=""><a href="/library/html-css/de/part6/">
-        Teil 6: Bootstrap Framework verwenden</a></li>
+        Teil 6: Navigation</a></li>
+      <li class=""><a href="/library/html-css/de/part7/">
+        Teil 7: Bootstrap Framework</a></li>
       <li class=""><a href="/library/html-css/de/next/">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a></li>
   </ul>
 </div>
 
-            
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sprachen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class="">
+        <a href="/library/html-css/"><i class="fa fa-fw fa-globe"></i> English</a>
+    </li>
+      <li class=" active">
+        <a href="/library/html-css/de/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+    </li>
+  </ul>
+</div>
+
           </aside>
           
           <div class="article-content">
@@ -167,7 +199,7 @@
 <p>Die Theorie wird erklärt, sobald sie für das Projekt benötigt wird. Sie werden damit sehr schnell eine solide Grundlage für die Webentwicklung erhalten. Ich werde Sie auf verschiedene Unterlagen hinweisen, so dass Sie später beliebige Bereiche vertiefen können.</p>
 <h2 id="das-projekt">Das Projekt</h2>
 <p>Das Projekt, welches wir Schritt-für-Schritt erarbeiten, ist Ihr persönliches <strong>Web Portfolio</strong>. Dieses Portfolio beinhaltet eine Startseite, einen Blog, eine Seite für Ihre zukünftigen Webprojekte und eine Kontaktseite.</p>
-<p><img src="/assets/library/html-css/portfolio.png" alt="Portfolio" class="img-thumbnail"></p>
+<p><img src="/assets/library/html-css/portfolio-de.png" alt="Portfolio" class="img-thumbnail"></p>
 <h2 id="grundidee">Grundidee</h2>
 <p>Die Grundidee dieses Tutorials ist, dass Sie einen Einstieg in die Webprogrammierung erhalten und dabei lernen, wie Sie sich selbständig die Informationen beschaffen können, die Sie brauchen. Dann werden Sie in der Lage sein, immer komplexere Webprojekte zu realisieren!</p>
 <h2 id="was-sind-html-css-">Was sind HTML &amp; CSS?</h2>
@@ -180,7 +212,7 @@
 
 
 <h2 id="webseite-oder-webapplikation">Webseite oder Webapplikation</h2>
-<p>Mit HTML und CSS lassen sich sehr komplexe Webseiten entwickeln. Diese Webseiten werden jedoch <strong>statisch</strong> sein, was bedeutet, dass Besucher die Seiten zwar anschauen können aber sie können nicht damit interagieren können. </p>
+<p>Mit HTML und CSS lassen sich sehr komplexe Webseiten entwickeln. Diese Webseiten werden jedoch <strong>statisch</strong> sein, was bedeutet, dass Besucher die Seiten zwar anschauen können aber sie können nicht damit interagieren können (ausser durch das Klicken auf Links). </p>
 <p>Um <strong>dynamische</strong> Webseiten zu programmieren, welche interaktiv sind, braucht man eine weitere Programmiersprache, wie zum Beispiel JavaScript oder Dart. Damit lassen sich ganze <em>Webapplikationen</em> entwickeln, wo ein Besucher zum Beispiel Berechnungen durchführen, ein Spiel spielen oder Chatfunktionen benutzen kann. </p>
 <p>Das HTML &amp; CSS Tutorial ist so aufgebaut, dass Sie direkt danach mit dem Lernen von Dart (oder JavaScript) beginnen können. Wenn Sie also möchten, können Sie bald eigene <em>Webapplikationen</em> entwickeln.</p>
 <h2 id="mobile">Mobile</h2>
@@ -221,10 +253,13 @@
       <a href="/library/html-css/de/part4/" data-toggle="tooltip" title="Teil 4: Entwicklertools im Browser">4</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Navigieren zwischen Seiten">5</a>
+      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Blog und weitere Seiten">5</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Bootstrap Framework verwenden">6</a>
+      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Navigation">6</a>
+      </li>
+        <li>
+      <a href="/library/html-css/de/part7/" data-toggle="tooltip" title="Teil 7: Bootstrap Framework">7</a>
       </li>
         <li>
       <a href="/library/html-css/de/next/" data-toggle="tooltip" title="Nächste Schritte"><i class="fa fa-flag-checkered"></i></a>

@@ -30,6 +30,9 @@
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="canonical" href="http://code.makery.ch/library/html-css/de/part3/" />
   
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/html-css/part3/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/html-css/de/part3/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
@@ -44,7 +47,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Lernen Sie, wie Sie mit CSS eine Webseite gestalten können." />
     <meta property="og:url" content="http://code.makery.ch/library/html-css/de/part3/" />
-    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio.png" />
+    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio-de.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
     
@@ -114,9 +117,11 @@
       <a href="/library/html-css/de/part4/" class="list-group-item">
         Teil 4: Entwicklertools im Browser</a>
       <a href="/library/html-css/de/part5/" class="list-group-item">
-        Teil 5: Navigieren zwischen Seiten</a>
+        Teil 5: Blog und weitere Seiten</a>
       <a href="/library/html-css/de/part6/" class="list-group-item">
-        Teil 6: Bootstrap Framework verwenden</a>
+        Teil 6: Navigation</a>
+      <a href="/library/html-css/de/part7/" class="list-group-item">
+        Teil 7: Bootstrap Framework</a>
       <a href="/library/html-css/de/next/" class="list-group-item">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a>
   </div>
@@ -127,12 +132,25 @@
   </div>
 
   <div class="list-group">
-      <a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v0.4/portfolio-de-part3.zip" class="list-group-item">
+      <a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v1.0/portfolio-part3.zip" class="list-group-item">
 <i class="fa fa-fw fa-file-archive-o"></i>        Portfolio Teil 3</a>
   </div>
 </div>
 
-          
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Sprachen</h4>  
+  </div>
+  <div class="list-group">
+      <a href="/library/html-css/part3/" class="list-group-item">
+        <i class="fa fa-fw fa-globe"></i> English
+      </a>
+      <a href="/library/html-css/de/part3/" class="list-group-item active">
+        <i class="fa fa-fw fa-globe"></i> Deutsch
+      </a>
+  </div>
+</div>
+
           </div>
         </aside>
         <div class="col-md-9">
@@ -161,9 +179,11 @@
       <li class=""><a href="/library/html-css/de/part4/">
         Teil 4: Entwicklertools im Browser</a></li>
       <li class=""><a href="/library/html-css/de/part5/">
-        Teil 5: Navigieren zwischen Seiten</a></li>
+        Teil 5: Blog und weitere Seiten</a></li>
       <li class=""><a href="/library/html-css/de/part6/">
-        Teil 6: Bootstrap Framework verwenden</a></li>
+        Teil 6: Navigation</a></li>
+      <li class=""><a href="/library/html-css/de/part7/">
+        Teil 7: Bootstrap Framework</a></li>
       <li class=""><a href="/library/html-css/de/next/">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a></li>
   </ul>
@@ -172,21 +192,33 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Downloads <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v0.4/portfolio-de-part3.zip">
+      <li class=""><a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v1.0/portfolio-part3.zip">
 <i class="fa fa-fw fa-file-archive-o"></i>        Portfolio Teil 3</a></li>
   </ul>
 </div>
 
-            
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sprachen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class="">
+        <a href="/library/html-css/part3/"><i class="fa fa-fw fa-globe"></i> English</a>
+    </li>
+      <li class=" active">
+        <a href="/library/html-css/de/part3/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+    </li>
+  </ul>
+</div>
+
           </aside>
           
           <div class="article-content">
-            <p>Vorhin haben Sie eine erste Webseite erstellt und veröffentlicht. Zugegeben, die Webseite hat noch wenig Inhalt und sieht nicht besonders ansprechend aus. Das wollen wir jetzt ändern. In diesem Teil lernen Sie, wie Sie mit CSS die Seite gestalten können. Später, im <a href="/library/html-css/de/part5/">Teil 5</a> werden wir mit der Hilfe von einem Framework noch mehr Style in die Webseite bringen. </p>
+            <p>Vorhin haben Sie eine erste Webseite erstellt und veröffentlicht. Zugegeben, die Webseite hat noch wenig Inhalt und sieht nicht besonders ansprechend aus. Das wollen wir jetzt ändern. In diesem Teil lernen Sie, wie Sie mit CSS die Seite gestalten können. In einem späteren Teil werden wir mit Hilfe vom Bootstrap Framework noch mehr Style in die Webseite bringen. </p>
 <h2 id="struktur-und-style">Struktur und Style</h2>
 <p>Nochmals zur Erinnerung: <abbr data-toggle="tooltip" title="Hypertext Markup Language">HTML</abbr> beschreibt die Struktur einer Webseite während <abbr data-toggle="tooltip" title="Cascading Style Sheet">CSS</abbr> die visuelle Erscheinung definiert. </p>
 <p>Die Aufteilung von Struktur und Style hat viele Vorteile, wie wir noch sehen werden. Es ist nicht zwingend, aber meistens schreibt man HTML und CSS auch in separate Dateien.</p>
 <h2 id="eine-css-datei-einbinden">Eine CSS-Datei einbinden</h2>
-<p>Eine CSS-Datei ist eine ganz normale Textdatei mit der Endung <code>.css</code>, die wir mit der HTML-Datei verknüpfen werden:</p>
+<p>Eine CSS-Datei ist eine ganz normale Textdatei mit der Endung <code>.css</code>, die wir mit der HTML-Datei verknüpfen werden.</p>
 <p>Erstellen Sie also in Ihrem <em>Portfolio</em>-Ordner eine <strong>neue Datei</strong>. Wir geben der Datei den Namen <code>main.css</code>.</p>
 <p><img src="/assets/library/html-css/part3/new-css-file-de.png" alt="Neue CSS-Datei"></p>
 <p>Nun wechseln wir zur <code>index.html</code>-Datei und fügen innerhalb des <code>&lt;head&gt;</code>-Elements ein <code>&lt;link&gt;</code>-Element hinzu. Mit dem <code>&lt;link&gt;</code>-Element können wir der HTML-Seite mitteilen, dass sie die CSS-Datei laden soll:</p>
@@ -248,11 +280,11 @@ h2 {
 </ul>
 <p>Bei den <em>Hex-Codes</em> stehen die ersten beiden Ziffern für den Rotanteil, die mittleren für den Grünanteil und die letzten beiden Ziffern für den Blauanteil.</p>
 <h3 id="mit-farbcodes-arbeiten">Mit Farbcodes arbeiten</h3>
-<p>Das Ausdrücken von Farben mit Hexadezimalzahlen ist sehr beliebt, da man damit sehr viele Farbkombinationen ausdrücken kann (über 16.7 Millionen). Es ist aber etwas schwierig mit ihnen zu arbeiten. Meistens braucht man deshalb einen Farbwähler.</p>
-<p>Falls Sie als Editor den <a href="http://brackets.io/">Brackets</a> verwenden, können Sie den Farbwähler gleich in der CSS-Datei aufrufen. Klicken Sie dazu mit der rechten Maustaste auf den Farbcode und wählen <em>Schnell bearbeiten</em>. Oder drücken Sie die Tastenkombination <code>Ctrl+E</code>.</p>
+<p>Das Ausdrücken von Farben mit Hexadezimalzahlen ist sehr beliebt, da man damit sehr viele Farbkombinationen dartsellen kann (über 16.7 Millionen). Es ist aber etwas schwierig mit ihnen zu arbeiten. Meistens braucht man deshalb einen Farbwähler.</p>
+<p>Falls Sie als Editor den <a href="http://brackets.io/">Brackets</a> verwenden, können Sie den Farbwähler gleich in der CSS-Datei aufrufen. Klicken Sie dazu mit der rechten Maustaste auf den Farbcode und wählen <strong>Schnell bearbeiten</strong> oder drücken Sie die Tastenkombination <code>Ctrl+E</code>.</p>
 <p><img src="/assets/library/html-css/part3/quick-edit-de.png" alt="Schnell bearbeiten"></p>
 <p>Dann erscheint sofort ein Farbwähler, wo man bequem die Farbe auswählen kann. Sie können mit den drei Knöpfen auch zwischen den verschiedenen Notationsformen umschalten.</p>
-<p><img src="/assets/library/html-css/part3/color-chooser-de.png" alt="Farbwähler"></p>
+<p><img src="/assets/library/html-css/part3/color-chooser.png" alt="Farbwähler"></p>
 <h3 id="online-farbw-hler">Online Farbwähler</h3>
 <p>Falls Sie nicht mit dem Brackets-Editor und keinen Farbwähler integriert haben, können sie auf zahlreiche Online-Farbwähler zurückgreifen:</p>
 <ul>
@@ -272,12 +304,12 @@ h2 {
 <h5 id="generatoren-zum-erstellen-von-farbpaletten">Generatoren zum Erstellen von Farbpaletten</h5>
 <ul>
 <li><a href="https://kuler.adobe.com">Kuler</a> - eine Farbregel definieren, am Regler mit dem kleinen Pfeil ziehen und schon hat man fünf Farben, die zusammen passen.</li>
-<li><a href="http://www.paletton.com">Paletton</a> - ein ausgeklügleter Regler zum Finden von Farbpaletten.</li>
+<li><a href="http://www.paletton.com">Paletton</a> - ein ausgeklügelter Regler zum Finden von Farbpaletten.</li>
 <li><a href="http://colourco.de/">Colourco.de</a> - ein weiterer, praktischer Paletten-Generator</li>
 </ul>
 <h2 id="css-regeln">CSS-Regeln</h2>
 <p>Sie haben nun bereits gesehen, wie CSS-Regeln die Farbe eines HTML-Elementes verändern können. Nun schauen wir uns etwas genauer an, wie CSS-Regeln aufgebaut sind werden.</p>
-<p>Eine CSS-Regel besteht aus drei Elementen, einem <em>Selektor</em>, einer <em>Eigenschaft</em> und einem <em>Wert</em>:</p>
+<p>Eine CSS-Regel besteht aus drei Elementen, einem <em>Selektor</em>, einer <em>Eigenschaft</em> und einem <em>Wert</em>.</p>
 <p><img src="/assets/library/html-css/part3/css-rule-de.png" alt="CSS-Regel"></p>
 <p>Diese Regel besagt, dass alle <code>&lt;h2&gt;</code>-Elemente eine Hintergrundfarbe von <code>#607d8b</code> erhalten sollen.</p>
 <h2 id="css-selektoren">CSS-Selektoren</h2>
@@ -289,7 +321,7 @@ h2 {
 
 <h3 id="typselektor">Typselektor</h3>
 <p>Der Typselektor wird angewandt auf alle Elemente mit dem entsprechenden Tag. 
-Wenn wir als Beispiel alle <code>p</code>-Elemente ansprechen wollten, würde dies so aussehen:</p>
+Wenn wir als Beispiel alle <code>p</code>-Elemente ansprechen wollten, würde dies so aussehen.</p>
 <h5 id="css">CSS</h5>
 <pre class="prettyprint lang-css">
 p {
@@ -307,7 +339,7 @@ p {
 
 <h3 id="klassenselektor">Klassenselektor</h3>
 <p>Klassenselektoren werden sehr häufig verwendet. Dazu fügt man dem HTML-Element ein Attribut <code>class</code> hinzu und gibt ihm einen beliebigen Wert. In CSS kann man nun alle Elemente ansprechen, die das gleiche <code>class</code>-Attribut haben. Man macht dies mit einem <strong>Punkt</strong>, gefolgt vom <code>class</code>-Attribut.</p>
-<p>Im folgenden Beispiel gilt der Klassenselektor für alle Elemente, welche ein <code>class</code>-Attribut mit dem Wert <code>highlight</code> haben:</p>
+<p>Im folgenden Beispiel gilt der Klassenselektor für alle Elemente, welche ein <code>class</code>-Attribut mit dem Wert <code>highlight</code> haben.</p>
 <h5 id="css">CSS</h5>
 <pre class="prettyprint lang-css">
 .highlight {
@@ -327,7 +359,7 @@ p {
 <h3 id="id-selektor">ID-Selektor</h3>
 <p>Der ID-Selektor ist sehr ähnlich wie der Klassenselektor. Er wird auf alle HTML-Elemente angewandt, die ein Attribut <code>id</code> mit einem entsprechenden Wert haben. Anstelle des Punktes verwendet man für ID-Selektoren ein <strong>Rautezeichen</strong> (<code>#</code>).</p>
 <p>Der wichtige Unterschied zum Klassenselektor besteht darin, dass ID-Selektoren <strong>nur einmal</strong> pro HTML-Seite vorkommen sollten, während eine Klasse für beliebig viele Elemente verwendet werden kann.</p>
-<p>Im folgenden Beispiel gilt der ID-Selektor für das Element, welches ein <code>id</code>-Attribut mit dem Wert <code>navigation</code> besitzt:</p>
+<p>Im folgenden Beispiel gilt der ID-Selektor für das Element, welches ein <code>id</code>-Attribut mit dem Wert <code>navigation</code> besitzt.</p>
 <h5 id="css">CSS</h5>
 <pre class="prettyprint lang-css">
 #navigation {
@@ -363,7 +395,7 @@ p a {
 
 <p>Der Nachkommenselektor <code>p a</code> wählt alle <code>a</code>-Elemente aus, die irgendwo innerhalb eines <code>p</code>-Elementes vorkommen. In unserem Beispiel würde die CSS-Regel auf <em>Meine Webseite</em> zutreffen, jedoch nicht auf <em>Example Webseite</em>. </p>
 <div class="alert alert-info">
-<strong>Wichtig:</strong> Das <code>a</code>-Element muss nicht unbedingt direkt dem <code>p</code>-Element untergeordnet sein. Der Nachkommenselektor trifft auf irgend ein <em>Nachkomme</em> zu. Für den anderen Fall gibt es den Kindselektor (<code>&gt;</code>), auf den ich jedoch hier nicht eingehen werde.
+<strong>Hinweis:</strong> Das <code>a</code>-Element muss nicht unbedingt direkt dem <code>p</code>-Element untergeordnet sein. Der Nachkommenselektor trifft auf irgend ein <em>Nachkomme</em> zu. Für den anderen Fall gibt es den Kindselektor (<code>&gt;</code>), auf den ich jedoch hier nicht eingehen werde.
 </div>
 
 
@@ -391,7 +423,7 @@ p {
 }
 </pre>
 
-<p>Eine andere Möglichkeit ist die Angabe in <strong>Prozent</strong>. Prozentangaben stehen immer im Verhältnis zu einem übergeordneten Element. Wenn also im folgenden Beispiel das übergeordnete Element von <code>h2</code> die ganze Bildschirmbreite umfasst, dann bedeutet das, dass <code>h2</code> nun 60% davon breit sein wird.</p>
+<p>Eine andere Möglichkeit ist die Angabe in <strong>Prozent</strong>. Prozentangaben stehen immer im Verhältnis zu einem übergeordneten Element. Wenn also im folgenden Beispiel das übergeordnete Element von <code>p</code> die ganze Bildschirmbreite umfasst, dann bedeutet das, dass <code>p</code> nun 60% davon breit sein wird.</p>
 <pre class="prettyprint lang-css">
 p {
   width: 60%;
@@ -458,10 +490,13 @@ h1 {
       <a href="/library/html-css/de/part4/" data-toggle="tooltip" title="Teil 4: Entwicklertools im Browser">4</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Navigieren zwischen Seiten">5</a>
+      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Blog und weitere Seiten">5</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Bootstrap Framework verwenden">6</a>
+      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Navigation">6</a>
+      </li>
+        <li>
+      <a href="/library/html-css/de/part7/" data-toggle="tooltip" title="Teil 7: Bootstrap Framework">7</a>
       </li>
         <li>
       <a href="/library/html-css/de/next/" data-toggle="tooltip" title="Nächste Schritte"><i class="fa fa-flag-checkered"></i></a>

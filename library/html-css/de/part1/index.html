@@ -30,6 +30,9 @@
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="canonical" href="http://code.makery.ch/library/html-css/de/part1/" />
   
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/html-css/part1/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/html-css/de/part1/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
@@ -44,7 +47,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Erstellen Sie Ihre erste Webseite. Hier lernen Sie die Tools und die Grundlagen von HTML & CSS kennen." />
     <meta property="og:url" content="http://code.makery.ch/library/html-css/de/part1/" />
-    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio.png" />
+    <meta property="og:image" content="http://code.makery.ch/assets/library/html-css/portfolio-de.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
     
@@ -114,9 +117,11 @@
       <a href="/library/html-css/de/part4/" class="list-group-item">
         Teil 4: Entwicklertools im Browser</a>
       <a href="/library/html-css/de/part5/" class="list-group-item">
-        Teil 5: Navigieren zwischen Seiten</a>
+        Teil 5: Blog und weitere Seiten</a>
       <a href="/library/html-css/de/part6/" class="list-group-item">
-        Teil 6: Bootstrap Framework verwenden</a>
+        Teil 6: Navigation</a>
+      <a href="/library/html-css/de/part7/" class="list-group-item">
+        Teil 7: Bootstrap Framework</a>
       <a href="/library/html-css/de/next/" class="list-group-item">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a>
   </div>
@@ -127,12 +132,25 @@
   </div>
 
   <div class="list-group">
-      <a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v0.4/portfolio-de-part1.zip" class="list-group-item">
+      <a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v1.0/portfolio-part1.zip" class="list-group-item">
 <i class="fa fa-fw fa-file-archive-o"></i>        Portfolio Teil 1</a>
   </div>
 </div>
 
-          
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Sprachen</h4>  
+  </div>
+  <div class="list-group">
+      <a href="/library/html-css/part1/" class="list-group-item">
+        <i class="fa fa-fw fa-globe"></i> English
+      </a>
+      <a href="/library/html-css/de/part1/" class="list-group-item active">
+        <i class="fa fa-fw fa-globe"></i> Deutsch
+      </a>
+  </div>
+</div>
+
           </div>
         </aside>
         <div class="col-md-9">
@@ -161,9 +179,11 @@
       <li class=""><a href="/library/html-css/de/part4/">
         Teil 4: Entwicklertools im Browser</a></li>
       <li class=""><a href="/library/html-css/de/part5/">
-        Teil 5: Navigieren zwischen Seiten</a></li>
+        Teil 5: Blog und weitere Seiten</a></li>
       <li class=""><a href="/library/html-css/de/part6/">
-        Teil 6: Bootstrap Framework verwenden</a></li>
+        Teil 6: Navigation</a></li>
+      <li class=""><a href="/library/html-css/de/part7/">
+        Teil 7: Bootstrap Framework</a></li>
       <li class=""><a href="/library/html-css/de/next/">
 <i class="fa fa-fw fa-flag-checkered"></i>        Nächste Schritte</a></li>
   </ul>
@@ -172,12 +192,24 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Downloads <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v0.4/portfolio-de-part1.zip">
+      <li class=""><a href="https://github.com/marcojakob/tutorial-html-css/releases/download/v1.0/portfolio-part1.zip">
 <i class="fa fa-fw fa-file-archive-o"></i>        Portfolio Teil 1</a></li>
   </ul>
 </div>
 
-            
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sprachen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class="">
+        <a href="/library/html-css/part1/"><i class="fa fa-fw fa-globe"></i> English</a>
+    </li>
+      <li class=" active">
+        <a href="/library/html-css/de/part1/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+    </li>
+  </ul>
+</div>
+
           </aside>
           
           <div class="article-content">
@@ -231,13 +263,13 @@
 Falls die Seite <strong>nicht angezeigt wird</strong>: Suchen Sie die <code>index.html</code>-Datei auf Ihrem Computer und öffnen Sie diese mit Chrome oder einem anderen Browser.
 </p>
 <p>
-Falls die Seite <strong>nicht aktualisiert wird</strong> bei Änderungen: Klicken Sie im Browser die Taste <code>F5</code> oder <code>cmd+r</code>.
+Falls die Seite <strong>nicht aktualisiert wird</strong> bei Änderungen: Speichern Sie alle Dateien und klicken Sie im Browser die Taste <code>F5</code> oder <code>cmd+r</code>.
 </p>
 </div>
 
 <p><strong><em>Gratuliere! Sie haben soeben Ihre erste Webseite erstellt!</em></strong></p>
 <h3 id="richtiges-einr-cken">Richtiges Einrücken</h3>
-<p>Damit Sie die Übersicht behalten ist es wichtig, dass Sie die Zeilen immer korrekt mit der <strong>Tabulator-Taste</strong> einrücken. Die Standardeinstellung in Brackets ist meist, dass ein Tabulator 4 Leerzeichen lang ist. Dies ist etwas lang. Ich empfehle deshalb, dass Sie die Einstellung am unteren Rand von Brackets auf <code>Leerzeichen: 2</code> ändern:</p>
+<p>Damit Sie die Übersicht behalten ist es wichtig, dass Sie die Zeilen immer korrekt mit der <strong>Tabulator-Taste</strong> einrücken. Die Standardeinstellung in Brackets ist meist, dass ein Tabulator 4 Leerzeichen lang ist. Dies ist etwas lang. Ich empfehle deshalb, dass Sie die Einstellung am unteren Rand von Brackets auf <code>Leerzeichen: 2</code> ändern.</p>
 <p><img src="/assets/library/html-css/part1/brackets-spaces-de.png" alt="Brackets Leerzeichen"></p>
 <p><strong>Wichtig:</strong> Schauen Sie den <strong>Beispielcode immer ganz genau an</strong> und rücken Sie Ihren Code entsprechend ein. Es ist wirklich wichtig, dass Sie sich gleich von Anfang an sauberes Einrücken angewöhnen!</p>
 <div class="alert alert-info">
@@ -262,7 +294,7 @@ Falls die Seite <strong>nicht aktualisiert wird</strong> bei Änderungen: Klicke
 <p><img src="/assets/library/html-css/part1/html-element-attribute-de.png" alt="HTML Element"></p>
 <p>Das abgebildete <code>a</code>-Element enthält ein <code>href</code>-Attribut (kurz für "Hypertext Reference") mit dem Wert <code>http://code.makery.ch</code>. Der Browser weiss damit, dass er den folgenden Link anzeigen muss: <a href="http://code.makery.ch">Meine Webseite</a></p>
 <h2 id="grundger-st-einer-html-seite">Grundgerüst einer HTML-Seite</h2>
-<p>Die Element <code>&lt;html&gt;</code> und <code>&lt;body&gt;</code> haben wir bereits kennen gelernt. Die Grundstruktur einer HTML-Seite beinhaltet aber üblicherweise noch ein paar weitere Elemente. Übernehmen Sie für Ihre Webseite den folgenden Code. Anschliessend werden wir ihn besprechen:</p>
+<p>Die Elemente <code>&lt;html&gt;</code> und <code>&lt;body&gt;</code> haben wir bereits kennen gelernt. Die Grundstruktur einer HTML-Seite beinhaltet aber üblicherweise noch ein paar weitere Elemente. Übernehmen Sie für Ihre Webseite den folgenden Code. Anschliessend werden wir ihn besprechen.</p>
 <h5 id="html-grundger-st">HTML Grundgerüst</h5>
 <pre class="prettyprint lang-html">
 &lt;!DOCTYPE html>
@@ -289,7 +321,7 @@ Falls die Seite <strong>nicht aktualisiert wird</strong> bei Änderungen: Klicke
 </ul>
 </li>
 <li>Alles innerhalb des <code>&lt;body&gt;</code>-Elements wird im Hauptbereich des Browsers angezeigt.<ul>
-<li>Ein <code>&lt;h1&gt;</code>-Element bezeichnet die Hauptüberschrift. Untergeordnete Überschriften können mit <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, ... erstellt werden.</li>
+<li>Ein <code>&lt;h1&gt;</code>-Element bezeichnet die Hauptüberschrift. Untergeordnete Überschriften können mit <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code> und <code>&lt;h6&gt;</code> erstellt werden.</li>
 <li>Alles, was zwischen <code>&lt;p&gt;</code> und <code>&lt;/p&gt;</code> steht ist ein Textabsatz (auch <strong>P</strong>aragraph genannt).</li>
 </ul>
 </li>
@@ -399,10 +431,13 @@ Falls die Seite <strong>nicht aktualisiert wird</strong> bei Änderungen: Klicke
       <a href="/library/html-css/de/part4/" data-toggle="tooltip" title="Teil 4: Entwicklertools im Browser">4</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Navigieren zwischen Seiten">5</a>
+      <a href="/library/html-css/de/part5/" data-toggle="tooltip" title="Teil 5: Blog und weitere Seiten">5</a>
       </li>
         <li>
-      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Bootstrap Framework verwenden">6</a>
+      <a href="/library/html-css/de/part6/" data-toggle="tooltip" title="Teil 6: Navigation">6</a>
+      </li>
+        <li>
+      <a href="/library/html-css/de/part7/" data-toggle="tooltip" title="Teil 7: Bootstrap Framework">7</a>
       </li>
         <li>
       <a href="/library/html-css/de/next/" data-toggle="tooltip" title="Nächste Schritte"><i class="fa fa-flag-checkered"></i></a>

@@ -180,21 +180,7 @@
           </aside>
           
           <div class="article-content">
-            <p>Es gibt grundsätzlich zwei Arten von Dart-Programmen:</p>
-<ul>
-<li>Programme, die auf der Konsole laufen (Kommandozeilenprogramme)</li>
-<li>Programme, die in einem Browser laufen (Webapplikationen)</li>
-</ul>
-<h3 id="kommandozeilenprogramme">Kommandozeilenprogramme</h3>
-<p>Kommandozeilenprogramme brauchen bloss eine <code>.dart</code>-Datei mit dem Dart-Programm. Dieses Programm kann dann im Dart Editor mit dem Run-Knopf <img src="/assets/library/dart-kanban/part1/run.png" alt="Run"> gestartet werden. Alternativ kann ein solches Programm auch mit der Dart VM aus dem Ordner <code>dart-sdk/bin</code> ausgeführt werden.</p>
-<p><img src="/assets/library/dart-kanban/part1/command-line.png" alt="Dart Kommandozeile"></p>
-<p>Wir werden uns an dieser Stelle nicht näher mit Kommandozeilenprogramme beschäftigen. Diese werden für Programme verwendet ohne grafische Benutzeroberfläche (z.B. auf einem Server). Bei Interesse gibt es hier eine <a href="https://www.dartlang.org/docs/tutorials/cmdline/">Anleitung für Kommandozeilenprogramme</a>.</p>
-<h3 id="webapplikationen">Webapplikationen</h3>
-<p>Neben einer Dart-Datei braucht eine Webapplikation eine HTML-Datei, die in einem Browser angezeigt werden kann.</p>
-<p>Auch eine Webapplikation kann im Dart Editor mit dem Run-Knopf <img src="/assets/library/dart-kanban/part1/run.png" alt="Run"> gestartet werden. Dies öffnet den Dartium (spezieller Chrome Browser mit integrierter Dart VM), welcher die HTML-Datei öffnet. Die HTML-Datei lädt anschliessend die Dart-Datei mit dem Dart-Programm.</p>
-<p>Wenn Sie die Webapplikation in einem anderen Browser laufen lassen möchten, dann kann der Dart-Code nach JavaScript übersetzt werden mittels dem <a href="https://www.dartlang.org/tools/dart2js/">dart2js</a> Tool. Dazu gibt es im Dart Editor ein praktisches Kontextmenu:</p>
-<p><img src="/assets/library/dart-kanban/part1/run-as-javascript.png" alt="Run as JavaScript"></p>
-<h2 id="eine-webapplikation-erstellen">Eine Webapplikation erstellen</h2>
+            <h2 id="eine-webapplikation-erstellen">Eine Webapplikation erstellen</h2>
 <p>Um eine Webapplikation zu erstellen öffnen Sie das Menu <strong>File | New Project...</strong></p>
 <ol>
 <li>Schreiben Sie <code>dart_kanban</code> in das Feld für den <em>Project name</em>.</li>
@@ -232,7 +218,7 @@
 
 <p>Speichern Sie die Datei nach den Änderungen mit <strong>File | Save</strong> oder der Tastenkombination <strong>Ctrl+S</strong>.</p>
 <h4 id="erkl-rungen-zum-html-code">Erklärungen zum HTML-Code</h4>
-<p>Im <code>head</code> werden zwei Stylesheets eingefügt. Ich verwende hier das <a href="http://holdirbootstrap.de/">Bootstrap</a> CSS. Das zweite ist unser eigenes CSS.</p>
+<p>Im <code>head</code> werden zwei Stylesheets eingefügt. Wir verwenden hier das <a href="http://holdirbootstrap.de/">Bootstrap</a> CSS für ein attraktives Aussehen. Das zweite ist unser eigenes CSS.</p>
 <p>Der <code>body</code> enthält zwei Div-Container mit Bootstrap-Klassen und einen Titel und Untertitel. Der Untertitel hat eine ID <code>subtitle</code>, die wir später noch verwenden werden.</p>
 <p>Am Schluss befinden sich die zwei wichtigen <code>script</code>-Tags. Das erste gibt an, dass die <code>main.dart</code>-Datei geladen werden soll. Das zweite Script, <code>dart.js</code>, wird verwendet für Browser, die kein Dart unterstützten. Darin wird <code>main.dart</code> mit dem entsprechenden JavaScript ersetzt.</p>
 <h3 id="die-dart-datei">Die Dart-Datei</h3>
@@ -264,8 +250,14 @@ querySelector('#subtitle').text = 'von Marco';
 
 
 <h2 id="die-webapplikation-starten">Die Webapplikation starten</h2>
-<p>Selektieren Sie nun die <code>index.html</code> und klicken Sie auf den Run-Knopf <img src="/assets/library/dart-kanban/part1/run.png" alt="Run">. Der Dart Editor öffnet Chromium und lädt die <code>index.html</code> darin. Der Dart-Code sorgt dafür, dass der Untertitel gesetzt wird, wie im folgenden Screenshot.</p>
+<p>Selektieren Sie nun die <code>index.html</code> und klicken Sie auf den Run-Knopf <img src="/assets/library/dart-kanban/part1/run.png" alt="Run">. Der Dart Editor öffnet Dartium (spezieller Chrome Browser mit integrierter Dart VM) und lädt die <code>index.html</code>. Der Dart-Code sorgt dafür, dass der Untertitel gesetzt wird, wie im folgenden Screenshot.</p>
 <p><img src="/assets/library/dart-kanban/part1/first-run-de.png" alt="Erster Start"></p>
+<h3 id="andere-browser">Andere Browser</h3>
+<p>Wenn Sie die Webapplikation in einem anderen Browser laufen lassen möchten, dann kann der Dart-Code nach JavaScript übersetzt werden mittels dem <a href="https://www.dartlang.org/tools/dart2js/">dart2js</a> Tool (ist bereits im Dart Editor enthalten). Dazu gibt es im Dart Editor ein praktisches Kontextmenu:</p>
+<p><img src="/assets/library/dart-kanban/part1/run-as-javascript.png" alt="Run as JavaScript"></p>
+<p>Im letzten Teil dieser Serie wird noch genauer beschrieben, wie eine Dart-Applikation in JavaScript übersetzt und auf einem Webserver veröffentlicht werden kann.</p>
+<h2 id="wie-weiter-">Wie weiter?</h2>
+<p>Im <a href="/library/dart-kanban/de/part2/">Teil 2</a> bereiten wir die Grundstruktur der HTML-Datei für unser Kanban Board vor.</p>
 
 
           </div>
