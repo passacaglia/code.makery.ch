@@ -96,6 +96,9 @@
   <span>
     Apr 30, 2014
     
+     • 
+    Updated Apr 15, 2015
+  
   </span>
   
      • 
@@ -203,9 +206,9 @@ public class PersonTableController {
                 // Compare first name and last name of every person with filter text.
                 String lowerCaseFilter = newValue.toLowerCase();
 
-                if (person.getFirstName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                if (person.getFirstName().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // Filter matches first name.
-                } else if (person.getLastName().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                } else if (person.getLastName().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // Filter matches last name.
                 }
                 return false; // Does not match.
