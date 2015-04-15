@@ -28,7 +28,7 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/library/javafx-8-tutorial/part2/" />
+    <link rel="canonical" href="http://code.makery.ch/library/javafx-8-tutorial/fr/part2/" />
   
     <!-- Alternate Languages -->
     <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/javafx-8-tutorial/part2/" />
@@ -136,8 +136,8 @@
   </div>
 
   <div class="list-group">
-      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-2.zip" class="list-group-item">
-<i class="fa fa-fw fa-download"></i>        Projet Eclipse relatif à la partie 2 <em>(JDK 8u20 requis au minimum)</em></a>
+      <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-2.zip" class="list-group-item">
+<i class="fa fa-fw fa-download"></i>        Projet Eclipse relatif à la partie 2 <em>(JDK 8u40 requis au minimum)</em></a>
   </div>
 </div>
 
@@ -212,8 +212,8 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Téléchargez les sources <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/addressapp-jfx8-part-2.zip">
-<i class="fa fa-fw fa-download"></i>        Projet Eclipse relatif à la partie 2 <em>(JDK 8u20 requis au minimum)</em></a></li>
+      <li class=""><a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.1/addressapp-jfx8u40-part-2.zip">
+<i class="fa fa-fw fa-download"></i>        Projet Eclipse relatif à la partie 2 <em>(JDK 8u40 requis au minimum)</em></a></li>
   </ul>
 </div>
 
@@ -440,7 +440,7 @@ public class Person {
 <h2 id="le-personoverviewcontroller">Le PersonOverviewController</h2>
 <p>Maintenant intégrons finalement les données dans notre tableau ! Nous aurons besoin d'un contrôleur pour notre <code>PersonOverview.fxml</code>. </p>
 <ol>
-<li>Créez une classe normale dans le package <strong>view</strong> nommé <code>PersonOverviewController.java</code>. (On doit le mettre dans le même package que <code>PersonOverview.fxml</code>, sans cela le SceneBuilder ne le trouvera pas - en tout cas pas la version courante). </li>
+<li>Créez une classe normale dans le package <strong>view</strong> nommé <code>PersonOverviewController.java</code>. (On doit le mettre dans le même package que <code>PersonOverview.fxml</code>, sans cela le SceneBuilder ne le trouvera pas). </li>
 <li>Nous allons ajouter quelques variables qui nous donneront accès au tableau et aux étiquettes de l'affichage. Les champs et quelques méthodes ont une annotation spéciale <code>@FXML</code>. Ceci est nécessaire au fichier fxml pour accéder aux champs et aux méthodes privées. Après avoir tout préparé dans le fichier fxml, l'application remplira automatiquement les variables lors du chargement du fxml. Ajoutons le code suivant : </li>
 </ol>
 <div class="alert alert-info">
@@ -522,6 +522,20 @@ public class PersonOverviewController {
 <li>La méthode <code>initialize()</code> est appelée automatiquement après le chargement du fichier fxml. À ce moment, tous les champs devraient déjà être initialisés. </li>
 <li>Les <code>setCellValueFactory(...)</code> que nous assignons aux colonnes du tableau sont utilisés pour déterminer quel champ dans les objets <code>Person</code> devraient être utilisés pour une colonne particulière. La flèche <code>-&gt;</code> indique que nous utilisons une fonctionnalité de Java 8 nommée fonctions <em>Lambdas</em>. (Une autre approche est possible en utilisant une <a href="http://docs.oracle.com/javase/8/javafx/api/">PropertyValueFactory</a> mais ce n'est type-safe). </li>
 </ul>
+<div class="alert alert-info">
+  <p>
+    We're only using <code>StringProperty</code> values for our table columns in this example. When you want to use <code>IntegerProperty</code> or <code>DoubleProperty</code>, the <code>setCellValueFactory(...)</code> must have an additional <code>asObject()</code>:
+  </p>
+  <p>
+  <pre>myIntegerColumn.setCellValueFactory(cellData -&gt; 
+      cellData.getValue().myIntegerProperty().<mark>asObject()</mark>);</pre>
+  </p>
+  <p>
+    This is necessary because of a bad design decision of JavaFX (see <a href="https://community.oracle.com/thread/2575601">this discussion</a>).
+  </p>
+</div>
+
+
 <h3 id="connexion-de-mainapp-avec-le-personoverviewcontroller">Connexion de MainApp avec le PersonOverviewController</h3>
 <p>La méthode <code>setMainApp(...)</code> doit être appelée par la classe <code>MainApp</code>. Ceci nous donne la possibilité d'accéder à  l'objet <code>MainApp</code> et d'obtenir la liste des <code>Persons</code> et d'autres choses. Remplacez la méthode <code>showPersonOverview()</code> avec ce qui suit ! Le code contient deux lignes en plus : </p>
 <h5 id="mainapp-java-nouvelle-m-thode-showpersonoverview-">MainApp.java - nouvelle méthode showPersonOverview()</h5>
@@ -539,9 +553,9 @@ public void showPersonOverview() {
         // Set person overview into the center of root layout.
         rootLayout.setCenter(personOverview);
 
-        // Give the controller access to the main app.
+        <mark>// Give the controller access to the main app.
         PersonOverviewController controller = loader.getController();
-        controller.setMainApp(this);
+        controller.setMainApp(this);</mark>
 
     } catch (IOException e) {
         e.printStackTrace();
@@ -578,7 +592,7 @@ public void showPersonOverview() {
 <p>Dans la <a href="/library/javafx-8-tutorial/fr/part3/">Partie 3 du tutoriel</a>, nous allons ajouter plus de fonctionnalités telles que l'ajout, la suppression et la modification des personnes. </p>
 <h5 id="voici-quelques-articles-qui-pourraient-aussi-vous-int-resser-">Voici quelques articles qui pourraient aussi vous intéresser :</h5>
 <ul>
-<li><a href="/blog/javafx-8-dialogs/">JavaFX Dialogs</a></li>
+<li><a href="/blog/javafx-dialogs-official/">JavaFX Dialogs (official)</a></li>
 <li><a href="/blog/javafx-8-date-picker/">JavaFX Date Picker</a></li>
 <li><a href="/blog/javafx-8-event-handling-examples/">JavaFX Event Handling Examples</a></li>
 <li><a href="/blog/javafx-8-tableview-sorting-filtering/">JavaFX TableView Sorting and Filtering</a></li>

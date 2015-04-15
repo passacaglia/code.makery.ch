@@ -432,7 +432,6 @@ private void handleDeletePerson() {
 <p>If you run the application at this point you should be able to delete selected persons from the table. But what happenes if you <strong>click the delete button while no person is selected</strong> in the table? </p>
 <p>There will be an <code>ArrayIndexOutOfBoundsException</code> because it could not remove a person item at index <code>-1</code>. The index <code>-1</code> was returned by <code>getSelectedIndex()</code> - which means that there was no selection.</p>
 <p>To ignore such an error is not very nice, of course. We should let the user know that he/she must select a person before deleting. (Even better would be if we disabled the button so that the user doesn't even have the chance to do something wrong.)</p>
-<p>We'll add a popup dialog to inform the user.</p>
 <p>With some changes made to the <code>handleDeletePerson()</code> method, we can show a simple popup dialog whenever the user pushes the delete button while no person is selected in the table:</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
