@@ -524,14 +524,14 @@ public class PersonOverviewController {
 </ul>
 <div class="alert alert-info">
   <p>
-    We're only using <code>StringProperty</code> values for our table columns in this example. When you want to use <code>IntegerProperty</code> or <code>DoubleProperty</code>, the <code>setCellValueFactory(...)</code> must have an additional <code>asObject()</code>:
+    Nous n'utilisons que les valeurs <code>StringProperty</code> pour les colonnes de notre tableau dans cet exemple. Si vous voulez utiliser une <code>IntegerProperty</code> ou <code>DoubleProperty</code>, la méthode <code>setCellValueFactory(...)</code> doit avoir un <code>asObject()</code> en plus :
   </p>
   <p>
   <pre>myIntegerColumn.setCellValueFactory(cellData -&gt; 
       cellData.getValue().myIntegerProperty().<mark>asObject()</mark>);</pre>
   </p>
   <p>
-    This is necessary because of a bad design decision of JavaFX (see <a href="https://community.oracle.com/thread/2575601">this discussion</a>).
+    Ceci est nécessaire à cause d'une mauvaise décision de conception de JavaFX (voir <a href="https://community.oracle.com/thread/2575601">cette discussion</a>). 
   </p>
 </div>
 
@@ -553,7 +553,7 @@ public void showPersonOverview() {
         // Set person overview into the center of root layout.
         rootLayout.setCenter(personOverview);
 
-        <mark>// Give the controller access to the main app.
+<mark>        // Give the controller access to the main app.
         PersonOverviewController controller = loader.getController();
         controller.setMainApp(this);</mark>
 

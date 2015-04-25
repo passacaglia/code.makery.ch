@@ -252,22 +252,22 @@
           
           <div class="article-content">
             <div class="alert alert-warning">
-  <i class="fa fa-language"></i> This page needs a French translation. If you'd like to help out please read <a href="/library/how-to-contribute/" class="alert-link">how to contribute</a>.
+  <i class="fa fa-language"></i> Part of this page needs a French translation. If you'd like to help out please read <a href="/library/how-to-contribute/" class="alert-link">how to contribute</a>.
 </div>
 
 <p><img src="/assets/library/javafx-8-tutorial/part3/addressapp-part3.png" alt="Screenshot AddressApp Part 3"></p>
 <h2 id="topics-in-part-3">Topics in Part 3</h2>
 <ul>
-<li><strong>React to selection changes</strong> in the table.</li>
-<li>Add functionality to the <strong>add</strong>, <strong>edit</strong>, and <strong>remove</strong> buttons.</li>
-<li>Create a custom <strong>popup dialog</strong> to edit a person.</li>
-<li><strong>Validate user input</strong>.</li>
+<li><strong>Réagir aux changements de sélections</strong> dans le tableau.</li>
+<li>Ajouter les fonctionnalités aux boutons <strong>add</strong>, <strong>edit</strong> et <strong>remove</strong>.</li>
+<li>Créer une <strong>fenêtre de dialogue</strong> personnalisée pour éditer une personne.</li>
+<li><strong>Valider les entrées de l'utilisateur</strong>.</li>
 </ul>
 <hr>
-<h2 id="react-to-table-selections">React to Table Selections</h2>
-<p>Obviousely, we haven't used the right side of our application, yet. The idea is to display the details about a person on the right side when the user selects a person in the table.</p>
-<p>First, let's add a new method inside <code>PersonOverviewController</code> that helps us fill the labels with the data from a single <code>Person</code>.</p>
-<p>Create a method called <code>showPersonDetails(Person person)</code>. Go trough all the labels and set the text using <code>setText(...)</code> with details from the person. If <code>null</code> is passed as parameter, all labels should be cleared.</p>
+<h2 id="r-agir-aux-s-lections-dans-le-tableau">Réagir aux sélections dans le tableau</h2>
+<p>Évidemment, nous n'avons pas utilisé la droite de notre application, pour l'instant. L'idée est de montrer les détails d'une personne sur le côté juste quand l'utilisateur sélectionne une personne dans la liste.</p>
+<p>Premièrement, ajoutons une nouvelle méthode dans <code>PersonOverviewController</code> qui nous aidera à remplir les labels avec les données d'une <code>Person</code></p>
+<p>Créons une méthode appelée <code>showPersonDetails(Person person)</code>. Parcourons tous les labels et définissons le texte en utilisant <code>setText(...)</code> avec les détails de la personne. Si <code>null</code> est passé en paramètre, tous les labels devront être réinitialisés.</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
 /**
@@ -299,10 +299,9 @@ private void showPersonDetails(Person person) {
 }
 </pre>
 
-
-<h3 id="convert-the-birthday-date-to-a-string">Convert the Birthday Date to a String</h3>
-<p>You will notice that we couldn't set the <code>birthday</code> into the <code>Label</code> because it is of type <code>LocalDate</code> and not a <code>String</code>. We need to format the date first.</p>
-<p>We will use the conversion from <code>LocalDate</code> and <code>String</code> and vice versa in several places. It's good practice to create a helper class with <code>static</code> methods for this. We'll call it <code>DateUtil</code> and place it in a seperate package called <code>ch.makery.address.util</code>:</p>
+<h3 id="convertir-birthday-date-en-un-string">Convertir Birthday Date en un String</h3>
+<p>Vous aurez remarqué que nous pouvons mettre <code>birthday</code> dans le <code>Label</code> car il est du type <code>LocalDate</code> et non un <code>String</code>. Nous devons d'abord formater la date.</p>
+<p>Nous allons utiliser la conversion à partir de <code>LocalDate</code> et <code>String</code> et vice-versa en plusieurs endroits du code. C'est un bon exercice de créer une classe auxiliaire avec une méthode <code>static</code> pour cela. Nous allons l'appeler <code>DateUtil</code> et la placer dans un package séparé appelé <code>ch.makery.address.util</code>:</p>
 <h5 id="dateutil-java">DateUtil.java</h5>
 <pre class="prettyprint lang-java">
 package ch.makery.address.util;
@@ -370,13 +369,13 @@ public class DateUtil {
 </pre>
 
 <div class="alert alert-info">
-<strong>Hint:</strong> You can change the format of the date by changing the
-<code>DATE_PATTERN</code>. For all possible formats see <a class="alert-link" href="http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html">DateTimeFormatter</a>.
+<strong>Astuce:</strong> Vous pouvez changer le format de la date en changeant le
+<code>DATE_PATTERN</code>. Pour tous les formats possibles voir <a class="alert-link" href="http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html">DateTimeFormatter</a>.
 </div>
 
 
-<h4 id="use-the-dateutil">Use the DateUtil</h4>
-<p>Now we need to use our new <code>DateUtil</code> in the <code>showPersonDetails</code> method of <code>PersonOverviewController</code>. Replace the <em>TODO</em> we added with the following line:</p>
+<h4 id="utiliser-le-dateutil">Utiliser le DateUtil</h4>
+<p>Maintenant nous devons utiliser notre tout nouveau <code>DateUtil</code> dans la méthode <code>showPersonDetails</code> de <code>PersonOverviewController</code>. Remplaçons le <em>TODO</em> que nous avions ajouté par la ligne suivante:</p>
 <pre class="prettyprint lang-java">
 birthdayLabel.setText(DateUtil.format(person.getBirthday()));
 </pre>
@@ -410,7 +409,7 @@ private void initialize() {
 <p>Try to <strong>run your application</strong> at this point. Verify that when you select a person in the table, details about that person are displayed on the right.</p>
 <p>If something doesn't work, you can compare your <code>PersonOverviewController</code> class with <a href="/assets/library/javafx-8-tutorial/part3/PersonOverviewController.java">PersonOverviewController.java</a>.</p>
 <hr>
-<h2 id="the-delete-button">The Delete Button</h2>
+<h2 id="le-boutton-delete">Le boutton Delete</h2>
 <p>Our user interface already contains a delete button but without any functionality. We can select the action for a button inside the <em>Scene Builder</em>. Any method inside our controller that is annotated with <code>@FXML</code> (or is public) is accessible by the <em>Scene Builder</em>. Thus, let's first add a delete method at the end of our <code>PersonOverviewController</code> class:</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
@@ -475,7 +474,7 @@ For more examples on how to use Dialogs read my blog post about <a class="alert-
 <li><p>Use a <code>GridPane</code>, <code>Label</code>s, <code>TextField</code>s and <code>Button</code>s to create a Dialog like the following:<br><img src="/assets/library/javafx-8-tutorial/part3/person-edit-dialog2.png" alt="Edit Dialog">   </p>
 </li>
 </ol>
-<h3 id="create-the-controller">Create the Controller</h3>
+<h3 id="cr-er-le-controller">Créer le Controller</h3>
 <p>Create the controller for the Dialog as <code>PersonEditDialogController.java</code>:</p>
 <h5 id="personeditdialogcontroller-java">PersonEditDialogController.java</h5>
 <pre class="prettyprint lang-java pre-scrollable">
@@ -746,9 +745,9 @@ private void handleEditPerson() {
 <h2 id="done-">Done!</h2>
 <p>You should have a working <em>Address Application</em> by now. The application is able to add, edit, and delete persons. There is even some validation for the text fields to avoid bad user entries.</p>
 <p>I hope the concepts and structure of this application will get you started with writing your own JavaFX application! Have fun.</p>
-<h3 id="what-s-next-">What's Next?</h3>
-<p>In <a href="/library/javafx-8-tutorial/fr/part4/">Tutorial Part 4</a> we will add some CSS styling.</p>
-<h5 id="some-other-articles-you-might-find-interesting">Some other articles you might find interesting</h5>
+<h3 id="et-apr-s-">Et après ?</h3>
+<p>Dans le <a href="/library/javafx-8-tutorial/fr/part4/">Tutorial Part 4</a> nous allons ajouter quelques styles CSS.</p>
+<h5 id="voici-quelques-articles-qui-pourraient-aussi-vous-int-resser-">Voici quelques articles qui pourraient aussi vous intéresser :</h5>
 <ul>
 <li><a href="/blog/javafx-dialogs-official/">JavaFX Dialogs (official)</a></li>
 <li><a href="/blog/javafx-8-date-picker/">JavaFX Date Picker</a></li>

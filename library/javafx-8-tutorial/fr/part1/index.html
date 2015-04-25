@@ -263,11 +263,11 @@
 <h3 id="pr-requis">Prérequis</h3>
 <ul>
 <li>le dernier <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK 8</a> (qui inclu <strong>JavaFX 8</strong>).</li>
-<li>Eclipse 4.4 ou supérieur avec le plugin e(fx)clipse. La façon la plus simple est de télécharger la distribution préconfigurée de le site de <a href="http://efxclipse.bestsolution.at/install.html#all-in-one">e(fx)clipse</a>. Une autre façon de faire consiste à utiliser le <a href="http://www.eclipse.org/efxclipse/install.html">site de mise à jour</a> pour votre installation d'Eclipse. </li>
-<li><a href="http://gluonhq.com/products/downloads/">Scene Builder 8.0</a> (provided by Gluon because <a href="http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html">Oracle only ships it in source code form</a>).</li>
+<li>Eclipse 4.4 ou supérieur avec le plugin e(fx)clipse. Le plus simple est de télécharger la distribution préconfigurée depuis le site <a href="http://efxclipse.bestsolution.at/install.html#all-in-one">e(fx)clipse</a>. Une autre façon de faire consiste à utiliser le <a href="http://www.eclipse.org/efxclipse/install.html">site de mise à jour</a> pour votre installation d'Eclipse. </li>
+<li><a href="http://gluonhq.com/products/downloads/">Scene Builder 8.0</a> (fourni par Gluon car <a href="http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html">Oracle le distribue seulement sous la forme de code source</a>).</li>
 </ul>
 <h3 id="configuration-d-eclipse">Configuration d'Eclipse</h3>
-<p>ous devons paramètrer Eclipse pour qu'il utilise le JDK 8 et qu'il sache où trouver le le Scene Builder : </p>
+<p>Nous devons paramètrer Eclipse pour qu'il utilise le JDK 8 et qu'il sache où trouver le le Scene Builder : </p>
 <ol>
 <li><p>Ouvrez les préférences et sélectionnez la partie <em>Java | Installed JREs</em>.</p>
 </li>
@@ -314,6 +314,7 @@
 </div>
 
 <p>Faites un clic droit sur <code>PersonOverview.fxml</code> et puis cliquez sur <em>Open with Scene Builder</em>. Maintenant vous devriez voir s'afficher le programme Scene Builder avec un <em>AnchorPane</em> (visible dans la partie hiérarchie sur la gauche). </p>
+<p>(Si Scene Builder ne démarre pas, cliquez sur <em>Window | Preferences | JavaFX</em> et définissez le chemin correct relatif à l'installation de votre Scene Builder). </p>
 <ol>
 <li><p>Dans la partie Hierarchy, sélectionnez l'<em>Anchor Pane</em> et ajustez la taille sous Layout (dans la partie de droite):<br><img src="/assets/library/javafx-8-tutorial/part1/anchor-pane-size.png" alt="Anchor Pane Size"></p>
 </li>
@@ -334,7 +335,7 @@
 </li>
 <li><p>Ajoutez le étiquettes suivantes dans les cellules !<br><em>Note : pour ajouter une ligne dans le GridPane, sélectionnez l'index d'un ligne existante (elle deviendra jaune) puis faites un clic droit sur l'index et sélectionnez "Add Row".</em><br><img src="/assets/library/javafx-8-tutorial/part1/add-labels.png" alt="Add labels"></p>
 </li>
-<li><p>Ajoutez les trois boutons en bas ! Astuce : sélectionnez-les tous puis faites un clic droit et exécutez <em>Wrap In | HBox</em>! Ceci les rassemble. Vous aurez peut-être besoin de spécifier un <em>spacing</em> (espacement) dans le HBox. Après, définissez encore les ancres pour qu'ils restent à leur place soit en bas et à droite.<br><img src="/assets/library/javafx-8-tutorial/part1/button-group.png" alt="Button Group"></p>
+<li><p>Ajoutez une <em>ButtonBar</em> en bas ! Ajoutez trois boutons à la barre ! Enfin, définissez les ancres pour qu'ils restent à leur place soit en bas et à droite.<br><img src="/assets/library/javafx-8-tutorial/part1/button-group.png" alt="Button Group"></p>
 </li>
 <li><p>Maintenant, vous devriez voir quelque chose ressemblant à l'image ci-dessous. Utilisez le menu <em>Preview</em> pour tester le comportement après redimensionnement.<br><img src="/assets/library/javafx-8-tutorial/part1/scene-builder-preview.png" alt="Preview"></p>
 </li>
