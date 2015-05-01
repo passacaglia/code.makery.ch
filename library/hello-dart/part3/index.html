@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hello Dart: Introduction to Programming | code.makery.ch</title>
+    <title>Hello Dart - Part 3: Conditionals | code.makery.ch</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--
     /**
@@ -28,29 +28,31 @@
     */
     -->
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="canonical" href="http://code.makery.ch/library/hello-dart/" />
+    <link rel="canonical" href="http://code.makery.ch/library/hello-dart/part3/" />
   
     <!-- Alternate Languages -->
-    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/hello-dart/" />
-    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/hello-dart/de/" />
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/hello-dart/part3/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/hello-dart/de/part3/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
 
-    <meta name="description" content="Hello Dart is a playful introduction to programming. Learn the basics of programming with the awesome Dart language.">
+    <meta name="description" content="Learn to control the program flow with conditional statements. Numerous Hello Dart exercises will help you understand it.">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Hello Dart: Introduction to Programming | code.makery.ch" />
+    <meta property="og:title" content="Hello Dart - Part 3: Conditionals | code.makery.ch" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="Hello Dart is a playful introduction to programming. Learn the basics of programming with the awesome Dart language." />
-    <meta property="og:url" content="http://code.makery.ch/library/hello-dart/" />
+    <meta property="og:description" content="Learn to control the program flow with conditional statements. Numerous Hello Dart exercises will help you understand it." />
+    <meta property="og:url" content="http://code.makery.ch/library/hello-dart/part3/" />
     <meta property="og:image" content="http://code.makery.ch/assets/library/hello-dart/hello-dart.png" />
     
     <link rel="author" href="https://plus.google.com/+MarcoJakob7"/>
     
+    <link href="/theme/css/prettify.min.css" rel="stylesheet" type="text/css" media="all" />
+
     
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -61,7 +63,7 @@
   ga('send', 'pageview');
 </script>
   </head>
-  <body >
+  <body onload="prettyPrint()">
     <header class="site-header container">
   <h1 class="site-title">
     <a href="/"><span class="main-text">code</span>.makery</a>
@@ -90,7 +92,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="github-edit">
-            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/hello-dart-en.md">Edit on GitHub</a>
+            <a href="https://github.com/marcojakob/code.makery.ch/edit/master/collections/library/hello-dart-en-part3.md">Edit on GitHub</a>
           </div>
         </div>
       </div>
@@ -104,7 +106,7 @@
   </div>
 
   <div class="list-group">
-      <a href="/library/hello-dart/" class="list-group-item active">
+      <a href="/library/hello-dart/" class="list-group-item">
         Introduction</a>
       <a href="/library/hello-dart/install/" class="list-group-item">
 <i class="fa fa-fw fa-cog"></i>        Installation</a>
@@ -112,7 +114,7 @@
         Part 1: First Steps</a>
       <a href="/library/hello-dart/part2/" class="list-group-item">
         Part 2: Loops</a>
-      <a href="/library/hello-dart/part3/" class="list-group-item">
+      <a href="/library/hello-dart/part3/" class="list-group-item active">
         Part 3: Conditionals</a>
       <a href="/library/hello-dart/part4/" class="list-group-item">
         Part 4: Variables</a>
@@ -122,16 +124,36 @@
 <i class="fa fa-fw fa-flag-checkered"></i>        Next Steps</a>
   </div>
 </div>
+<div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Solutions</h4>  
+  </div>
+
+  <div class="list-group">
+      <a href="/library/hello-dart/part3-solutions/" class="list-group-item">
+<i class="fa fa-fw fa-check-square-o"></i>        Solutions Part 3</a>
+  </div>
+</div>
+<div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Links</h4>  
+  </div>
+
+  <div class="list-group">
+      <a href="/library/convert-web-page-to-word/" class="list-group-item">
+<i class="fa fa-fw fa-file-word-o"></i>        Page as Word File</a>
+  </div>
+</div>
 
           <div class="panel panel-default sidebar">
   <div class="panel-heading">
     <h4 class="panel-title">Languages</h4>  
   </div>
   <div class="list-group">
-      <a href="/library/hello-dart/" class="list-group-item active">
+      <a href="/library/hello-dart/part3/" class="list-group-item active">
         <i class="fa fa-fw fa-globe"></i> English
       </a>
-      <a href="/library/hello-dart/de/" class="list-group-item">
+      <a href="/library/hello-dart/de/part3/" class="list-group-item">
         <i class="fa fa-fw fa-globe"></i> Deutsch
       </a>
   </div>
@@ -141,7 +163,7 @@
         </aside>
         <div class="col-md-9">
           <header class="article-header">
-            <h1 class="article-title">Hello Dart: Introduction to Programming</h1>
+            <h1 class="article-title">Hello Dart - Part 3: Conditionals</h1>
             <div class="article-date">
   May 01, 2015
 
@@ -153,7 +175,7 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Articles in this Series <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-      <li class=" active"><a href="/library/hello-dart/">
+      <li class=""><a href="/library/hello-dart/">
         Introduction</a></li>
       <li class=""><a href="/library/hello-dart/install/">
 <i class="fa fa-fw fa-cog"></i>        Installation</a></li>
@@ -161,7 +183,7 @@
         Part 1: First Steps</a></li>
       <li class=""><a href="/library/hello-dart/part2/">
         Part 2: Loops</a></li>
-      <li class=""><a href="/library/hello-dart/part3/">
+      <li class=" active"><a href="/library/hello-dart/part3/">
         Part 3: Conditionals</a></li>
       <li class=""><a href="/library/hello-dart/part4/">
         Part 4: Variables</a></li>
@@ -171,16 +193,32 @@
 <i class="fa fa-fw fa-flag-checkered"></i>        Next Steps</a></li>
   </ul>
 </div>
+<div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Solutions <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class=""><a href="/library/hello-dart/part3-solutions/">
+<i class="fa fa-fw fa-check-square-o"></i>        Solutions Part 3</a></li>
+  </ul>
+</div>
+<div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Links <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class=""><a href="/library/convert-web-page-to-word/">
+<i class="fa fa-fw fa-file-word-o"></i>        Page as Word File</a></li>
+  </ul>
+</div>
 
             <div class="btn-group sidebar-dropdown">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Languages <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
       <li class=" active">
-        <a href="/library/hello-dart/"><i class="fa fa-fw fa-globe"></i> English</a>
+        <a href="/library/hello-dart/part3/"><i class="fa fa-fw fa-globe"></i> English</a>
     </li>
       <li class="">
-        <a href="/library/hello-dart/de/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+        <a href="/library/hello-dart/de/part3/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
     </li>
   </ul>
 </div>
@@ -188,123 +226,123 @@
           </aside>
           
           <div class="article-content">
-            <p><img src="/assets/library/hello-dart/hello-dart-animation.gif" alt="Hello Dart"></p>
-<blockquote>
-<p><code>Hello Dart</code> is a playful introduction to programming with Dart.</p>
-</blockquote>
-<p>Previously, it was hardly realistic to program mobile or web-based applications. The Dart programming language provides how such applications can be programmed much easier.</p>
-<p><code>Hello Dart</code> guides you through the basics of programming. No prior programming knowledge is required. The playful world of <code>Hello Dart</code> visualizes the execution of your programs. Soon you will want to break out of the limiting rules of the <code>Hello Dart</code> world, which is intended. After the introduction with <code>Hello Dart</code> you will have a good foundation to soon realize your own web projects.</p>
+            <p>In addition to loops there is a second structure, which is very important to control the program flow. With <strong>conditional statements</strong> we can specify if a block of statements should be executed or not.</p>
+<pre class="prettyprint lang-dart">
+if (treeFront()) {  // Condition.
+  turnLeft();       // Block 1, executed if the condition is true.
+} else {
+  move();           // Block 2, executed if the condition is false.
+}
+</pre>
+
 <div class="alert alert-info">
-  Read <a class="alert-link" href="/library/hello-dart/background/">Background Infos</a> to learn why I see Dart as the ideal language for beginners and professionals to program web and mobile apps.
+  <strong>Note:</strong> The <code>else</code> part (block 2) may be omitted if it is not needed.
 </div>
 
 
-<h2 id="the-world">The World</h2>
-<p>The world of <code>Hello Dart</code> consists of fields, trees and stars.</p>
-<p><img src="/assets/library/hello-dart/intro/elements.png" alt="Elements"></p>
-<h2 id="the-player">The Player</h2>
-<p>In the world of <code>Hello Dart</code> we move around with our character. You can choose from one of four characters.</p>
-<p><img src="/assets/library/hello-dart/intro/characters.png" alt="Characters"></p>
-<p>A game character, called <code>Player</code> has the following actions and sensors that he/she can use:</p>
-<h3 id="actions">Actions</h3>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Action</th>
-      <th>Command</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/move.png" alt="Move"></td>
-      <td style="vertical-align:middle"><code>move()</code></td>
-      <td style="vertical-align:middle">The player makes a step forward.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/turn-left.png" alt="Turn Left"></td>
-      <td style="vertical-align:middle"><code>turnLeft()</code></td>
-      <td style="vertical-align:middle">The player turns left by 90 degrees.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/turn-right.png" alt="Turn Right"></td>
-      <td style="vertical-align:middle"><code>turnRight()</code></td>
-      <td style="vertical-align:middle">The player turns right by 90 degrees.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/put-star.png" alt="Put Star"></td>
-      <td style="vertical-align:middle"><code>putStar()</code></td>
-      <td style="vertical-align:middle">The player puts down a star.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/remove-star.png" alt="Move"></td>
-      <td style="vertical-align:middle"><code>removeStar()</code></td>
-      <td style="vertical-align:middle">The player removes a star.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/say.png" alt="Say"></td>
-      <td style="vertical-align:middle; "><code>say('Hello')</code></td>
-      <td style="vertical-align:middle">The player says something using a speech bubble.</td>
-    </tr>
-  </tbody>
-</table>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-task-3-01-conditionals"><i class="fa fa-rocket mg-t"></i> TASK 3.01: Conditionals</h4>
+<p>Describe in words the effect of the following code examples. Then test them in <code>scenario3.01</code>. For the conditional statements to be executed more than once you should put them into the loop that is already in the scenario.</p>
+<h5 id="a-">a.</h5>
+<pre class="prettyprint lang-dart">
+if (onStar()) {
+  removeStar();
+}
+move();
+</pre>
 
 
-<h3 id="sensors">Sensors</h3>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Sensor</th>
-      <th>Command</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/can-move.png" alt="Can Move"></td>
-      <td style="vertical-align:middle"><code>canMove()</code></td>
-      <td style="vertical-align:middle">The player checks if he can move to the next field.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/tree-front.png" alt="Tree Front"></td>
-      <td style="vertical-align:middle"><code>treeFront()</code></td>
-      <td style="vertical-align:middle">The player checks if there is a tree in front.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/tree-left.png" alt="Tree Left"></td>
-      <td style="vertical-align:middle"><code>treeLeft()</code></td>
-      <td style="vertical-align:middle">The player checks if there is a tree on the left side.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/tree-right.png" alt="Tree Right"></td>
-      <td style="vertical-align:middle"><code>treeRight()</code></td>
-      <td style="vertical-align:middle">The player checks if there is a tree on the right side.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:middle"><img src="/assets/library/hello-dart/intro/on-star.png" alt="On Star"></td>
-      <td style="vertical-align:middle"><code>onStar()</code></td>
-      <td style="vertical-align:middle">The player checks if he is on a star.</td>
-    </tr>
-  </tbody>
-</table>
+<h5 id="b-">b.</h5>
+<pre class="prettyprint lang-dart">
+if (onStar()) {
+  removeLeaf();
+} else {
+  putLeaf();
+}
+move();
+</pre>
 
 
-<h2 id="let-s-go">Let's go</h2>
-<h4 id="installation">Installation</h4>
-<p>First you need to install the Dart Editor and the <code>Hello Dart</code> scenarios. It's described in those <a href="/library/hello-dart/install/">installation instructions</a>.</p>
-<h4 id="background-infos">Background Infos</h4>
-<p>If you want to know more about why I recommend Dart for programming, see <a href="/library/hello-dart/background/">background information</a>.</p>
-<hr>
-<h3 id="copyright">Copyright</h3>
-<p>I publish the <code>Hello Dart</code> materials under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a> license. That means you can do pretty much everything you want with it. But you need to comply with the following:</p>
+<h5 id="c-">c.</h5>
+<p>Conditional statements may be nested:</p>
+<pre class="prettyprint lang-dart">
+if (treeLeft()) {
+  if (onStar()) {
+    removeStar();
+  }
+}
+move();
+</pre>
+
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-task-3-02-star-track"><i class="fa fa-rocket mg-t"></i> TASK 3.02: Star Track</h4>
+<p><img src="/assets/library/hello-dart/part3/star-track.png" alt="Star Track"></p>
+<p>The player is to move forward and always put a star where there is none. Make sure that he also puts a star on the last field.</p>
+<p>Open the <code>scenario3.02</code> and write the program.</p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-task-3-03-star-at-tree"><i class="fa fa-rocket mg-t"></i> TASK 3.03: Star at Tree</h4>
+<p><img src="/assets/library/hello-dart/part3/star-at-tree.png" alt="Star at Tree"></p>
+<p>Let the player go straight ahaid and put a leaf anywhere where there is a tree on his left or right or on both sides.</p>
+<p>Note that you can use the <em>logical operators</em> <code>&amp;&amp;</code>, <code>||</code>, and <code>!</code> in the same way we did in loops.</p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-task-3-04-around-tree-ii"><i class="fa fa-rocket mg-t"></i> TASK 3.04: Around Tree II</h4>
+<p><img src="/assets/library/hello-dart/part3/around-tree-a.png" alt="Around Tree A"></p>
+<p>How to walk around trees we already know from the first part. We had solved it like this:</p>
+<pre class="prettyprint lang-dart">
+class MyPlayer extends Player {
+
+  start() {
+    move();
+    goAroundTree();
+    goAroundTree();
+    move();
+    goAroundTree();
+    removeStar();
+  }
+
+  goAroundTree() {
+    turnLeft();
+    move();
+    turnRight();
+    move();
+    move();
+    turnRight();
+    move();
+    turnLeft();
+  }
+}
+</pre>
+
+<p>This program works very well as long as the world and trees looks exactly the same. Once a tree is moved, like in the following example, the program will fail.</p>
+<p><img src="/assets/library/hello-dart/part3/around-tree-b.png" alt="Around Tree B"></p>
+<p>The <code>scenario3.04</code> has three variants. Open this scenario and in the <code>main()</code> function change the text <code>scenario-a.txt</code> to <code>scenario-b.txt</code>. Now test what happens when you start the program in the alternate world.</p>
+<p>By now you know various ways you can respond to circumstances with the help of sensor methods. Try to change the program so that your player reaches the star in all worlds with the following properties:</p>
 <ul>
-<li>If you use my materials or programs, you must clearly indicate that I'm the original author of this material. Include my name, a link to the original and a link to the license. It could look something like the way I provide attribution to the images at the bottom of every page.</li>
+<li>The star is always right in front of the player. He must walk around the trees to get to the star.</li>
+<li>There are never two trees standing next to each other.</li>
 </ul>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-task-3-05-round-trip"><i class="fa fa-rocket mg-t"></i> TASK 3.05: Round Trip</h4>
+<p><img src="/assets/library/hello-dart/part3/round-trip.png" alt="Round Trip"></p>
+<p>The player makes a round trip in search of a star (and removes it). Each field in the tour has exactly two empty adjacent fields. One is always behind the player which is the field the player came from.</p>
+<p>Open the <code>scenario3.05</code> and write a program for it. Test your program in <strong>all three worlds</strong>, <code>scenario-a.txt</code>, <code>scenario-b.txt</code>, and <code>scenario-c.txt</code>.</p>
+<p><em>Hint: First write a loop that stops when the player is on a star. Then imagine what must happen after every step through the loop.</em></p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-task-3-06-around-tree-iii"><i class="fa fa-rocket mg-t"></i> TASK 3.06: Around Tree III</h4>
+<p><img src="/assets/library/hello-dart/part3/around-tree-iii.png" alt="Around Tree III"></p>
+<p>This is a similar exercise as task 3.04: The player has to find the star that lies before him. Now, however, any number of trees may stand next to each other.</p>
+<p>Load the <code>scenario3.06</code> und improve the <code>goAroundTree()</code> method so that the player can go around multiple trees. Test your program in all the available worlds (a, b, c, and d).</p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-task-3-07-difficult-follow-the-trail"><i class="fa fa-rocket mg-t"></i> TASK 3.07 (difficult): Follow the Trail</h4>
+<p><img src="/assets/library/hello-dart/part3/follow-the-trail.png" alt="Rundgang"></p>
+<p>The player has to follow a trail of stars and pick them up. Before the trees he should stop.</p>
+<p><em>Important: Write new methods for specific parts of your program. This greatly improves the clarity of your program.</em></p>
+<h4 id="-i-class-fa-fa-rocket-mg-t-i-task-3-08-difficult-guard"><i class="fa fa-rocket mg-t"></i> TASK 3.08 (difficult): Guard</h4>
+<p><img src="/assets/library/hello-dart/part3/guard.png" alt="Guard"></p>
+<p>The player is to guard a forest full of stars. He should walk along the outer edge of the forest.</p>
+<p>Start with a single walk around the forest. Then you can let the player make multiple rounds with an infinite loop <code>while (true)</code>.</p>
+<p>Also test your program in the second world that is available.</p>
+<h2 id="what-s-next-">What's next?</h2>
+<p>&rarr; Continue with <a href="/library/hello-dart/part4/">Part 4: Variables</a></p>
 <hr>
 <p><em>Credits</em><br>
 <em class="small">
   <a href="http://www.lostgarden.com/2007/05/dancs-miraculously-flexible-game.html">Planet Cute</a> images by Daniel Cook (Lostgarden.com), published under <a href="http://creativecommons.org/licenses/by/3.0/us/">CC BY 3.0</a>.<br>
-<a href="https://www.linkedin.com/in/olegyadrov">Oleg Yadrov</a> improved the "Planet Cute" images and was so kind to let me use them.
+<a href="https://www.linkedin.com/in/olegyadrov">Oleg Yadrov</a> improved the "Planet Cute" images and was so kind to let me use them.<br>
+Some exercises in <code>Hello Dart</code>were inspired by <a href="http://www.swisseduc.ch/compscience/karatojava/javakara/">Kara</a>. Kara was developed by Jürg Nievergelt, Werner Hartmann, Raimond Reichert et. al.
 </em></p>
 
 
@@ -315,7 +353,7 @@
   <nav>
     <div class="article-paging">
       <ul class="pagination">
-              <li class="active">
+              <li>
       <a href="/library/hello-dart/" data-toggle="tooltip" title="Introduction">Intro</a>
       </li>
         <li>
@@ -327,7 +365,7 @@
         <li>
       <a href="/library/hello-dart/part2/" data-toggle="tooltip" title="Part 2: Loops">2</a>
       </li>
-        <li>
+        <li class="active">
       <a href="/library/hello-dart/part3/" data-toggle="tooltip" title="Part 3: Conditionals">3</a>
       </li>
         <li>
@@ -339,7 +377,7 @@
         <li>
       <a href="/library/hello-dart/next/" data-toggle="tooltip" title="Next Steps"><i class="fa fa-flag-checkered"></i></a>
       </li>
-  
+      
       </ul>
     </div>
   </nav>
@@ -398,13 +436,15 @@
     
     
     
+  <script type="text/javascript" src="/theme/js/prettify.min.js"></script>
+
                                     
   <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'codemakery'; // Required - the forum shortname
-    var disqus_identifier = '/library/hello-dart/';
-    var disqus_url = 'http://code.makery.ch/library/hello-dart/';
-    var disqus_title = 'Hello Dart: Introduction to Programming';
+    var disqus_identifier = '/library/hello-dart/part3/';
+    var disqus_url = 'http://code.makery.ch/library/hello-dart/part3/';
+    var disqus_title = 'Hello Dart - Part 3: Conditionals';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

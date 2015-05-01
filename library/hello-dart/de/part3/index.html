@@ -30,6 +30,9 @@
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part3/" />
   
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/hello-dart/part3/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/hello-dart/de/part3/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
@@ -144,7 +147,20 @@
   </div>
 </div>
 
-          
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Sprachen</h4>  
+  </div>
+  <div class="list-group">
+      <a href="/library/hello-dart/part3/" class="list-group-item">
+        <i class="fa fa-fw fa-globe"></i> English
+      </a>
+      <a href="/library/hello-dart/de/part3/" class="list-group-item active">
+        <i class="fa fa-fw fa-globe"></i> Deutsch
+      </a>
+  </div>
+</div>
+
           </div>
         </aside>
         <div class="col-md-9">
@@ -198,7 +214,19 @@
   </ul>
 </div>
 
-            
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sprachen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class="">
+        <a href="/library/hello-dart/part3/"><i class="fa fa-fw fa-globe"></i> English</a>
+    </li>
+      <li class=" active">
+        <a href="/library/hello-dart/de/part3/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+    </li>
+  </ul>
+</div>
+
           </aside>
           
           <div class="article-content">
@@ -211,7 +239,11 @@ if (treeFront()) {  // Bedingung.
 }
 </pre>
 
-<p><strong>Hinweis: Der <code>else</code>-Teil (Block 2) kann weggelassen werden, wenn er nicht benötigt wird.</strong></p>
+<div class="alert alert-info">
+  <strong>Hinweis:</strong> Der <code>else</code>-Teil (Block 2) kann weggelassen werden, wenn er nicht benötigt wird.
+</div>
+
+
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-01-conditionals"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.01: Conditionals</h4>
 <p>Beschreiben Sie mit Worten, was die folgenden Codebeispiele bewirken. Testen Sie diese anschliessend im <code>scenario3.01</code>. Damit die bedingten Anweisungen nicht nur einmal ausgeführt werden, sollten Sie diese in die vorbereitete Schleife setzen.</p>
 <h5 id="a-">a.</h5>
@@ -292,7 +324,7 @@ class MyPlayer extends Player {
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-05-round-trip"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.05: Round Trip</h4>
 <p><img src="/assets/library/hello-dart/part3/round-trip.png" alt="Rundgang"></p>
 <p>Der Spieler geht in einem Rundgang auf die Suche nach einem Stern (und liest diesen auf). Jedes Feld im Rundgang hat genau zwei freie benachbarte Felder. Eines liegt immer hinter dem Spieler; von diesem Feld aus ist er auf das aktuelle Feld gekommen.</p>
-<p>Laden Sie das <code>scenario3.05</code> und schreiben Sie ein Programm dazu. Testen Sie das Programm in <strong>allen drei Welten</strong>.</p>
+<p>Laden Sie das <code>scenario3.05</code> und schreiben Sie ein Programm dazu. Testen Sie das Programm in <strong>allen drei Welten</strong>, <code>scenario-a.txt</code>, <code>scenario-b.txt</code> und <code>scenario-c.txt</code>.</p>
 <p><em>Tipp: Schreiben Sie zuerst eine Schleife, die stoppt, sobald der Spieler auf einem Stern ist. Stellen Sie sich dann vor, was nach jedem einzelnen durchgang durch die Schleife geschehen soll.</em></p>
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-06-around-tree-iii"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.06: Around Tree III</h4>
 <p><img src="/assets/library/hello-dart/part3/around-tree-iii.png" alt="Um Baum herum III"></p>
@@ -305,7 +337,7 @@ class MyPlayer extends Player {
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-3-08-schwierig-guard"><i class="fa fa-rocket mg-t"></i> AUFGABE 3.08 (schwierig): Guard</h4>
 <p><img src="/assets/library/hello-dart/part3/guard.png" alt="Wächter"></p>
 <p>Der Spieler soll einen Wald bewachen voller Sterne. Er soll aussen am Waldrand entlang laufen.</p>
-<p>Beginnen Sie mit einem einzelnen Rundgang um den Wald. Anschliessend können Sie mit einer Endlosschleife <code>while(true)</code> den Spieler mehrere Rundgänge machen lassen.</p>
+<p>Beginnen Sie mit einem einzelnen Rundgang um den Wald. Anschliessend können Sie mit einer Endlosschleife <code>while (true)</code> den Spieler mehrere Rundgänge machen lassen.</p>
 <p>Testen Sie Ihr Programm auch in der zweiten Welt.</p>
 <h2 id="wie-weiter-">Wie weiter?</h2>
 <p>Lernen Sie im <a href="/library/hello-dart/de/part4/">Teil 4</a>, wie wir mit Variablen etwas speichern können.</p>

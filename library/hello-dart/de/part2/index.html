@@ -30,6 +30,9 @@
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part2/" />
   
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/hello-dart/part2/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/hello-dart/de/part2/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
@@ -144,7 +147,20 @@
   </div>
 </div>
 
-          
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Sprachen</h4>  
+  </div>
+  <div class="list-group">
+      <a href="/library/hello-dart/part2/" class="list-group-item">
+        <i class="fa fa-fw fa-globe"></i> English
+      </a>
+      <a href="/library/hello-dart/de/part2/" class="list-group-item active">
+        <i class="fa fa-fw fa-globe"></i> Deutsch
+      </a>
+  </div>
+</div>
+
           </div>
         </aside>
         <div class="col-md-9">
@@ -198,7 +214,19 @@
   </ul>
 </div>
 
-            
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sprachen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class="">
+        <a href="/library/hello-dart/part2/"><i class="fa fa-fw fa-globe"></i> English</a>
+    </li>
+      <li class=" active">
+        <a href="/library/hello-dart/de/part2/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+    </li>
+  </ul>
+</div>
+
           </aside>
           
           <div class="article-content">
@@ -250,7 +278,21 @@ while (canMove()) {
   </tbody>
 </table>
 
-<p>Ein Beispiel in Dart würde wie folgt aussehen:</p>
+<p>Ein Beispiel in Dart könnte wie folgt aussehen:</p>
+<pre class="prettyprint lang-dart">
+if (treeLeft() && onStar()) {
+  // Mache etwas ...
+}
+</pre>
+
+<p>oder auch kombiniert:</p>
+<pre class="prettyprint lang-dart">
+if (treeLeft() && !treeRight()) {
+  // Mache etwas ...
+}
+</pre>
+
+
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-2-02-loop-star"><i class="fa fa-rocket mg-t"></i> AUFGABE 2.02: Loop Star</h4>
 <p><img src="/assets/library/hello-dart/part2/loop-star.png" alt="Schleife mit Stern"></p>
 <p>Öffnen Sie das <code>scenario2.02</code> und programmieren Sie den Spieler mit einer Schleife so, dass er vorwärts läuft, bis er auf dem Stern steht. </p>
@@ -264,19 +306,19 @@ while (canMove()) {
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-2-05-climbing-up"><i class="fa fa-rocket mg-t"></i> AUFGABE 2.05: Climbing Up</h4>
 <p><img src="/assets/library/hello-dart/part2/climbing-up.png" alt="Treppensteigen"></p>
 <p>Der Spieler soll eine beliebig lange Treppe hochlaufen.</p>
-<p>Schreiben Sie eine Funktion <code>onStepUp()</code>, wo Sie den Spieler eine einzelne Stufe hochsteigen lassen. Überlegen Sie sich, wie Sie erkennen können, ob der Spieler noch eine Stufe steigen muss oder ob er zuoberst angekommen ist.</p>
+<p>Schreiben Sie eine Funktion <code>oneStepUp()</code>, wo Sie den Spieler eine einzelne Stufe hochsteigen lassen. Überlegen Sie sich, wie Sie erkennen können, ob der Spieler noch eine Stufe steigen muss oder ob er zuoberst angekommen ist.</p>
 <h2 id="for-schleifen">For-Schleifen</h2>
-<p>Es gibt neben der <code>while</code>-Schleife eine weitere, sehr wichtige Art von Schleife: die <code>for</code>-Schleife:</p>
+<p>Es gibt neben der <code>while</code>-Schleife eine weitere, sehr wichtige Art von Schleife: die <code>for</code>-Schleife.</p>
 <pre class="prettyprint lang-dart">
 for (var i = 0; i &lt; 4; i++) {
   move();
 }
 </pre>
 
-<p>Bei diesem Beispiel wird ein Zähler <code>i</code> verwendet. Der Zähler wird zuerst auf <code>0</code> gesetzt. Danach wird bei jedem Schleifendurchgang geprüft, ob <code>i</code> kleiner ist als 4 und schliesslich wird <code>i</code> um eins erhöht. Das bedeutet, dass die <code>move()</code>-Anweisung in dieser Schleife vier mal ausgeführt wird.</p>
+<p>Bei diesem Beispiel wird ein Zähler <code>i</code> verwendet. Der Zähler wird zuerst auf <code>0</code> gesetzt. Danach wird bei jedem Schleifendurchgang geprüft, ob <code>i</code> kleiner ist als <code>4</code> und schliesslich wird <code>i</code> um eins erhöht. Das bedeutet, dass die <code>move()</code>-Anweisung in dieser Schleife vier mal ausgeführt wird.</p>
 <p>Sie werden der <code>for</code>-Schleife später immer wieder begegnen, auch zum Teil in etwas abgewandelter Form. Für den Moment reicht uns mal das Wissen, dass es sie gibt.</p>
 <h2 id="wie-weiter-">Wie weiter?</h2>
-<p>Im <a href="/library/hello-dart/de/part3/">Teil 3</a> lernen wir mit <em>bedingten Anweisungen</em> eine weitere Art kennen, unsere Programme zu steuern.</p>
+<p>&rarr; Im <a href="/library/hello-dart/de/part3/">Teil 3</a> lernen wir mit <em>bedingten Anweisungen</em> eine weitere Art kennen, unsere Programme zu steuern.</p>
 <hr>
 <p><em>Quellen</em><br>
 <em class="small">

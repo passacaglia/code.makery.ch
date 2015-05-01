@@ -30,6 +30,9 @@
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part1/" />
   
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/hello-dart/part1/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/hello-dart/de/part1/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
@@ -144,7 +147,20 @@
   </div>
 </div>
 
-          
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Sprachen</h4>  
+  </div>
+  <div class="list-group">
+      <a href="/library/hello-dart/part1/" class="list-group-item">
+        <i class="fa fa-fw fa-globe"></i> English
+      </a>
+      <a href="/library/hello-dart/de/part1/" class="list-group-item active">
+        <i class="fa fa-fw fa-globe"></i> Deutsch
+      </a>
+  </div>
+</div>
+
           </div>
         </aside>
         <div class="col-md-9">
@@ -198,7 +214,19 @@
   </ul>
 </div>
 
-            
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sprachen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class="">
+        <a href="/library/hello-dart/part1/"><i class="fa fa-fw fa-globe"></i> English</a>
+    </li>
+      <li class=" active">
+        <a href="/library/hello-dart/de/part1/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+    </li>
+  </ul>
+</div>
+
           </aside>
           
           <div class="article-content">
@@ -214,7 +242,7 @@
 <p>Öffnen Sie die Datei <code>my_player.dart</code> aus dem Ordner <code>scenario1.01</code>.</p>
 <p><img src="/assets/library/hello-dart/part1/my-player.png" alt="My Player"></p>
 <p>Betrachten wir einmal die <strong>Klasse</strong> <code>MyPlayer</code>. Zwischen den geschweiften Klammern <code>{</code> und <code>}</code> werden die Eigenschaften und das Verhalten unseres Spielers definiert. </p>
-<p>Das Einzige, was im Moment in dieser Klasse steht ist <code>start()</code> und drei Anweisungen für die Bewegungen des Spielers. <code>start()</code> ist eine Funktion (wird manchmal auch Methode genannt). Darin können wir das Verhalten unseres Spieleres verändern.</p>
+<p>Das Einzige, was im Moment in dieser Klasse steht ist <code>start()</code> und drei Anweisungen für die Bewegungen des Spielers. <code>start()</code> ist eine Funktion (wird manchmal auch <em>Methode</em> genannt). Darin können wir das Verhalten unseres Spieleres verändern.</p>
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-1-01-first-steps"><i class="fa fa-rocket mg-t"></i> AUFGABE 1.01: First Steps</h4>
 <p>Ändern Sie die <code>start()</code>-Funktion so ab, dass der Spieler zuerst einen Schritt macht, dann einen Stern legt und schliesslich wieder einen Schritt macht.</p>
 <p>In der <a href="/library/hello-dart/de/">Einleitung</a> finden Sie alle Befehle, die ein Spieler ausführen kann.</p>
@@ -263,6 +291,8 @@ goAroundTree() {
 
 <p>Schreiben Sie zwischen die geschweiften Klammern der Funktion die Befehle, die es braucht, um um den Baum zu kommen.</p>
 <p>Benutzen Sie nun innerhalb der <code>start()</code>-Funktion die Funktion <code>goAroundTree()</code> für jeden der drei Bäume.</p>
+<h2 id="wie-weiter-">Wie weiter?</h2>
+<p>&rarr; Fahren Sie weiter mit <a href="/library/hello-dart/de/part2/">Teil 2: Schleifen</a>.</p>
 <hr>
 <p><em>Quellen</em><br>
 <em class="small">

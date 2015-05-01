@@ -30,6 +30,9 @@
     <link href="/theme/css/style.min.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="canonical" href="http://code.makery.ch/library/hello-dart/de/part4/" />
   
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="http://code.makery.ch/library/hello-dart/part4/" />
+    <link rel="alternate" hreflang="de" href="http://code.makery.ch/library/hello-dart/de/part4/" />
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" href="/rss" title="code.makery.ch - RSS Feed">
@@ -144,7 +147,20 @@
   </div>
 </div>
 
-          
+          <div class="panel panel-default sidebar">
+  <div class="panel-heading">
+    <h4 class="panel-title">Sprachen</h4>  
+  </div>
+  <div class="list-group">
+      <a href="/library/hello-dart/part4/" class="list-group-item">
+        <i class="fa fa-fw fa-globe"></i> English
+      </a>
+      <a href="/library/hello-dart/de/part4/" class="list-group-item active">
+        <i class="fa fa-fw fa-globe"></i> Deutsch
+      </a>
+  </div>
+</div>
+
           </div>
         </aside>
         <div class="col-md-9">
@@ -198,7 +214,19 @@
   </ul>
 </div>
 
-            
+            <div class="btn-group sidebar-dropdown">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sprachen <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+      <li class="">
+        <a href="/library/hello-dart/part4/"><i class="fa fa-fw fa-globe"></i> English</a>
+    </li>
+      <li class=" active">
+        <a href="/library/hello-dart/de/part4/"><i class="fa fa-fw fa-globe"></i> Deutsch</a>
+    </li>
+  </ul>
+</div>
+
           </aside>
           
           <div class="article-content">
@@ -235,7 +263,7 @@ while (i &lt; 5) {
 </ul>
 <hr>
 <h2 id="datentypen-in-dart">Datentypen in Dart</h2>
-<p>In Dart gibt es ein paar vordefinierte Datentypen. Mit Datentypen gibt man an, was in eine Variable gespeichert wird. Diese Angaben sind in Dart freiwillig. Das heisst, man kann alle Variablen einfach mit <code>var</code> deklarieren, wie wir es oben gemacht haben. Ich empfehle aber, meistens den Datentyp anzugeben, weil dies hilft, Fehler zu erkennen.</p>
+<p>In Dart gibt es ein paar vordefinierte Datentypen. Mit Datentypen gibt man an, was in eine Variable gespeichert wird. Diese Angaben sind in Dart freiwillig. Das heisst, man kann alle Variablen einfach mit <code>var</code> deklarieren, wie wir es oben gemacht haben. Ich empfehle aber, meistens den Datentyp anzugeben. Dies hilft Fehler früh zu erkennen, da Dart Hinweise geben wird, wenn wir versuchen einen falschen Datentyp in eine Variable zu speichern.</p>
 <div class="alert alert-info">
   <strong>Merke:</strong> Alles, was in eine Variable gespeichert werden kann, wird in Dart als <strong>Objekt</strong> bezeichnet. Der Datentyp eines Objektes nennen wir eine <strong>Klasse</strong>. Klassen und Objekte sind die Grundelemente der <a class="alert-link" href="http://de.wikipedia.org/wiki/Objektorientierte_Programmierung">objektorientierten Programmierung</a>.
 </div>
@@ -382,7 +410,7 @@ while (i &lt; 5) {
 <li>Am Schluss soll der Spieler angeben, wie viele Sterne er gezählt hat. Mit <code>${count}</code> können wir die Variable in einen Text einfügen:<br><code>say('Ich habe ${count} Sterne gefunden.');</code></li>
 </ol>
 <div class="alert alert-info">
-  <strong>Gültigkeitsbereich von Variablen:</strong> Variablen sind immer nur innerhalb des Blockes (zwischen den geschweiften Klammern) gültig, in welchem sie deklariert wurden. Man kann sie auch ausserhalb der Methoden deklarieren, dann gelten sie für die ganze Klasse.
+  <strong>Gültigkeitsbereich von Variablen:</strong> Variablen sind immer nur innerhalb des Blockes (zwischen den geschweiften Klammern) gültig, in welchem sie deklariert wurden. Man kann sie auch ausserhalb der Funktionen deklarieren. Dann sind sie in der ganzen Klasse verfügbar, oder, falls sie sogar ausserhalb einer Klasse deklariert werden, sind sie überall verfügbar.
 </div>
 
 
@@ -391,26 +419,26 @@ while (i &lt; 5) {
 <p>Der Spieler soll alle Sterne wegräumen.</p>
 <p><em>Hinweise:</em></p>
 <ol>
-<li>Sie können den Baum verwenden, um herauszufinden, wann der Spiele am Ende angekommen ist mit einer Schleife <code>while (!treeFront()) {...}</code>.</li>
+<li>Sie können den Baum verwenden, um herauszufinden, wann der Spieler am Ende angekommen ist mit einer Schleife <code>while (!treeFront()) {...}</code>.</li>
 <li>Entfernen Sie zuerst die Sterne auf der ersten Zeile.</li>
-<li>Drehen Sie am Rand und entfernen Sie die die Sterne auf der zweiten Zeile.</li>
+<li>Drehen Sie am Rand und entfernen Sie die Sterne auf der zweiten Zeile.</li>
 <li>Führen Sie nun eine <code>bool</code>-Variable ein, damit sich der Spieler merkt, in welche Richtung er läuft, zum Beispiel so:<br><code>bool goingRight = true;</code></li>
 <li>Mit dieser Variable können Sie nun herausfinden, ob der Spieler am rechten oder am linken Rand angekommen ist und entsprechend umdrehen muss. Ein <code>bool</code> kann wie folgt in einer Bedingung verwendet werden:<br><code>if (goingRight) {...}</code></li>
 <li>Denken Sie daran, die neue Richtung in die Variable zu setzen, sobald sich der Spieler dreht:<br><code>goingRight = false;</code></li>
-<li><em>Verbesserung</em>: Damit der Code übersichtlicher wird, sollen Sie zwei Funktionen machen zum Umdrehen: <code>turnAroundRight()</code> und <code>turnAroundLeft()</code>.</li>
+<li><em>Verbesserung</em>: Damit der Code übersichtlicher wird, könnten Sie zwei Funktionen machen zum Umdrehen: <code>turnAroundRight()</code> und <code>turnAroundLeft()</code>.</li>
 </ol>
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-4-03-inverting"><i class="fa fa-rocket mg-t"></i> AUFGABE 4.03: Inverting</h4>
-<p><img src="/assets/library/hello-dart/part4/inverting.png" alt="Sternenspur"></p>
+<p><img src="/assets/library/hello-dart/part4/inverting.png" alt="Invertieren"></p>
 <p>Die Welt hat eine quadratische Fläche und am Schluss einen Baum. Innerhalb der Fläche ist ein Muster aus Sternen gelegt, das vom Spieler invertiert (=umgedreht) werden soll. Achten Sie darauf, dass Ihr Code übersichtlich bleibt und lagern Sie allenfalls Teile in eigene Funktionen aus.</p>
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-4-04-chessboard"><i class="fa fa-rocket mg-t"></i> AUFGABE 4.04: Chessboard</h4>
 <p><img src="/assets/library/hello-dart/part4/chessboard.png" alt="Schachbrett"></p>
 <p>Die Welt hat eine quadratische Fläche und am Schluss einen Baum. Innerhalb der Fläche soll ein schachbrettartiges Muster aus Sternen gelegt werden.</p>
 <h4 id="-i-class-fa-fa-rocket-mg-t-i-aufgabe-4-04-schwierig-tree-line"><i class="fa fa-rocket mg-t"></i> AUFGABE 4.04 (schwierig): Tree Line</h4>
 <p><img src="/assets/library/hello-dart/part4/tree-line.jpg" alt="Baumreihe"></p>
-<p>Auf der Wiese hat es verschiedene Baumreihen. Der Spieler soll nun die Länge (in Anzahl Bäumen) der längsten Baumreihe ermitteln und ausgeben. Zwischen den Baumreihen ist immer mindestens ein Feld Platz. Auf dem letzten Feld liegt ein Stern.</p>
+<p>In dieser Welt hat es verschiedene Baumreihen. Der Spieler soll nun die Länge (in Anzahl Bäumen) der längsten Baumreihe ermitteln und ausgeben. Zwischen den Baumreihen ist immer mindestens ein Feld Platz. Auf dem letzten Feld liegt ein Stern.</p>
 <hr>
 <h2 id="wie-weiter-">Wie weiter?</h2>
-<p>Fahren Sie weiter mit <a href="/library/hello-dart/de/part5/">Teil 5: Methoden</a></p>
+<p>Fahren Sie weiter mit <a href="/library/hello-dart/de/part5/">Teil 5: Funktionen</a></p>
 <hr>
 <p><em>Quellen</em><br>
 <em class="small">
