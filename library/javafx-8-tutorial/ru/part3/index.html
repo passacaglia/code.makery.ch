@@ -447,13 +447,6 @@ private void handleDeletePerson() {
 <p>Если вы сейчас запустите наше приложение, то вы сможете удалять выбранную запись из таблицы. Но что случится, когда вы нажмете кнопку <strong>Delete</strong>, а ни одна запись выбрана не будет?</p>
 <p>Нам выбросит исключение <code>ArrayIndexOutOfBoundsException</code>, потому что мы не можем удалить запись с индексом <code>-1</code>. Индекс <code>-1</code> возвращается методом <code>getSelectedIndex()</code> когда в таблице не выделено ни одной ячейки.</p>
 <p>Конечно, не очень хорошо игнорировать такую ошибку. Поэтому мы должны сообщить пользователю что он, перед тем как нажимать кнопку <strong>Delete</strong>, должен выбрать запись в таблице.</p>
-<p>Для оповещения пользователя мы будем показывать всплывающее диалоговое окно. Для этого вам нужно добавить стороннюю библиотеку (<a href="/blog/javafx-8-dialogs/" title="Dialogs">Dialogs</a>):</p>
-<ol>
-<li>Скачайте этот файл <a href="https://github.com/marcojakob/tutorial-javafx-8/releases/download/v1.0/controlsfx-8.0.6_20.jar" title="ControlsFX 8.0.6_20">controlsfx-8.0.6_20.jar</a> (вы также можете его скачать с сайта <a href="http://fxexperience.com/controlsfx/">http://fxexperience.com/controlsfx/</a>);<br><strong>Важно: Версия библиотеки ControlFX должна быть не ниже <code>8.0.6\_20</code> работающая с <code>JDK 8u20</code> или выше, т.к. в этой версии были представлены критические изменения.</strong></li>
-<li>Создайте папку <strong>lib</strong> в корневой папке проекта и добавьте туда файл библиотеки <code>controlsfx-jar</code>;</li>
-<li>Подключите данную библиотеку в ваш проект: В среде разработки Eclipse кликните правой кнопкой мышки на jar-файл | Build Path | Add to Build Path. Теперь приложение Eclipse знает об этой библиотеке.  </li>
-</ol>
-<p><img src="/assets/library/javafx-8-tutorial/part3/controlsfx-library.png" alt="ControlsFX Libaray" title="ControlsFX Library"></p>
 <p>Добавив некоторые изменения в метод <code>handleDeletePerson</code> мы можем показывать простое диалоговое окно когда пользователь нажимает на кнопку <strong>Delete</strong>, а в таблице ничего не выбрано:</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
@@ -467,11 +460,13 @@ private void handleDeletePerson() {
         personTable.getItems().remove(selectedIndex);
     } else {
         // Nothing selected.
-        Dialogs.create()
-            .title("No Selection")
-            .masthead("No Person Selected")
-            .message("Please select a person in the table.")
-            .showWarning();
+        Alert alert = new Alert(AlertType.WARNING);
+        alert.initOwner(mainApp.getPrimaryStage());
+        alert.setTitle("No Selection");
+        alert.setHeaderText("No Person Selected");
+        alert.setContentText("Please select a person in the table.");
+
+        alert.showAndWait();
     }
 }
 </pre>
@@ -498,11 +493,10 @@ private void handleDeletePerson() {
 package ch.makery.address.view;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import org.controlsfx.dialog.Dialogs;
-
 import ch.makery.address.model.Person;
 import ch.makery.address.util.DateUtil;
 
@@ -645,11 +639,14 @@ public class PersonEditDialogController {
             return true;
         } else {
             // Show the error message.
-            Dialogs.create()
-                .title("Invalid Fields")
-                .masthead("Please correct invalid fields")
-                .message(errorMessage)
-                .showError();
+            Alert alert = new Alert(AlertType.ERROR);
+            alert.initOwner(dialogStage);
+            alert.setTitle("Invalid Fields");
+            alert.setHeaderText("Please correct invalid fields");
+            alert.setContentText(errorMessage);
+
+            alert.showAndWait();
+
             return false;
         }
     }
@@ -744,11 +741,13 @@ private void handleEditPerson() {
 
     } else {
         // Nothing selected.
-        Dialogs.create()
-            .title("No Selection")
-            .masthead("No Person Selected")
-            .message("Please select a person in the table.")
-            .showWarning();
+        Alert alert = new Alert(AlertType.WARNING);
+        alert.initOwner(mainApp.getPrimaryStage());
+        alert.setTitle("No Selection");
+        alert.setHeaderText("No Person Selected");
+        alert.setContentText("Please select a person in the table.");
+
+        alert.showAndWait();
     }
 }
 </pre>
