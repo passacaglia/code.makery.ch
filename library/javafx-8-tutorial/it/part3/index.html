@@ -192,7 +192,7 @@
             <h1 class="article-title">JavaFX 8 Tutorial - Part 3: Interacting with the User</h1>
             <div class="article-date">
   Apr 24, 2014
-  • Updated Mar 12, 2015
+  • Updated Nov 01, 2015
 
 </div>
           </header>
@@ -272,23 +272,19 @@
           </aside>
           
           <div class="article-content">
-            <div class="alert alert-warning">
-  <i class="fa fa-language"></i> This page needs an Italian translation. If you'd like to help out please read <a href="/library/how-to-contribute/" class="alert-link">how to contribute</a>.
-</div>
-
-<p><img src="/assets/library/javafx-8-tutorial/part3/addressapp-part3.png" alt="Screenshot AddressApp Part 3"></p>
-<h2 id="topics-in-part-3">Topics in Part 3</h2>
+            <p><img src="/assets/library/javafx-8-tutorial/part3/addressapp-part3.png" alt="Screenshot AddressApp Part 3"></p>
+<h2 id="argomenti-della-parte-3">Argomenti della parte 3</h2>
 <ul>
-<li><strong>React to selection changes</strong> in the table.</li>
-<li>Add functionality to the <strong>add</strong>, <strong>edit</strong>, and <strong>remove</strong> buttons.</li>
-<li>Create a custom <strong>popup dialog</strong> to edit a person.</li>
-<li><strong>Validate user input</strong>.</li>
+<li><strong>Reagire alle variazioni di selezione</strong> nella tabella.</li>
+<li>Aggiunta delle funzionalità ai pulsanti <strong>add</strong>, <strong>edit</strong>, e <strong>remove</strong>.</li>
+<li>Creazione di un <strong>popup dialog</strong> per modificare una persona.</li>
+<li><strong>Validazione dell'input dell'utente</strong>.</li>
 </ul>
 <hr>
-<h2 id="react-to-table-selections">React to Table Selections</h2>
-<p>Obviousely, we haven't used the right side of our application, yet. The idea is to display the details about a person on the right side when the user selects a person in the table.</p>
-<p>First, let's add a new method inside <code>PersonOverviewController</code> that helps us fill the labels with the data from a single <code>Person</code>.</p>
-<p>Create a method called <code>showPersonDetails(Person person)</code>. Go trough all the labels and set the text using <code>setText(...)</code> with details from the person. If <code>null</code> is passed as parameter, all labels should be cleared.</p>
+<h2 id="reagire-alla-selezione-nella-tabella-">Reagire alla selezione nella tabella.</h2>
+<p>Ovviamente non abbiamo ancora utilizzato la parte funzionale della nostra applicazione. L'idea è di visualizzare i dettagli di una persona sulla parte destra della finestra quando un utente seleziona la persona dalla tabella.</p>
+<p>Primo, aggiungiamo un nuovo metodo dentro a <code>PersonOverviewController</code> che ci aiuterà a riempire i label con i dati provenienti da un sigolo <code>Person</code>.</p>
+<p>Create un metodo chiamato <code>showPersonDetails(Person person)</code>. Andate all'interno di tutti i label e settate il testo usando <code>setText(...)</code> con i dettagli provenienti dall'oggetto persona. Se è passato <code>null</code> come parametro, tutti i label devono essere puliti.</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
 /**
@@ -306,7 +302,7 @@ private void showPersonDetails(Person person) {
         postalCodeLabel.setText(Integer.toString(person.getPostalCode()));
         cityLabel.setText(person.getCity());
 
-        // TODO: We need a way to convert the birthday into a String! 
+        // TODO: We need a way to convert the birthday into a String!
         // birthdayLabel.setText(...);
     } else {
         // Person is null, remove all the text.
@@ -321,9 +317,9 @@ private void showPersonDetails(Person person) {
 </pre>
 
 
-<h3 id="convert-the-birthday-date-to-a-string">Convert the Birthday Date to a String</h3>
-<p>You will notice that we couldn't set the <code>birthday</code> into the <code>Label</code> because it is of type <code>LocalDate</code> and not a <code>String</code>. We need to format the date first.</p>
-<p>We will use the conversion from <code>LocalDate</code> and <code>String</code> and vice versa in several places. It's good practice to create a helper class with <code>static</code> methods for this. We'll call it <code>DateUtil</code> and place it in a seperate package called <code>ch.makery.address.util</code>:</p>
+<h3 id="convertire-la-data-di-compleanno-in-una-stringa">Convertire la data di compleanno in una stringa</h3>
+<p>Noterai che non possiamo settare <code>birthday</code> all'interno di <code>Label</code> perché è del tipo <code>LocalDate</code> e non <code>String</code>. Prima dobbiamo formattare la data.</p>
+<p>Useremo la conversione da <code>LocalDate</code> a <code>String</code> e vice versa in diversi posti. E' buona norma creare una classe di supporto(helper) con metodi <code>static</code> per questo. La chiameremo <code>DateUtil</code> e la posizioneremo in un package separato chiamato <code>ch.makery.address.util</code>:</p>
 <h5 id="dateutil-java">DateUtil.java</h5>
 <pre class="prettyprint lang-java">
 package ch.makery.address.util;
@@ -391,22 +387,22 @@ public class DateUtil {
 </pre>
 
 <div class="alert alert-info">
-<strong>Hint:</strong> You can change the format of the date by changing the
-<code>DATE_PATTERN</code>. For all possible formats see <a class="alert-link" href="http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html">DateTimeFormatter</a>.
+<strong>Hint:</strong> Puoi cambiare il formato della data cambiando
+<code>DATE_PATTERN</code>. Per tutti i formati possibili consulta <a class="alert-link" href="http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html">DateTimeFormatter</a>.
 </div>
 
 
-<h4 id="use-the-dateutil">Use the DateUtil</h4>
-<p>Now we need to use our new <code>DateUtil</code> in the <code>showPersonDetails</code> method of <code>PersonOverviewController</code>. Replace the <em>TODO</em> we added with the following line:</p>
+<h4 id="usare-dateutil">Usare DateUtil</h4>
+<p>Adesso dobbiamo usare la nostra nuova <code>DateUtil</code> nel metodo <code>showPersonDetails</code> di <code>PersonOverviewController</code>. Sostituisci il <em>TODO</em> che avevamo aggiunto con la seguente linea:</p>
 <pre class="prettyprint lang-java">
 birthdayLabel.setText(DateUtil.format(person.getBirthday()));
 </pre>
 
 
-<h3 id="listen-for-table-selection-changes">Listen for Table Selection Changes</h3>
-<p>To get informed when the user selects a person in the person table, we need to <em>listen for changes</em>.</p>
-<p>There is an interface in JavaFX called <a href="http://docs.oracle.com/javase/8/javafx/api/"><code>ChangeListener</code></a> with one method called <code>changed(...)</code>. The method has three parameters: <code>observable</code>, <code>oldValue</code>, and <code>newValue</code>.</p>
-<p>We will create such a <code>ChangeListener</code> using a Java 8 <em>lambda expression</em>. Let's add a few lines to the <code>initialize()</code> method in <code>PersonOverviewController</code>. Now it looks like this:</p>
+<h3 id="ascoltare-i-cambiamenti-di-selezione-della-tabella">Ascoltare i cambiamenti di selezione della tabella</h3>
+<p>Per essere informati quando un utente seleziona una persona nella tabella delle persone, dobbiamo metterci <em>in ascolto dei cambiamenti</em>.</p>
+<p>C'è un interfaccia nelle JavaFX chiamata <a href="http://docs.oracle.com/javase/8/javafx/api/"><code>ChangeListener</code></a> con un metodo chiamato <code>changed(...)</code>. Il metodo ha 3 parametri: <code>observable</code>, <code>oldValue</code>, e <code>newValue</code>.</p>
+<p>Creeremo tale <code>ChangeListener</code> usando una Java 8 <em>espressione lambda</em>. Aggiungiamo qualche linea nel metodo <code>initialize()</code> in <code>PersonOverviewController</code>. Adesso è diventato come segue:</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
 @FXML
@@ -426,13 +422,13 @@ private void initialize() {
 }
 </pre>
 
-<p>With <code>showPersonDetails(null);</code> we reset the person details. </p>
-<p>With <code>personTable.getSelectionModel...</code> we get the <em>selectedItemProperty</em> of the person table and add a listener to it. Whenever the user selects a person in the table, our <em>lambda expression</em> is executed. We take the newly selected person and pass it to the <code>showPersonDetails(...)</code> method.</p>
-<p>Try to <strong>run your application</strong> at this point. Verify that when you select a person in the table, details about that person are displayed on the right.</p>
-<p>If something doesn't work, you can compare your <code>PersonOverviewController</code> class with <a href="/assets/library/javafx-8-tutorial/part3/PersonOverviewController.java">PersonOverviewController.java</a>.</p>
+<p>Con <code>showPersonDetails(null);</code> resettiamo i dettagli della persona. </p>
+<p>Con <code>personTable.getSelectionModel...</code> prendiamo il <em>selectedItemProperty</em> della tabella persone e vi aggiungiamo un ascoltatore. Ogni volta che l'utente seleziona una persona nella tabella, la nostra <em>lespressione ambda</em> sarà eseguita. Prendiamo la nuova persona selezionata e la passiamo al metodo <code>showPersonDetails(...)</code>.</p>
+<p>Prova ad <strong>avviare la tua applicazione</strong> a questo punto. Verifica che quando selezioni una persona nella tabella, idettagli di questa persona sono visualizzati sulla destra.</p>
+<p>Se qualcosa non funziona, puoi comparare la tua classe <code>PersonOverviewController</code> con <a href="/assets/library/javafx-8-tutorial/part3/PersonOverviewController.java">PersonOverviewController.java</a>.</p>
 <hr>
-<h2 id="the-delete-button">The Delete Button</h2>
-<p>Our user interface already contains a delete button but without any functionality. We can select the action for a button inside the <em>Scene Builder</em>. Any method inside our controller that is annotated with <code>@FXML</code> (or is public) is accessible by the <em>Scene Builder</em>. Thus, let's first add a delete method at the end of our <code>PersonOverviewController</code> class:</p>
+<h2 id="il-pulsante-elimina">Il pulsante Elimina</h2>
+<p>La nostra interfaccia utente contiene anche un pulsante elimina senza nessuna funzionalità. Possiamo selezionare l'azione per un pulsante all'interno di <em>Scene Builder</em>. Oggni metodo all'interno del nostro controllore che è annotato con <code>@FXML</code> (o è pubblico) è accessibile da <em>Scene Builder</em>. Quindi, prima aggiungiamo un metodo elimina alla fine della nostra classe <code>PersonOverviewController</code>:</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
 /**
@@ -445,20 +441,20 @@ private void handleDeletePerson() {
 }
 </pre>
 
-<p>Now, open the <code>PersonOverview.fxml</code> file in <em>SceneBuilder</em>. Select the <em>Delete</em> button, open the <em>Code</em> group and choose <code>handleDeletePerson</code> in the dropdown of <strong>On Action</strong>.</p>
+<p>Ora, apri il file <code>PersonOverview.fxml</code> in <em>SceneBuilder</em>. Seleziona il pulsante <em>Delete</em>, apri il gruppo <em>Code</em> e scegli <code>handleDeletePerson</code> nel menu a tendina di <strong>On Action</strong>.</p>
 <p><img src="/assets/library/javafx-8-tutorial/part3/handle-delete.png" alt="On Action"></p>
 <div class="alert alert-info">
-<strong>Remember:</strong> After making changes to an FXML file in Scene Builder you might need to refresh the project in Eclipse for the changes to be applied.
+<strong>Ricorda:</strong> Dopo aver effettuato cambiamenti nel file FXML in Scene Builder dovresti riaggioranre il progetto in Eclipse affinché i cambiamenti siano applicati.
 </div>
 
 
 
-<h3 id="error-handling">Error Handling</h3>
-<p>If you run the application at this point you should be able to delete selected persons from the table. But what happenes if you <strong>click the delete button while no person is selected</strong> in the table? </p>
-<p>There will be an <code>ArrayIndexOutOfBoundsException</code> because it could not remove a person item at index <code>-1</code>. The index <code>-1</code> was returned by <code>getSelectedIndex()</code> - which means that there was no selection.</p>
-<p>To ignore such an error is not very nice, of course. We should let the user know that he/she must select a person before deleting. (Even better would be if we disabled the button so that the user doesn't even have the chance to do something wrong.)</p>
-<p>We'll add a popup dialog to inform the user.</p>
-<p>With some changes made to the <code>handleDeletePerson()</code> method, we can show a simple popup dialog whenever the user pushes the delete button while no person is selected in the table:</p>
+<h3 id="gestire-gli-errori">Gestire gli errori</h3>
+<p>Se avvii l'applicazion a questo punto dovresti essere in grado di eliminare una persona dalla tabella. Ma cosa succede se <strong>clicchi il pulsante delete mentre nessuna persona è selezionata</strong> nella tabella? </p>
+<p>Verrà generata una <code>ArrayIndexOutOfBoundsException</code> perché non può essere eliminata un elemento persona con l'indice <code>-1</code>. L'indice <code>-1</code> è restituito da <code>getSelectedIndex()</code> - il quale significa che non c'è selezione.</p>
+<p>Naturalmente ignorare l'errore non è molto elegante. Dovremmo informare l'utente che deve selezionare una persona prima di eliminarla. (Potrebbe essere meglio se disabilitiamo il pulsante così l'utente non ha mai la possibilità di fare qualcosa di sbagliato).
+Aggiungeremo un <em>popup dialog</em> per informare l'utente.</p>
+<p>Con alcuni cambiamenti al metodo <code>handleDeletePerson()</code>, possiamo mostrare un semplice popup dialog ogni volta che l'utente preme il pulsante delete mentre nessuna pesona nella tabella è selezionata:</p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
 /**
@@ -483,22 +479,22 @@ private void handleDeletePerson() {
 </pre>
 
 <div class="alert alert-info">
-For more examples on how to use Dialogs read my blog post about <a class="alert-link" href="/blog/javafx-dialogs-official/">JavaFX Dialogs</a>.
+Per altri esempi su come usare i Dialogs il post sul mio blog a riguardo <a class="alert-link" href="/blog/javafx-dialogs-official/">JavaFX Dialogs</a>.
 </div>
 
 
 <hr>
-<h2 id="the-new-and-edit-dialogs">The New and Edit Dialogs</h2>
-<p>The new and edit actions are a bit more work: We'll need a custom dialog (that means a new stage) with a form to ask the user for details about the person.</p>
-<h3 id="design-the-dialog">Design the Dialog</h3>
+<h2 id="i-dialogs-nuovo-e-modifica">I Dialogs Nuovo e Modifica</h2>
+<p>Le azioni Nuovo e Modifica richiedono un pò più di impegno: Avremo bisogno di crere un dialog personalizzato (che significa un nuovo stage) con un form per chiedere all'utente i dettagli riguardo la persona.</p>
+<h3 id="disegnare-il-dialog">Disegnare il Dialog</h3>
 <ol>
-<li><p>Create a new fxml file called <code>PersonEditDialog.fxml</code> inside the <em>view</em> package.<br><img src="/assets/library/javafx-8-tutorial/part3/person-edit-dialog1.png" alt="Create Edit Dialog"></p>
+<li><p>Crea un nuovo file fxml chiamato <code>PersonEditDialog.fxml</code> dentro al package <em>view</em>.<br><img src="/assets/library/javafx-8-tutorial/part3/person-edit-dialog1.png" alt="Create Edit Dialog"></p>
 </li>
-<li><p>Use a <code>GridPane</code>, <code>Label</code>s, <code>TextField</code>s and <code>Button</code>s to create a Dialog like the following:<br><img src="/assets/library/javafx-8-tutorial/part3/person-edit-dialog2.png" alt="Edit Dialog">   </p>
+<li><p>Usa il <code>GridPane</code>, <code>Label</code>s, <code>TextField</code>s e <code>Button</code>s per creare un Dialog come il seguente:<br><img src="/assets/library/javafx-8-tutorial/part3/person-edit-dialog2.png" alt="Edit Dialog">   </p>
 </li>
 </ol>
-<h3 id="create-the-controller">Create the Controller</h3>
-<p>Create the controller for the Dialog as <code>PersonEditDialogController.java</code>:</p>
+<h3 id="creare-il-controllore">Creare il Controllore</h3>
+<p>Create il controller per il Dialog con il nome <code>PersonEditDialogController.java</code>:</p>
 <h5 id="personeditdialogcontroller-java">PersonEditDialogController.java</h5>
 <pre class="prettyprint lang-java pre-scrollable">
 package ch.makery.address.view;
@@ -664,22 +660,22 @@ public class PersonEditDialogController {
 }
 </pre>
 
-<p>A few things to note about this controller:</p>
+<p>Qualhe informazione riguardo questo controllore:</p>
 <ul>
-<li>The <code>setPerson(...)</code> method can be called from another class to set the person that is to be edited.</li>
-<li>When the user clicks the OK butten, the <code>handleOk()</code> method is called. First, some validation is done by calling the <code>isInputValid()</code> method. Only if validation was successful, the person object is filled with the data that the user entered. Those changes will directly be applied to the person object that was passed to <code>setPerson(...)</code>!</li>
-<li>The boolean <code>okClicked</code> is used so that the caller can determine whether the user clicked the OK or Cancel button.</li>
+<li>Il metodo <code>setPerson(...)</code> può essere chiamato da un'altra classe per settare la persona che deve essere modificata.</li>
+<li>Quando l'utente clicca sul pulsante OK, viene chiamato il metodo <code>handleOk()</code>. Prima, vengono effettuate alcune validazione del metodo <code>isInputValid()</code>. Solo se le validazioni hanno successo, l'oggetto persona viene riempito con i dati che l'utente ha inserito. Questi cambiamenti saranno applicati direttamente all'oggetto person che è stato passato a <code>setPerson(...)</code>!</li>
+<li>Il boleano <code>okClicked</code> è usato per far si che colui che chiama può determinare se l'utente ha premuto il pulsante Ok oppure Cancel.</li>
 </ul>
-<h3 id="link-view-and-controller">Link View and Controller</h3>
-<p>With the View (FXML) and the controller created we need to link them together:</p>
+<h3 id="collegare-vista-e-controllore">Collegare Vista e Controllore</h3>
+<p>Con la vista (FXML) ed il controllore creati dobbiamo procedere al loro collegamento:</p>
 <ol>
-<li>Open the <code>PersonEditDialog.fxml</code>.</li>
-<li>In the <em>Controller</em> group on the left side select select the <code>PersonEditDialogController</code> as controller class.</li>
-<li>Set the <strong>fx:id</strong> of all <code>TextField</code>s to the corresponding field of the controller.</li>
-<li>Set the <strong>onAction</strong> of the two buttons to the corresponding handler method.</li>
+<li>Apri <code>PersonEditDialog.fxml</code>.</li>
+<li>Nel gruppo <em>Controller</em> sul lato sinistro seleziona <code>PersonEditDialogController</code> come classe controllore.</li>
+<li>Setta il campo <strong>fx:id</strong> per tutti i <code>TextField</code> il corrispondente campo del controllore.</li>
+<li>Setta il campo <strong>onAction</strong> dei due pulsanti al corrispondente metodo.</li>
 </ol>
-<h3 id="opening-the-dialog">Opening the Dialog</h3>
-<p>Add a method to load and display the edit person dialog inside our <code>MainApp</code>:   </p>
+<h3 id="aprire-il-dialog">Aprire il Dialog</h3>
+<p>Aggiungi un metodo per aggiungere e mostrare il Dialog di modifica della persona all'interno del nostro <code>MainApp</code>:   </p>
 <h5 id="mainapp-java">MainApp.java</h5>
 <pre class="prettyprint lang-java">
 /**
@@ -721,7 +717,7 @@ public boolean showPersonEditDialog(Person person) {
 }
 </pre>
 
-<p>Add the following methods to the <code>PersonOverviewController</code>. Those methods will call the <code>showPersonEditDialog(...)</code> from the <code>MainApp</code> when the user clicks the <em>new</em> or <em>edit</em> button.   </p>
+<p>Aggiungi i seguenti metodi in <code>PersonOverviewController</code>. Questi metodi chiameranno il <code>showPersonEditDialog(...)</code> da <code>MainApp</code> quando l'utente clicca i pulsanti <em>new</em> o <em>edit</em>.   </p>
 <h5 id="personoverviewcontroller-java">PersonOverviewController.java</h5>
 <pre class="prettyprint lang-java">
 /**
@@ -763,14 +759,14 @@ private void handleEditPerson() {
 }
 </pre>
 
-<p>Open the <code>PersonOverview.fxml</code> file in Scene Builder. Choose the corresponding methods in <em>On Action</em> for the new and edit buttons.</p>
+<p>Apri il file <code>PersonOverview.fxml</code> in Scene Builder. Scegli il corrispondente metodo in <em>On Action</em> per i pulsanti <em>New</em> e <em>Cancel</em>.</p>
 <hr>
-<h2 id="done-">Done!</h2>
-<p>You should have a working <em>Address Application</em> by now. The application is able to add, edit, and delete persons. There is even some validation for the text fields to avoid bad user entries.</p>
-<p>I hope the concepts and structure of this application will get you started with writing your own JavaFX application! Have fun.</p>
-<h3 id="what-s-next-">What's Next?</h3>
-<p>In <a href="/library/javafx-8-tutorial/part4/">Tutorial Part 4</a> we will add some CSS styling.</p>
-<h5 id="some-other-articles-you-might-find-interesting">Some other articles you might find interesting</h5>
+<h2 id="fatto-">Fatto!</h2>
+<p>Dovresti avere un <em>Applicazione Rubrica</em> funzionante adesso. L'applicazione è in grado di aggiungere, modificare ed eliminare persone. Ci sono anche alcune validazioni per i testi per evitare input sbagliati.</p>
+<p>Spero che i concetti e la struttura di questa applicazione di permetteranno di cominciare a scrivere le tue applicazioni JavaFX! Buon divertimento.</p>
+<h3 id="qual-il-prossimo-">Qual'è il prossimo?</h3>
+<p>Nella <a href="/library/javafx-8-tutorial/it/part4/">Parte 4 del tutorial</a> aggiungeremo alcuni CSS per lo stile.</p>
+<h5 id="alcuni-articoli-che-potresti-trovare-interessanti">Alcuni articoli che potresti trovare interessanti</h5>
 <ul>
 <li><a href="/blog/javafx-dialogs-official/">JavaFX Dialogs (official)</a></li>
 <li><a href="/blog/javafx-8-date-picker/">JavaFX Date Picker</a></li>
