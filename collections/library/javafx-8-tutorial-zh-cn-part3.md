@@ -321,7 +321,7 @@ private void handleDeletePerson() {
 1. 在*view*包中创建新的fxml文件，称为`PersonEditDialog.fxml`
 ![Create Edit Dialog](/assets/library/javafx-8-tutorial/part3/person-edit-dialog1.png)
 
-2. 使用`GridPan`，`Label`，`TextField`和`Button`创建一个对话框，如下所示:   
+2. 使用`GridPane`，`Label`，`TextField`和`Button`创建一个对话框，如下所示:   
 ![Edit Dialog](/assets/library/javafx-8-tutorial/part3/person-edit-dialog2.png)   
 
 *如果你不能完成工作，你能下载这个[PersonEditDialog.fxml](/assets/library/javafx-8-tutorial/part3/PersonEditDialog.fxml).* 
